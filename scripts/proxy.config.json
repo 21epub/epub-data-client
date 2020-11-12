@@ -1,9 +1,6 @@
 {
-  "/api": {
-    "target": "http://url.to/",
-    "changeOrigin": true,
-    "pathRewrite": {
-      "/api": "/api"
-    }
+  "/v3/api": {
+    "target": "http://52.82.81.234:10080/",
+    "changeOrigin": true
   }
 }

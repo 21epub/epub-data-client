@@ -1,9 +1,15 @@
 import React from 'react'
 
-import { ExampleComponent } from '../src'
-
 const App = () => {
-  return <ExampleComponent text='Create React TS Parcel Library Example 😄' />
+  return (
+    <>
+      <h2>Restful Client Module</h2>
+      <h3>
+        Reference Demo ( 21epub staff only ):{' '}
+        <a href='https://github.com/21epub/data-client-demo'>Demo</a>
+      </h3>
+    </>
+  )
 }
 
 export default App

@@ -1,3 +1,1 @@
-export class DataClient {}
-
-export class ObjectClient {}
+export { default as DataClient } from './DataClient'

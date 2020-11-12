@@ -6,12 +6,17 @@
 
 ## Intro
 
-This is a component for react. 
+Well, This is a data client for Epub . （ Can be reformed for other Usage )
 
 ## Feature
 
 - [x] Easy-to-use
-- [x] Typescript Support
+- [x] Typescript Only
+- [x] RestFul data client support
+- [x] Object Client support
+- [x] Local data manupulate
+- [x] Hooks for data client
+- [x] Both for web and node supported
 
 ## Install
 
@@ -21,21 +26,28 @@ npm install --save @21epub/epub-data-client
 
 ## Usage
 
-```tsx
-import React, { Component } from 'react'
+- Documentation
 
-import MyComponent from '@21epub/epub-data-client'
-import '@21epub/epub-data-client/dist/index.css'
+```ts
+import { DataClient } from '@21epub/epub-data-client'
+
+const client = new DataClient('http://url.to/data/')
+
+client.fetchAll()
 
 class Example extends Component {
+  data = client.useData()
   render() {
-    return <MyComponent />
+    return (
+      <>
+        <div> Total Data: {data?.length} </div>
+      </>
+    )
   }
 }
 ```
 
 For Details: See Example
-
 
 ## Developing and running on localhost
 
@@ -62,6 +74,12 @@ To create a bundle library module build:
 
 ```sh
 npm run build
+```
+
+To update documentation
+
+```sh
+npm run doc
 ```
 
 ## Running
