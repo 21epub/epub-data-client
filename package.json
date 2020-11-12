@@ -63,8 +63,6 @@
     "axios": "0.21.0",
     "query-string": "6.13.7",
     "ramda": "0.27.1",
-    "react": "file:../data-client-demo/node_modules/react",
-    "react-dom": "file:../data-client-demo/node_modules/react-dom",
     "rxjs": "6.6.3",
     "xhr2": "0.2.0"
   },

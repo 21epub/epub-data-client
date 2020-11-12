@@ -26,7 +26,7 @@ npm install --save @21epub/epub-data-client
 
 ## Usage
 
-- Documentation
+- [Documentation](https://21epub.github.io/epub-data-client/classes/dataclient.html)
 
 ```ts
 import { DataClient } from '@21epub/epub-data-client'
