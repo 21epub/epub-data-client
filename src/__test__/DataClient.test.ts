@@ -119,5 +119,28 @@ describe('Test DataClient functions', () => {
     expect(dataClient.getQuery()).toEqual({
       search: 'demo'
     })
+    const newData = {
+      no: 2,
+      i1: 12,
+      openid: 8,
+      id: '21210894b550865b04515e71',
+      modified: '2020-11-06 16:26',
+      created: '2020-11-06 16:25'
+    }
+    dataClient.appendLocal(newData)
+    expect(dataClient.getData()).toEqual([...formData.data.results, newData])
+    dataClient.id('21210894b550865b04515e71').patchLocal({
+      openid: 9
+    })
+    expect(
+      dataClient.current('21210894b550865b04515e71').fetchCurrentLocal()
+    ).toEqual({
+      no: 2,
+      i1: 12,
+      openid: 9,
+      id: '21210894b550865b04515e71',
+      modified: '2020-11-06 16:26',
+      created: '2020-11-06 16:25'
+    })
   })
 })

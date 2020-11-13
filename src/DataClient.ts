@@ -15,7 +15,6 @@ import {
   urlJoin
 } from './util/util'
 import { BehaviorSubject } from 'rxjs'
-import { map, reject } from 'ramda'
 import { createDataHook } from './util/hooks'
 import {
   RequestOpts,
@@ -30,14 +29,14 @@ import {
  * - First, You shoud know the type of a single Data item , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
  * - Asume that the single Data item type is
  * ```ts
- * type DataItem = {
- *  openid: number
- *  created: string
- *  i1: number
- *  no: number
- *  modified: string
- *  id: string
- * }
+ *  type DataItem = {
+ *    openid: number
+ *    created: string
+ *    i1: number
+ *    no: number
+ *    modified: string
+ *    id: string
+ *  }
  * ```
  * - Then create a new Client
  * - Asume the client rest url is : http://url.to/data
@@ -316,6 +315,10 @@ export default class DataClient<T extends { id: string }> {
    *  ```
    *  await client.id('12345').get()    // get object by id '12345'
    *  ```
+   *  Current Catch after request
+   *  ```
+   *  await client.id('12345').get().catch(err => console.log(error.response.msg))
+   *  ```
    *  @category Request Functions
    */
   public async get() {
@@ -499,9 +502,9 @@ export default class DataClient<T extends { id: string }> {
   // * -------------------------------- Chain Operators
 
   /**
-   *
+   * change Request options
    * @param opts
-   * @category Operators
+   * @category Chain Operators
    */
   public options(opts: RequestOpts = {}): DataClient<T> {
     this._options = {
@@ -513,12 +516,12 @@ export default class DataClient<T extends { id: string }> {
 
   /**
    *
-   * @param option
-   * @category Operators
+   * @param q
+   * @category Chain Operators
    */
-  public query(option = {}): DataClient<T> {
+  public query(q = {}): DataClient<T> {
     this._query = {
-      ...option
+      ...q
     }
     this.query$.next(this._query)
     return this
@@ -527,7 +530,7 @@ export default class DataClient<T extends { id: string }> {
   /**
    *
    * @param p
-   * @category Operators
+   * @category Chain Operators
    */
   public page(p: number = 1): DataClient<T> {
     this._page = p
@@ -537,7 +540,7 @@ export default class DataClient<T extends { id: string }> {
   /**
    *
    * @param s size / per page to fetch data
-   * @category Operators
+   * @category Chain Operators
    */
   public size(s: number = 10) {
     this._size = s
@@ -548,7 +551,7 @@ export default class DataClient<T extends { id: string }> {
    * Change client main url
    * Can reset by this.urlReset()
    * @param u
-   * @category Operators
+   * @category Chain Operators
    */
   public url(u: string) {
     this._url = u
@@ -557,7 +560,7 @@ export default class DataClient<T extends { id: string }> {
 
   /**
    *  Reset to origin client url
-   *  @category Operators
+   *  @category Chain Operators
    */
   public urlReset() {
     this._url = this._originUrl
@@ -568,7 +571,7 @@ export default class DataClient<T extends { id: string }> {
    * id prefix for Request (exclude getAll)
    * always use with request functions
    * @param idString
-   * @category Operators
+   * @category Chain Operators
    * @example
    * ```
    *  const result = await client.id('12345').patch({title: '标题'});
@@ -582,7 +585,7 @@ export default class DataClient<T extends { id: string }> {
   /**
    *
    * @param p
-   * @category Operators
+   * @category Chain Operators
    */
   public path(p: string): DataClient<T> {
     this._path = p
@@ -609,6 +612,14 @@ export default class DataClient<T extends { id: string }> {
 
   public getQuery() {
     return this._query
+  }
+
+  public getOptions() {
+    return this._options
+  }
+
+  public getUrl() {
+    return this._url
   }
 
   // * -------------------------------- local data methods
@@ -660,12 +671,13 @@ export default class DataClient<T extends { id: string }> {
     const id = this._id
     this.clearIdPath()
     if (body && id && this.data.find((v: T) => v.id === id)) {
-      this.data = map<T[], T[]>((v: any) => {
+      const d = (this.data as Array<T>).map((v) => {
         if (v.id === id) {
           return { ...v, ...body }
         }
         return v
-      }, this.data)
+      })
+      this.data = [...d]
       this.rawData = {
         ...this.rawData,
         results: this.data
@@ -683,7 +695,7 @@ export default class DataClient<T extends { id: string }> {
     const id = this._id
     this.clearIdPath()
     if (id && this.data.find((v: T) => v.id === id)) {
-      this.data = reject((v: T) => v.id === id, this.data)
+      this.data = [...this.data.filter((v: T) => v.id !== id)]
       this.rawData = {
         ...this.rawData,
         sum: this.rawData.sum - 1,
