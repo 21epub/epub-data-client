@@ -1,5 +1,5 @@
 import { AjaxFetcherResponse } from '../type'
-import { parseData, urlJoin } from './util'
+import { parseData, urlJoin } from '../util/util'
 
 test('should url join correct', () => {
   const url = urlJoin(['/v3/api/works', '12345'])

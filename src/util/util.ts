@@ -79,7 +79,6 @@ export const parseRawResponse = <T>(
   if (loading$) {
     loading$.next(true)
   }
-  console.log(observer)
   return observer
     .pipe(
       tap((data) => {

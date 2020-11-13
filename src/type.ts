@@ -42,7 +42,7 @@ export type RequestOpts = {
    */
   size?: number
   /**
-   *  Add slash at the end of parsed url (default is false)
+   *  Force to Add slash at the end of parsed url (default is false)
    *  @example
    *  ```
    *    Turn `http://url.to/1234`  to `http://url.to/1234/`

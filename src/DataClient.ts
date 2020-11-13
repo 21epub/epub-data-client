@@ -30,21 +30,21 @@ import {
  * - First, You shoud know the type of a single Data item , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
  * - Asume that the single Data item type is
  * ```ts
- *type DataItem = {
- * openid: number
- * created: string
- * i1: number
- * no: number
- * modified: string
+ * type DataItem = {
+ *  openid: number
+ *  created: string
+ *  i1: number
+ *  no: number
+ *  modified: string
  *  id: string
- *}
+ * }
  * ```
  * - Then create a new Client
  * - Asume the client rest url is : http://url.to/data
  * ```ts
  *  const client = new DataClient<DataItem>('http://url.to/data')
  * ```
- * Create with opts to catch error and error msg
+ * Create with opts to catch error and error msg by default
  * ```ts
  * const opts = {
  *    catchError(error){
@@ -107,10 +107,15 @@ export default class DataClient<T extends { id: string }> {
     T | undefined
   >(undefined)
 
+  protected query$: BehaviorSubject<RequestOpts> = new BehaviorSubject<
+    RequestOpts
+  >({})
+
   // * -------------------------------- Hooks
 
   /**
    * Hooks of rawData
+   * The Demo structure as below:
    * ```json
    *      {
    * "msg": "success",
@@ -175,6 +180,16 @@ export default class DataClient<T extends { id: string }> {
    * @category Hooks
    */
   public useCurrentData: () => T | undefined
+  /**
+   * Hooks for get query object
+   * Can be used with .query() ,async data change
+   * @category Hooks
+   * @example
+   * ```
+   * const {query} = client.useQuery();  // For example
+   * ```
+   */
+  public useQuery: () => RequestOpts
 
   // * -------------------------------- End of Hooks
 
@@ -204,6 +219,7 @@ export default class DataClient<T extends { id: string }> {
       this.currentLoading$,
       false
     )
+    this.useQuery = createDataHook<RequestOpts>(this.query$, {})
     return this
   }
 
@@ -480,7 +496,7 @@ export default class DataClient<T extends { id: string }> {
     return data
   }
 
-  // * -------------------------------- operators
+  // * -------------------------------- Chain Operators
 
   /**
    *
@@ -504,6 +520,7 @@ export default class DataClient<T extends { id: string }> {
     this._query = {
       ...option
     }
+    this.query$.next(this._query)
     return this
   }
 
@@ -590,8 +607,29 @@ export default class DataClient<T extends { id: string }> {
     return this.currentData
   }
 
+  public getQuery() {
+    return this._query
+  }
+
   // * -------------------------------- local data methods
 
+  public updateLocal(data: T[]) {
+    if (data?.length) {
+      this.data = [...data]
+      this.rawData = {
+        ...this.rawData,
+        results: this.data
+      }
+      this.emit$()
+    }
+    return this.data
+  }
+
+  /**
+   * Append a single data to the end of the local data list
+   * Without any sync with server
+   * @param body
+   */
   public appendLocal(body: T) {
     if (body) {
       this.data = [...this.data, body]
@@ -661,7 +699,9 @@ export default class DataClient<T extends { id: string }> {
     this.data$.next(this.data)
   }
 
-  // get
+  /**
+   *  clear Id and path after request
+   */
   protected clearIdPath(): void {
     this._id = ''
     this._path = ''

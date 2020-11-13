@@ -1,9 +1,9 @@
 // TDD first and then enjoy coding !!!
-import { DataClient } from './'
+import { DataClient } from '..'
 import { AjaxResponse } from 'rxjs/ajax'
 import { Observable } from 'rxjs'
-import request from './util/request'
-import { generatePromiseResolveMock } from './mockFn'
+import request from '../util/request'
+import { generatePromiseResolveMock } from '../util/mockFn'
 
 type DataItem = {
   openid: number
@@ -18,14 +18,14 @@ const dataClient = new DataClient<DataItem>(
   'v3/api/h5/works/soskgm/form/objects/'
 )
 
-jest.mock('./util/request')
+jest.mock('../util/request')
 
 const mockRequest = request as jest.Mock<Observable<AjaxResponse>>
 
 describe('Test DataClient functions', () => {
   test('should FetchAll Data correct ', async () => {
     // fn.mockImplementationOnce(() => 'test')
-    const formData = require('./testResults/formData.json')
+    const formData = require('../testResults/formData.json')
 
     mockRequest.mockImplementationOnce(() =>
       generatePromiseResolveMock(formData)
@@ -35,7 +35,7 @@ describe('Test DataClient functions', () => {
   })
 
   test('should POST PUT PATCH DELETE OPTION correct ', async () => {
-    const d = require('./testResults/formSingleData.json')
+    const d = require('../testResults/formSingleData.json')
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe('v3/api/h5/works/soskgm/form/objects/test')
       expect(opt.method).toBe('POST')
@@ -53,10 +53,20 @@ describe('Test DataClient functions', () => {
       return generatePromiseResolveMock(d)
     })
     await dataClient.id('test').patch({})
+    mockRequest.mockImplementationOnce((opt) => {
+      expect(opt.method).toBe('DELETE')
+      return generatePromiseResolveMock(d)
+    })
+    await dataClient.id('12345').delete()
+    mockRequest.mockImplementationOnce((opt) => {
+      expect(opt.method).toBe('OPTION')
+      return generatePromiseResolveMock(d)
+    })
+    await dataClient.option({})
   })
 
   test('should current Functions pass ', async () => {
-    const formData = require('./testResults/formData.json')
+    const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe(
         'v3/api/h5/works/soskgm/form/objects/test1111?page=1'
@@ -71,7 +81,7 @@ describe('Test DataClient functions', () => {
   })
 
   test('should change args pass ', async () => {
-    const formData = require('./testResults/formData.json')
+    const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe(
         '/v3/api/h5/works/soskgm/form/fields/1111/publish/?page=3&query=demo&size=20'
@@ -98,5 +108,16 @@ describe('Test DataClient functions', () => {
       return generatePromiseResolveMock(formData)
     })
     await dataClient.urlReset().get()
+  })
+  test('should local functions pass', async () => {
+    const formData = require('../testResults/formData.json')
+    expect(dataClient.getRawData()).toBe(formData.data)
+    expect(dataClient.getData()).toBe(formData.data.results)
+    dataClient.query({
+      search: 'demo'
+    })
+    expect(dataClient.getQuery()).toEqual({
+      search: 'demo'
+    })
   })
 })
