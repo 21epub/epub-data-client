@@ -1,2140 +1,867 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="default no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>@21epub/epub-data-client</title>
-    <meta
-      name="description"
-      content="Documentation for @21epub/epub-data-client"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <header>
-      <div class="tsd-page-toolbar">
-        <div class="container">
-          <div class="table-wrap">
-            <div
-              class="table-cell"
-              id="tsd-search"
-              data-index="assets/js/search.json"
-              data-base="."
-            >
-              <div class="field">
-                <label
-                  for="tsd-search-field"
-                  class="tsd-widget search no-caption"
-                  >Search</label
-                >
-                <input id="tsd-search-field" type="text" />
-              </div>
-              <ul class="results">
-                <li class="state loading">Preparing search index...</li>
-                <li class="state failure">The search index is not available</li>
-              </ul>
-              <a href="index.html" class="title">@21epub/epub-data-client</a>
-            </div>
-            <div class="table-cell" id="tsd-widgets">
-              <div id="tsd-filter">
-                <a
-                  href="#"
-                  class="tsd-widget options no-caption"
-                  data-toggle="options"
-                  >Options</a
-                >
-                <div class="tsd-filter-group">
-                  <div class="tsd-select" id="tsd-filter-visibility">
-                    <span class="tsd-select-label">All</span>
-                    <ul class="tsd-select-list">
-                      <li data-value="public">Public</li>
-                      <li data-value="protected">Public/Protected</li>
-                      <li data-value="private" class="selected">All</li>
-                    </ul>
-                  </div>
-                  <input type="checkbox" id="tsd-filter-inherited" checked />
-                  <label class="tsd-widget" for="tsd-filter-inherited"
-                    >Inherited</label
-                  >
-                </div>
-              </div>
-              <a href="#" class="tsd-widget menu no-caption" data-toggle="menu"
-                >Menu</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tsd-page-title">
-        <div class="container">
-          <ul class="tsd-breadcrumb">
-            <li>
-              <a href="index.html">Globals</a>
-            </li>
-          </ul>
-          <h1>@21epub/epub-data-client</h1>
-        </div>
-      </div>
-    </header>
-    <div class="container container-main">
-      <div class="row">
-        <div class="col-8 col-content">
-          <section class="tsd-panel-group tsd-index-group">
-            <h2>Index</h2>
-            <section class="tsd-panel tsd-index-panel">
-              <div class="tsd-index-content">
-                <section class="tsd-index-section">
-                  <h3>Classes</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-class tsd-has-type-parameter">
-                      <a href="classes/dataclient.html" class="tsd-kind-icon"
-                        >Data<wbr />Client</a
-                      >
-                    </li>
-                  </ul>
-                </section>
-                <section class="tsd-index-section">
-                  <h3>Interfaces</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-interface tsd-has-type-parameter">
-                      <a
-                        href="interfaces/ajaxfetcherresponse.html"
-                        class="tsd-kind-icon"
-                        >Ajax<wbr />Fetcher<wbr />Response</a
-                      >
-                    </li>
-                    <li class="tsd-kind-interface tsd-has-type-parameter">
-                      <a href="interfaces/data.html" class="tsd-kind-icon"
-                        >Data</a
-                      >
-                    </li>
-                    <li class="tsd-kind-interface tsd-has-type-parameter">
-                      <a
-                        href="interfaces/fetcherdata.html"
-                        class="tsd-kind-icon"
-                        >Fetcher<wbr />Data</a
-                      >
-                    </li>
-                  </ul>
-                </section>
-                <section class="tsd-index-section">
-                  <h3>Type aliases</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-type-alias">
-                      <a href="index.html#method" class="tsd-kind-icon"
-                        >Method</a
-                      >
-                    </li>
-                    <li class="tsd-kind-type-alias">
-                      <a href="index.html#queryopt" class="tsd-kind-icon"
-                        >Query<wbr />Opt</a
-                      >
-                    </li>
-                    <li class="tsd-kind-type-alias">
-                      <a href="index.html#requestopts" class="tsd-kind-icon"
-                        >Request<wbr />Opts</a
-                      >
-                    </li>
-                  </ul>
-                </section>
-                <section class="tsd-index-section">
-                  <h3>Variables</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-variable">
-                      <a href="index.html#xhr2" class="tsd-kind-icon">XHR2</a>
-                    </li>
-                    <li class="tsd-kind-variable">
-                      <a href="index.html#xhr2" class="tsd-kind-icon">xhr2</a>
-                    </li>
-                  </ul>
-                </section>
-                <section class="tsd-index-section">
-                  <h3>Functions</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-function">
-                      <a href="index.html#catcherror" class="tsd-kind-icon"
-                        >catch<wbr />Error</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function">
-                      <a href="index.html#catchmsg" class="tsd-kind-icon"
-                        >catch<wbr />Msg</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function tsd-has-type-parameter">
-                      <a href="index.html#createdatahook" class="tsd-kind-icon"
-                        >create<wbr />Data<wbr />Hook</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function">
-                      <a
-                        href="index.html#generateinitdata"
-                        class="tsd-kind-icon"
-                        >generate<wbr />Init<wbr />Data</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function tsd-has-type-parameter">
-                      <a
-                        href="index.html#generatepromiseresolvemock"
-                        class="tsd-kind-icon"
-                        >generate<wbr />Promise<wbr />Resolve<wbr />Mock</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function">
-                      <a href="index.html#geterrormsg" class="tsd-kind-icon"
-                        >get<wbr />Error<wbr />Msg</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function tsd-has-type-parameter">
-                      <a href="index.html#parsedata" class="tsd-kind-icon"
-                        >parse<wbr />Data</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function tsd-has-type-parameter">
-                      <a
-                        href="index.html#parserawresponse"
-                        class="tsd-kind-icon"
-                        >parse<wbr />Raw<wbr />Response</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function tsd-has-type-parameter">
-                      <a href="index.html#parseresponse" class="tsd-kind-icon"
-                        >parse<wbr />Response</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function">
-                      <a href="index.html#parseurl" class="tsd-kind-icon"
-                        >parse<wbr />Url</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function">
-                      <a href="index.html#request" class="tsd-kind-icon"
-                        >request</a
-                      >
-                    </li>
-                    <li class="tsd-kind-function">
-                      <a href="index.html#urljoin" class="tsd-kind-icon"
-                        >url<wbr />Join</a
-                      >
-                    </li>
-                  </ul>
-                </section>
-                <section class="tsd-index-section">
-                  <h3>Object literals</h3>
-                  <ul class="tsd-index-list">
-                    <li class="tsd-kind-object-literal">
-                      <a href="index.html#codemessage" class="tsd-kind-icon"
-                        >code<wbr />Message</a
-                      >
-                    </li>
-                  </ul>
-                </section>
-              </div>
-            </section>
-          </section>
-          <section class="tsd-panel-group tsd-member-group">
-            <h2>Type aliases</h2>
-            <section class="tsd-panel tsd-member tsd-kind-type-alias">
-              <a name="method" class="tsd-anchor"></a>
-              <h3>Method</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                Method<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">"POST"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"GET"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"PUT"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"DELETE"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"OPTION"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"PATCH"</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/21epub/epub-data-client/blob/20daf03/src/type.ts#L20"
-                      >src/type.ts:20</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-type-alias">
-              <a name="queryopt" class="tsd-anchor"></a>
-              <h3>Query<wbr />Opt</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                Query<wbr />Opt<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-symbol">{ </span>page<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">number</span
-                ><span class="tsd-signature-symbol">; </span>query<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">; </span>size<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">number</span
-                ><span class="tsd-signature-symbol"> }</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/21epub/epub-data-client/blob/20daf03/src/type.ts#L54"
-                      >src/type.ts:54</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-              <div class="tsd-type-declaration">
-                <h4>Type declaration</h4>
-                <ul class="tsd-parameters">
-                  <li class="tsd-parameter-index-signature">
-                    <h5>
-                      <span class="tsd-signature-symbol">[</span>k:
-                      <span class="tsd-signature-type">string</span
-                      ><span class="tsd-signature-symbol">]: </span
-                      ><span class="tsd-signature-type">string</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">number</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">undefined</span>
-                    </h5>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      page<span class="tsd-signature-symbol">?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">number</span>
-                    </h5>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      query<span class="tsd-signature-symbol">?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">string</span>
-                    </h5>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      size<span class="tsd-signature-symbol">?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">number</span>
-                    </h5>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-type-alias">
-              <a name="requestopts" class="tsd-anchor"></a>
-              <h3>Request<wbr />Opts</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                Request<wbr />Opts<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-symbol">{ </span>acceptMethods<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">Array</span
-                ><span class="tsd-signature-symbol">&lt;</span
-                ><a href="index.html#method" class="tsd-signature-type"
-                  >Method</a
-                ><span class="tsd-signature-symbol">&gt;</span
-                ><span class="tsd-signature-symbol">; </span>addBackSlash<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">false</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">true</span
-                ><span class="tsd-signature-symbol">; </span>catchError<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-symbol">(</span
-                ><span class="tsd-signature-symbol">(</span>error<span
-                  class="tsd-signature-symbol"
-                  >: </span
-                ><span class="tsd-signature-type">AjaxError</span
-                ><span class="tsd-signature-symbol">)</span
-                ><span class="tsd-signature-symbol"> =&gt; </span
-                ><span class="tsd-signature-type">void</span
-                ><span class="tsd-signature-symbol">)</span
-                ><span class="tsd-signature-symbol">; </span>catchMsg<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-symbol">(</span
-                ><span class="tsd-signature-symbol">(</span>msg<span
-                  class="tsd-signature-symbol"
-                  >: </span
-                ><span class="tsd-signature-type">string</span
-                ><span class="tsd-signature-symbol">)</span
-                ><span class="tsd-signature-symbol"> =&gt; </span
-                ><span class="tsd-signature-type">void</span
-                ><span class="tsd-signature-symbol">)</span
-                ><span class="tsd-signature-symbol">; </span>contentType<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type"
-                  >"application/x-www-form-urlencoded"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"multipart/form-data"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"application/json"</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">"text/plain"</span
-                ><span class="tsd-signature-symbol">; </span>size<span
-                  class="tsd-signature-symbol"
-                  >?: </span
-                ><span class="tsd-signature-type">undefined</span
-                ><span class="tsd-signature-symbol"> | </span
-                ><span class="tsd-signature-type">number</span
-                ><span class="tsd-signature-symbol"> }</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/21epub/epub-data-client/blob/20daf03/src/type.ts#L22"
-                      >src/type.ts:22</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-              <div class="tsd-type-declaration">
-                <h4>Type declaration</h4>
-                <ul class="tsd-parameters">
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      accept<wbr />Methods<span class="tsd-signature-symbol"
-                        >?: </span
-                      ><span class="tsd-signature-type">Array</span
-                      ><span class="tsd-signature-symbol">&lt;</span
-                      ><a href="index.html#method" class="tsd-signature-type"
-                        >Method</a
-                      ><span class="tsd-signature-symbol">&gt;</span>
-                    </h5>
-                    <div class="tsd-comment tsd-typography">
-                      <div class="lead">
-                        <p>Methods allowed To use</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      add<wbr />Back<wbr />Slash<span
-                        class="tsd-signature-symbol"
-                        >?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">false</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">true</span>
-                    </h5>
-                    <div class="tsd-comment tsd-typography">
-                      <div class="lead">
-                        <p>
-                          Force to Add slash at the end of parsed url (default
-                          is false)
-                        </p>
-                      </div>
-                      <dl class="tsd-comment-tags">
-                        <dt>example</dt>
-                        <dd>
-                          <pre><code>  Turn `http:<span class="hljs-regexp">//u</span>rl.to<span class="hljs-regexp">/1234`  to `http:/</span><span class="hljs-regexp">/url.to/</span><span class="hljs-number">1234</span>/`</code></pre>
-                        </dd>
-                      </dl>
-                    </div>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      catch<wbr />Error<span class="tsd-signature-symbol"
-                        >?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-symbol">(</span
-                      ><span class="tsd-signature-symbol">(</span>error<span
-                        class="tsd-signature-symbol"
-                        >: </span
-                      ><span class="tsd-signature-type">AjaxError</span
-                      ><span class="tsd-signature-symbol">)</span
-                      ><span class="tsd-signature-symbol"> =&gt; </span
-                      ><span class="tsd-signature-type">void</span
-                      ><span class="tsd-signature-symbol">)</span>
-                    </h5>
-                    <div class="tsd-comment tsd-typography">
-                      <div class="lead">
-                        <p>
-                          catchError for both http response error and
-                          data.code!=200 error
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      catch<wbr />Msg<span class="tsd-signature-symbol"
-                        >?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-symbol">(</span
-                      ><span class="tsd-signature-symbol">(</span>msg<span
-                        class="tsd-signature-symbol"
-                        >: </span
-                      ><span class="tsd-signature-type">string</span
-                      ><span class="tsd-signature-symbol">)</span
-                      ><span class="tsd-signature-symbol"> =&gt; </span
-                      ><span class="tsd-signature-type">void</span
-                      ><span class="tsd-signature-symbol">)</span>
-                    </h5>
-                    <div class="tsd-comment tsd-typography">
-                      <div class="lead">
-                        <p>
-                          catchMsg return by error response msg or default
-                          system msg
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      content<wbr />Type<span class="tsd-signature-symbol"
-                        >?: </span
-                      ><span class="tsd-signature-type"
-                        >"application/x-www-form-urlencoded"</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type"
-                        >"multipart/form-data"</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">"application/json"</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">"text/plain"</span>
-                    </h5>
-                  </li>
-                  <li class="tsd-parameter">
-                    <h5>
-                      <span class="tsd-flag ts-flagOptional">Optional</span>
-                      size<span class="tsd-signature-symbol">?: </span
-                      ><span class="tsd-signature-type">undefined</span
-                      ><span class="tsd-signature-symbol"> | </span
-                      ><span class="tsd-signature-type">number</span>
-                    </h5>
-                    <div class="tsd-comment tsd-typography">
-                      <div class="lead">
-                        <p>size for request per page</p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </section>
-          <section class="tsd-panel-group tsd-member-group">
-            <h2>Variables</h2>
-            <section class="tsd-panel tsd-member tsd-kind-variable">
-              <a name="xhr2" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> XHR2</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                XHR2<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">any</span
-                ><span class="tsd-signature-symbol">
-                  = typeof XMLHttpRequest !&#x3D;&#x3D; &#x27;undefined&#x27; ?
-                  XMLHttpRequest : xhr2</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/request.ts#L6"
-                      >src/util/request.ts:6</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-variable">
-              <a name="xhr2" class="tsd-anchor"></a>
-              <h3><span class="tsd-flag ts-flagConst">Const</span> xhr2</h3>
-              <div class="tsd-signature tsd-kind-icon">
-                xhr2<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">any</span
-                ><span class="tsd-signature-symbol">
-                  = require(&#x27;xhr2&#x27;)</span
-                >
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/request.ts#L4"
-                      >src/util/request.ts:4</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-            </section>
-          </section>
-          <section class="tsd-panel-group tsd-member-group">
-            <h2>Functions</h2>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="catcherror" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                catch<wbr />Error
-              </h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  catch<wbr />Error<span class="tsd-signature-symbol">(</span
-                  >error<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">AjaxError</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">void</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L3"
-                          >src/util/catchError.ts:3</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        error: <span class="tsd-signature-type">AjaxError</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">void</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="catchmsg" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span> catch<wbr />Msg
-              </h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  catch<wbr />Msg<span class="tsd-signature-symbol">(</span
-                  >msg<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">void</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L7"
-                          >src/util/catchError.ts:7</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        msg: <span class="tsd-signature-type">string</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">void</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
-            >
-              <a name="createdatahook" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                create<wbr />Data<wbr />Hook
-              </h3>
-              <ul
-                class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
-              >
-                <li class="tsd-signature tsd-kind-icon">
-                  create<wbr />Data<wbr />Hook&lt;T&gt;<span
-                    class="tsd-signature-symbol"
-                    >(</span
-                  >data$<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">BehaviorSubject</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">&gt;</span>,
-                  initialData<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">(Anonymous function)</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/hooks.ts#L4"
-                          >src/util/hooks.ts:4</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-type-parameters-title">Type parameters</h4>
-                  <ul class="tsd-type-parameters">
-                    <li>
-                      <h4>T</h4>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        data$:
-                        <span class="tsd-signature-type">BehaviorSubject</span
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><span class="tsd-signature-type">T</span
-                        ><span class="tsd-signature-symbol">&gt;</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        initialData: <span class="tsd-signature-type">T</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns
-                    <span class="tsd-signature-type">(Anonymous function)</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="generateinitdata" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                generate<wbr />Init<wbr />Data
-              </h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  generate<wbr />Init<wbr />Data<span
-                    class="tsd-signature-symbol"
-                    >(</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-symbol">{ </span>facet<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">never</span
-                  ><span class="tsd-signature-symbol">[]</span
-                  ><span class="tsd-signature-symbol">; </span>numpages<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">number</span
-                  ><span class="tsd-signature-symbol">; </span>page<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">number</span
-                  ><span class="tsd-signature-symbol">; </span>results<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">never</span
-                  ><span class="tsd-signature-symbol">[]</span
-                  ><span class="tsd-signature-symbol">; </span>size<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">number</span
-                  ><span class="tsd-signature-symbol">; </span>sum<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">number</span
-                  ><span class="tsd-signature-symbol"> }</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/util.ts#L7"
-                          >src/util/util.ts:7</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-returns-title">
-                    Returns
-                    <span class="tsd-signature-symbol">{ </span>facet<span
-                      class="tsd-signature-symbol"
-                      >: </span
-                    ><span class="tsd-signature-type">never</span
-                    ><span class="tsd-signature-symbol">[]</span
-                    ><span class="tsd-signature-symbol">; </span>numpages<span
-                      class="tsd-signature-symbol"
-                      >: </span
-                    ><span class="tsd-signature-type">number</span
-                    ><span class="tsd-signature-symbol">; </span>page<span
-                      class="tsd-signature-symbol"
-                      >: </span
-                    ><span class="tsd-signature-type">number</span
-                    ><span class="tsd-signature-symbol">; </span>results<span
-                      class="tsd-signature-symbol"
-                      >: </span
-                    ><span class="tsd-signature-type">never</span
-                    ><span class="tsd-signature-symbol">[]</span
-                    ><span class="tsd-signature-symbol">; </span>size<span
-                      class="tsd-signature-symbol"
-                      >: </span
-                    ><span class="tsd-signature-type">number</span
-                    ><span class="tsd-signature-symbol">; </span>sum<span
-                      class="tsd-signature-symbol"
-                      >: </span
-                    ><span class="tsd-signature-type">number</span
-                    ><span class="tsd-signature-symbol"> }</span>
-                  </h4>
-                  <ul class="tsd-parameters">
-                    <li class="tsd-parameter">
-                      <h5>
-                        facet<span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">never</span
-                        ><span class="tsd-signature-symbol">[]</span>
-                      </h5>
-                    </li>
-                    <li class="tsd-parameter">
-                      <h5>
-                        numpages<span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">number</span>
-                      </h5>
-                    </li>
-                    <li class="tsd-parameter">
-                      <h5>
-                        page<span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">number</span>
-                      </h5>
-                    </li>
-                    <li class="tsd-parameter">
-                      <h5>
-                        results<span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">never</span
-                        ><span class="tsd-signature-symbol">[]</span>
-                      </h5>
-                    </li>
-                    <li class="tsd-parameter">
-                      <h5>
-                        size<span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">number</span>
-                      </h5>
-                    </li>
-                    <li class="tsd-parameter">
-                      <h5>
-                        sum<span class="tsd-signature-symbol">: </span
-                        ><span class="tsd-signature-type">number</span>
-                      </h5>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
-            >
-              <a name="generatepromiseresolvemock" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                generate<wbr />Promise<wbr />Resolve<wbr />Mock
-              </h3>
-              <ul
-                class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
-              >
-                <li class="tsd-signature tsd-kind-icon">
-                  generate<wbr />Promise<wbr />Resolve<wbr />Mock&lt;T&gt;<span
-                    class="tsd-signature-symbol"
-                    >(</span
-                  >data<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">Observable</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">AjaxResponse</span
-                  ><span class="tsd-signature-symbol">&gt;</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/mockFn.ts#L4"
-                          >src/util/mockFn.ts:4</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-type-parameters-title">Type parameters</h4>
-                  <ul class="tsd-type-parameters">
-                    <li>
-                      <h4>T</h4>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>data: <span class="tsd-signature-type">T</span></h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">Observable</span
-                    ><span class="tsd-signature-symbol">&lt;</span
-                    ><span class="tsd-signature-type">AjaxResponse</span
-                    ><span class="tsd-signature-symbol">&gt;</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="geterrormsg" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                get<wbr />Error<wbr />Msg
-              </h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  get<wbr />Error<wbr />Msg<span class="tsd-signature-symbol"
-                    >(</span
-                  >error<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">AjaxError</span
-                  ><span class="tsd-signature-symbol"> &amp; </span
-                  ><span class="tsd-signature-symbol">{ </span>responseText<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol"> }</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">any</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L38"
-                          >src/util/catchError.ts:38</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        error: <span class="tsd-signature-type">AjaxError</span
-                        ><span class="tsd-signature-symbol"> &amp; </span
-                        ><span class="tsd-signature-symbol">{ </span
-                        >responseText<span class="tsd-signature-symbol"
-                          >?: </span
-                        ><span class="tsd-signature-type">undefined</span
-                        ><span class="tsd-signature-symbol"> | </span
-                        ><span class="tsd-signature-type">string</span
-                        ><span class="tsd-signature-symbol"> }</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">any</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
-            >
-              <a name="parsedata" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                parse<wbr />Data
-              </h3>
-              <ul
-                class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
-              >
-                <li class="tsd-signature tsd-kind-icon">
-                  parse<wbr />Data&lt;T&gt;<span class="tsd-signature-symbol"
-                    >(</span
-                  >data<span class="tsd-signature-symbol">: </span
-                  ><a
-                    href="interfaces/ajaxfetcherresponse.html"
-                    class="tsd-signature-type"
-                    >AjaxFetcherResponse</a
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">&gt;</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">[]</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-symbol">[</span
-                  ><span class="tsd-signature-symbol">]</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/util.ts#L34"
-                          >src/util/util.ts:34</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-type-parameters-title">Type parameters</h4>
-                  <ul class="tsd-type-parameters">
-                    <li>
-                      <h4>T</h4>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        data:
-                        <a
-                          href="interfaces/ajaxfetcherresponse.html"
-                          class="tsd-signature-type"
-                          >AjaxFetcherResponse</a
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><span class="tsd-signature-type">T</span
-                        ><span class="tsd-signature-symbol">&gt;</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">T</span
-                    ><span class="tsd-signature-symbol">[]</span
-                    ><span class="tsd-signature-symbol"> | </span
-                    ><span class="tsd-signature-symbol">[</span
-                    ><span class="tsd-signature-symbol">]</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
-            >
-              <a name="parserawresponse" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                parse<wbr />Raw<wbr />Response
-              </h3>
-              <ul
-                class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
-              >
-                <li class="tsd-signature tsd-kind-icon">
-                  parse<wbr />Raw<wbr />Response&lt;T&gt;<span
-                    class="tsd-signature-symbol"
-                    >(</span
-                  >observer<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">Observable</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><a
-                    href="interfaces/ajaxfetcherresponse.html"
-                    class="tsd-signature-type"
-                    >AjaxFetcherResponse</a
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">&gt;</span
-                  ><span class="tsd-signature-symbol">&gt;</span>, catchErr<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-symbol">(</span
-                  ><span class="tsd-signature-symbol">(</span>error<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">AjaxError</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol"> =&gt; </span
-                  ><span class="tsd-signature-type">void</span
-                  ><span class="tsd-signature-symbol">)</span>, catchMsg<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-symbol">(</span
-                  ><span class="tsd-signature-symbol">(</span>msg<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol"> =&gt; </span
-                  ><span class="tsd-signature-type">void</span
-                  ><span class="tsd-signature-symbol">)</span>, loading$<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">BehaviorSubject</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">boolean</span
-                  ><span class="tsd-signature-symbol">&gt;</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">Promise</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">void</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><a
-                    href="interfaces/ajaxfetcherresponse.html"
-                    class="tsd-signature-type"
-                    >AjaxFetcherResponse</a
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">&gt;</span
-                  ><span class="tsd-signature-symbol">&gt;</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/util.ts#L73"
-                          >src/util/util.ts:73</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-type-parameters-title">Type parameters</h4>
-                  <ul class="tsd-type-parameters">
-                    <li>
-                      <h4>T</h4>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        observer:
-                        <span class="tsd-signature-type">Observable</span
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><a
-                          href="interfaces/ajaxfetcherresponse.html"
-                          class="tsd-signature-type"
-                          >AjaxFetcherResponse</a
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><span class="tsd-signature-type">T</span
-                        ><span class="tsd-signature-symbol">&gt;</span
-                        ><span class="tsd-signature-symbol">&gt;</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        catchErr:
-                        <span class="tsd-signature-type">undefined</span
-                        ><span class="tsd-signature-symbol"> | </span
-                        ><span class="tsd-signature-symbol">(</span
-                        ><span class="tsd-signature-symbol">(</span>error<span
-                          class="tsd-signature-symbol"
-                          >: </span
-                        ><span class="tsd-signature-type">AjaxError</span
-                        ><span class="tsd-signature-symbol">)</span
-                        ><span class="tsd-signature-symbol"> =&gt; </span
-                        ><span class="tsd-signature-type">void</span
-                        ><span class="tsd-signature-symbol">)</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        catchMsg:
-                        <span class="tsd-signature-type">undefined</span
-                        ><span class="tsd-signature-symbol"> | </span
-                        ><span class="tsd-signature-symbol">(</span
-                        ><span class="tsd-signature-symbol">(</span>msg<span
-                          class="tsd-signature-symbol"
-                          >: </span
-                        ><span class="tsd-signature-type">string</span
-                        ><span class="tsd-signature-symbol">)</span
-                        ><span class="tsd-signature-symbol"> =&gt; </span
-                        ><span class="tsd-signature-type">void</span
-                        ><span class="tsd-signature-symbol">)</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        loading$:
-                        <span class="tsd-signature-type">BehaviorSubject</span
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><span class="tsd-signature-type">boolean</span
-                        ><span class="tsd-signature-symbol">&gt;</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">Promise</span
-                    ><span class="tsd-signature-symbol">&lt;</span
-                    ><span class="tsd-signature-type">void</span
-                    ><span class="tsd-signature-symbol"> | </span
-                    ><a
-                      href="interfaces/ajaxfetcherresponse.html"
-                      class="tsd-signature-type"
-                      >AjaxFetcherResponse</a
-                    ><span class="tsd-signature-symbol">&lt;</span
-                    ><span class="tsd-signature-type">T</span
-                    ><span class="tsd-signature-symbol">&gt;</span
-                    ><span class="tsd-signature-symbol">&gt;</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section
-              class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter"
-            >
-              <a name="parseresponse" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                parse<wbr />Response
-              </h3>
-              <ul
-                class="tsd-signatures tsd-kind-function tsd-has-type-parameter"
-              >
-                <li class="tsd-signature tsd-kind-icon">
-                  parse<wbr />Response&lt;T&gt;<span
-                    class="tsd-signature-symbol"
-                    >(</span
-                  >observer<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">Observable</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><a
-                    href="interfaces/ajaxfetcherresponse.html"
-                    class="tsd-signature-type"
-                    >AjaxFetcherResponse</a
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">&gt;</span
-                  ><span class="tsd-signature-symbol">&gt;</span>, catchErr<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-symbol">(</span
-                  ><span class="tsd-signature-symbol">(</span>error<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">AjaxError</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol"> =&gt; </span
-                  ><span class="tsd-signature-type">void</span
-                  ><span class="tsd-signature-symbol">)</span>, catchMsg<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-symbol">(</span
-                  ><span class="tsd-signature-symbol">(</span>msg<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol"> =&gt; </span
-                  ><span class="tsd-signature-type">void</span
-                  ><span class="tsd-signature-symbol">)</span>, loading$<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">BehaviorSubject</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">boolean</span
-                  ><span class="tsd-signature-symbol">&gt;</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">Promise</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">void</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-type">T</span
-                  ><span class="tsd-signature-symbol">[]</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol">&gt;</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/util.ts#L37"
-                          >src/util/util.ts:37</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-type-parameters-title">Type parameters</h4>
-                  <ul class="tsd-type-parameters">
-                    <li>
-                      <h4>T</h4>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        observer:
-                        <span class="tsd-signature-type">Observable</span
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><a
-                          href="interfaces/ajaxfetcherresponse.html"
-                          class="tsd-signature-type"
-                          >AjaxFetcherResponse</a
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><span class="tsd-signature-type">T</span
-                        ><span class="tsd-signature-symbol">&gt;</span
-                        ><span class="tsd-signature-symbol">&gt;</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        catchErr:
-                        <span class="tsd-signature-type">undefined</span
-                        ><span class="tsd-signature-symbol"> | </span
-                        ><span class="tsd-signature-symbol">(</span
-                        ><span class="tsd-signature-symbol">(</span>error<span
-                          class="tsd-signature-symbol"
-                          >: </span
-                        ><span class="tsd-signature-type">AjaxError</span
-                        ><span class="tsd-signature-symbol">)</span
-                        ><span class="tsd-signature-symbol"> =&gt; </span
-                        ><span class="tsd-signature-type">void</span
-                        ><span class="tsd-signature-symbol">)</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        catchMsg:
-                        <span class="tsd-signature-type">undefined</span
-                        ><span class="tsd-signature-symbol"> | </span
-                        ><span class="tsd-signature-symbol">(</span
-                        ><span class="tsd-signature-symbol">(</span>msg<span
-                          class="tsd-signature-symbol"
-                          >: </span
-                        ><span class="tsd-signature-type">string</span
-                        ><span class="tsd-signature-symbol">)</span
-                        ><span class="tsd-signature-symbol"> =&gt; </span
-                        ><span class="tsd-signature-type">void</span
-                        ><span class="tsd-signature-symbol">)</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        loading$:
-                        <span class="tsd-signature-type">BehaviorSubject</span
-                        ><span class="tsd-signature-symbol">&lt;</span
-                        ><span class="tsd-signature-type">boolean</span
-                        ><span class="tsd-signature-symbol">&gt;</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">Promise</span
-                    ><span class="tsd-signature-symbol">&lt;</span
-                    ><span class="tsd-signature-type">void</span
-                    ><span class="tsd-signature-symbol"> | </span
-                    ><span class="tsd-signature-type">T</span
-                    ><span class="tsd-signature-symbol">[]</span
-                    ><span class="tsd-signature-symbol"> | </span
-                    ><span class="tsd-signature-type">undefined</span
-                    ><span class="tsd-signature-symbol">&gt;</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="parseurl" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span> parse<wbr />Url
-              </h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  parse<wbr />Url<span class="tsd-signature-symbol">(</span
-                  >prefix<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">string</span>, suffix<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">undefined</span
-                  ><span class="tsd-signature-symbol"> | </span
-                  ><span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">string</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/util.ts#L18"
-                          >src/util/util.ts:18</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        prefix: <span class="tsd-signature-type">string</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagOptional">Optional</span>
-                        suffix: <span class="tsd-signature-type">undefined</span
-                        ><span class="tsd-signature-symbol"> | </span
-                        ><span class="tsd-signature-type">string</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">string</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="request" class="tsd-anchor"></a>
-              <h3>request</h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  request<span class="tsd-signature-symbol">(</span>options<span
-                    class="tsd-signature-symbol"
-                    >: </span
-                  ><span class="tsd-signature-type">AjaxRequest</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">Observable</span
-                  ><span class="tsd-signature-symbol">&lt;</span
-                  ><span class="tsd-signature-type">AjaxResponse</span
-                  ><span class="tsd-signature-symbol">&gt;</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/request.ts#L8"
-                          >src/util/request.ts:8</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        options:
-                        <span class="tsd-signature-type">AjaxRequest</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">Observable</span
-                    ><span class="tsd-signature-symbol">&lt;</span
-                    ><span class="tsd-signature-type">AjaxResponse</span
-                    ><span class="tsd-signature-symbol">&gt;</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-            <section class="tsd-panel tsd-member tsd-kind-function">
-              <a name="urljoin" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span> url<wbr />Join
-              </h3>
-              <ul class="tsd-signatures tsd-kind-function">
-                <li class="tsd-signature tsd-kind-icon">
-                  url<wbr />Join<span class="tsd-signature-symbol">(</span
-                  >__namedParameters<span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-symbol">[</span
-                  ><span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">, </span
-                  ><span class="tsd-signature-type">Array</span
-                  ><span class="tsd-signature-symbol">]</span>, slash<span
-                    class="tsd-signature-symbol"
-                    >?: </span
-                  ><span class="tsd-signature-type">boolean</span
-                  ><span class="tsd-signature-symbol">)</span
-                  ><span class="tsd-signature-symbol">: </span
-                  ><span class="tsd-signature-type">string</span>
-                </li>
-              </ul>
-              <ul class="tsd-descriptions">
-                <li class="tsd-description">
-                  <aside class="tsd-sources">
-                    <ul>
-                      <li>
-                        Defined in
-                        <a
-                          href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/util.ts#L21"
-                          >src/util/util.ts:21</a
-                        >
-                      </li>
-                    </ul>
-                  </aside>
-                  <h4 class="tsd-parameters-title">Parameters</h4>
-                  <ul class="tsd-parameters">
-                    <li>
-                      <h5>
-                        __namedParameters:
-                        <span class="tsd-signature-symbol">[</span
-                        ><span class="tsd-signature-type">string</span
-                        ><span class="tsd-signature-symbol">, </span
-                        ><span class="tsd-signature-type">Array</span
-                        ><span class="tsd-signature-symbol">]</span>
-                      </h5>
-                    </li>
-                    <li>
-                      <h5>
-                        <span class="tsd-flag ts-flagDefault value"
-                          >Default value</span
-                        >
-                        slash: <span class="tsd-signature-type">boolean</span
-                        ><span class="tsd-signature-symbol"> = true</span>
-                      </h5>
-                    </li>
-                  </ul>
-                  <h4 class="tsd-returns-title">
-                    Returns <span class="tsd-signature-type">string</span>
-                  </h4>
-                </li>
-              </ul>
-            </section>
-          </section>
-          <section class="tsd-panel-group tsd-member-group">
-            <h2>Object literals</h2>
-            <section class="tsd-panel tsd-member tsd-kind-object-literal">
-              <a name="codemessage" class="tsd-anchor"></a>
-              <h3>
-                <span class="tsd-flag ts-flagConst">Const</span>
-                code<wbr />Message
-              </h3>
-              <div class="tsd-signature tsd-kind-icon">
-                code<wbr />Message<span class="tsd-signature-symbol">:</span>
-                <span class="tsd-signature-type">object</span>
-              </div>
-              <aside class="tsd-sources">
-                <ul>
-                  <li>
-                    Defined in
-                    <a
-                      href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L20"
-                      >src/util/catchError.ts:20</a
-                    >
-                  </li>
-                </ul>
-              </aside>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.200" class="tsd-anchor"></a>
-                <h3>200</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  200<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;服务器成功返回请求的数据。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L21"
-                        >src/util/catchError.ts:21</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.201" class="tsd-anchor"></a>
-                <h3>201</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  201<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;新建或修改数据成功。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L22"
-                        >src/util/catchError.ts:22</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.202" class="tsd-anchor"></a>
-                <h3>202</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  202<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;一个请求已经进入后台排队（异步任务）。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L23"
-                        >src/util/catchError.ts:23</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.204" class="tsd-anchor"></a>
-                <h3>204</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  204<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;删除数据成功。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L24"
-                        >src/util/catchError.ts:24</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.400" class="tsd-anchor"></a>
-                <h3>400</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  400<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;请求有错误，请重试！&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L25"
-                        >src/util/catchError.ts:25</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.401" class="tsd-anchor"></a>
-                <h3>401</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  401<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;用户没有权限（令牌、用户名、密码错误）。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L26"
-                        >src/util/catchError.ts:26</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.403" class="tsd-anchor"></a>
-                <h3>403</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  403<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;用户得到授权，但是访问是被禁止的。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L27"
-                        >src/util/catchError.ts:27</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.404" class="tsd-anchor"></a>
-                <h3>404</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  404<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    =
-                    &quot;发出的请求针对的是不存在的记录，服务器没有进行操作。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L28"
-                        >src/util/catchError.ts:28</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.406" class="tsd-anchor"></a>
-                <h3>406</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  406<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;请求的格式不可得。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L29"
-                        >src/util/catchError.ts:29</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.410" class="tsd-anchor"></a>
-                <h3>410</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  410<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;请求的资源被永久删除，且不会再得到的。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L30"
-                        >src/util/catchError.ts:30</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.422" class="tsd-anchor"></a>
-                <h3>422</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  422<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;当创建一个对象时，发生一个验证错误。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L31"
-                        >src/util/catchError.ts:31</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.500" class="tsd-anchor"></a>
-                <h3>500</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  500<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;服务器发生错误，请检查服务器。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L32"
-                        >src/util/catchError.ts:32</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.502" class="tsd-anchor"></a>
-                <h3>502</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  502<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;网关错误。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L33"
-                        >src/util/catchError.ts:33</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.503" class="tsd-anchor"></a>
-                <h3>503</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  503<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;服务不可用，服务器暂时过载或维护。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L34"
-                        >src/util/catchError.ts:34</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-              <section
-                class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal"
-              >
-                <a name="codemessage.504" class="tsd-anchor"></a>
-                <h3>504</h3>
-                <div class="tsd-signature tsd-kind-icon">
-                  504<span class="tsd-signature-symbol">:</span>
-                  <span class="tsd-signature-type">string</span
-                  ><span class="tsd-signature-symbol">
-                    = &quot;网关超时。&quot;</span
-                  >
-                </div>
-                <aside class="tsd-sources">
-                  <ul>
-                    <li>
-                      Defined in
-                      <a
-                        href="https://github.com/21epub/epub-data-client/blob/20daf03/src/util/catchError.ts#L35"
-                        >src/util/catchError.ts:35</a
-                      >
-                    </li>
-                  </ul>
-                </aside>
-              </section>
-            </section>
-          </section>
-        </div>
-        <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-          <nav class="tsd-navigation primary">
-            <ul>
-              <li class="globals current">
-                <a href="index.html"><em>Globals</em></a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="tsd-navigation secondary menu-sticky">
-            <ul class="before-current">
-              <li class="tsd-kind-class tsd-has-type-parameter">
-                <a href="classes/dataclient.html" class="tsd-kind-icon"
-                  >Data<wbr />Client</a
-                >
-              </li>
-              <li class="tsd-kind-interface tsd-has-type-parameter">
-                <a
-                  href="interfaces/ajaxfetcherresponse.html"
-                  class="tsd-kind-icon"
-                  >Ajax<wbr />Fetcher<wbr />Response</a
-                >
-              </li>
-              <li class="tsd-kind-interface tsd-has-type-parameter">
-                <a href="interfaces/data.html" class="tsd-kind-icon">Data</a>
-              </li>
-              <li class="tsd-kind-interface tsd-has-type-parameter">
-                <a href="interfaces/fetcherdata.html" class="tsd-kind-icon"
-                  >Fetcher<wbr />Data</a
-                >
-              </li>
-              <li class="tsd-kind-type-alias">
-                <a href="index.html#method" class="tsd-kind-icon">Method</a>
-              </li>
-              <li class="tsd-kind-type-alias">
-                <a href="index.html#queryopt" class="tsd-kind-icon"
-                  >Query<wbr />Opt</a
-                >
-              </li>
-              <li class="tsd-kind-type-alias">
-                <a href="index.html#requestopts" class="tsd-kind-icon"
-                  >Request<wbr />Opts</a
-                >
-              </li>
-              <li class="tsd-kind-variable">
-                <a href="index.html#xhr2" class="tsd-kind-icon">XHR2</a>
-              </li>
-              <li class="tsd-kind-variable">
-                <a href="index.html#xhr2" class="tsd-kind-icon">xhr2</a>
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#catcherror" class="tsd-kind-icon"
-                  >catch<wbr />Error</a
-                >
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#catchmsg" class="tsd-kind-icon"
-                  >catch<wbr />Msg</a
-                >
-              </li>
-              <li class="tsd-kind-function tsd-has-type-parameter">
-                <a href="index.html#createdatahook" class="tsd-kind-icon"
-                  >create<wbr />Data<wbr />Hook</a
-                >
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#generateinitdata" class="tsd-kind-icon"
-                  >generate<wbr />Init<wbr />Data</a
-                >
-              </li>
-              <li class="tsd-kind-function tsd-has-type-parameter">
-                <a
-                  href="index.html#generatepromiseresolvemock"
-                  class="tsd-kind-icon"
-                  >generate<wbr />Promise<wbr />Resolve<wbr />Mock</a
-                >
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#geterrormsg" class="tsd-kind-icon"
-                  >get<wbr />Error<wbr />Msg</a
-                >
-              </li>
-              <li class="tsd-kind-function tsd-has-type-parameter">
-                <a href="index.html#parsedata" class="tsd-kind-icon"
-                  >parse<wbr />Data</a
-                >
-              </li>
-              <li class="tsd-kind-function tsd-has-type-parameter">
-                <a href="index.html#parserawresponse" class="tsd-kind-icon"
-                  >parse<wbr />Raw<wbr />Response</a
-                >
-              </li>
-              <li class="tsd-kind-function tsd-has-type-parameter">
-                <a href="index.html#parseresponse" class="tsd-kind-icon"
-                  >parse<wbr />Response</a
-                >
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#parseurl" class="tsd-kind-icon"
-                  >parse<wbr />Url</a
-                >
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#request" class="tsd-kind-icon">request</a>
-              </li>
-              <li class="tsd-kind-function">
-                <a href="index.html#urljoin" class="tsd-kind-icon"
-                  >url<wbr />Join</a
-                >
-              </li>
-              <li class="tsd-kind-object-literal">
-                <a href="index.html#codemessage" class="tsd-kind-icon"
-                  >code<wbr />Message</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <footer class="with-border-bottom">
-      <div class="container">
-        <h2>Legend</h2>
-        <div class="tsd-legend-group">
-          <ul class="tsd-legend">
-            <li class="tsd-kind-constructor tsd-parent-kind-class">
-              <span class="tsd-kind-icon">Constructor</span>
-            </li>
-            <li class="tsd-kind-property tsd-parent-kind-class">
-              <span class="tsd-kind-icon">Property</span>
-            </li>
-            <li class="tsd-kind-method tsd-parent-kind-class">
-              <span class="tsd-kind-icon">Method</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li
-              class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"
-            >
-              <span class="tsd-kind-icon">Protected property</span>
-            </li>
-            <li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected">
-              <span class="tsd-kind-icon">Protected method</span>
-            </li>
-          </ul>
-          <ul class="tsd-legend">
-            <li class="tsd-kind-property tsd-parent-kind-interface">
-              <span class="tsd-kind-icon">Property</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <div class="container tsd-generator">
-      <p>
-        Generated using
-        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
-      </p>
-    </div>
-    <div class="overlay"></div>
-    <script src="assets/js/main.js"></script>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@21epub/epub-data-client</title>
+	<meta name="description" content="Documentation for @21epub/epub-data-client">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@21epub/epub-data-client</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="index.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@21epub/epub-data-client</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/dataclient.html" class="tsd-kind-icon">Data<wbr>Client</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/ajaxfetcherresponse.html" class="tsd-kind-icon">Ajax<wbr>Fetcher<wbr>Response</a></li>
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/data.html" class="tsd-kind-icon">Data</a></li>
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/fetcherdata.html" class="tsd-kind-icon">Fetcher<wbr>Data</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="index.html#method" class="tsd-kind-icon">Method</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#queryopt" class="tsd-kind-icon">Query<wbr>Opt</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#requestopts" class="tsd-kind-icon">Request<wbr>Opts</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="index.html#xhr2" class="tsd-kind-icon">XHR2</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#xhr2" class="tsd-kind-icon">xhr2</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="index.html#catcherror" class="tsd-kind-icon">catch<wbr>Error</a></li>
+								<li class="tsd-kind-function"><a href="index.html#catchmsg" class="tsd-kind-icon">catch<wbr>Msg</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#createdatahook" class="tsd-kind-icon">create<wbr>Data<wbr>Hook</a></li>
+								<li class="tsd-kind-function"><a href="index.html#generateinitdata" class="tsd-kind-icon">generate<wbr>Init<wbr>Data</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#generatepromiseresolvemock" class="tsd-kind-icon">generate<wbr>Promise<wbr>Resolve<wbr>Mock</a></li>
+								<li class="tsd-kind-function"><a href="index.html#geterrormsg" class="tsd-kind-icon">get<wbr>Error<wbr>Msg</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#parsedata" class="tsd-kind-icon">parse<wbr>Data</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#parserawresponse" class="tsd-kind-icon">parse<wbr>Raw<wbr>Response</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#parseresponse" class="tsd-kind-icon">parse<wbr>Response</a></li>
+								<li class="tsd-kind-function"><a href="index.html#parseurl" class="tsd-kind-icon">parse<wbr>Url</a></li>
+								<li class="tsd-kind-function"><a href="index.html#request" class="tsd-kind-icon">request</a></li>
+								<li class="tsd-kind-function"><a href="index.html#urljoin" class="tsd-kind-icon">url<wbr>Join</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal"><a href="index.html#codemessage" class="tsd-kind-icon">code<wbr>Message</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="method" class="tsd-anchor"></a>
+					<h3>Method</h3>
+					<div class="tsd-signature tsd-kind-icon">Method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DELETE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"OPTION"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PATCH"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/type.ts#L20">src/type.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="queryopt" class="tsd-anchor"></a>
+					<h3>Query<wbr>Opt</h3>
+					<div class="tsd-signature tsd-kind-icon">Query<wbr>Opt<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>query<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>size<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/type.ts#L54">src/type.ts:54</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>k: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> query<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> size<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="requestopts" class="tsd-anchor"></a>
+					<h3>Request<wbr>Opts</h3>
+					<div class="tsd-signature tsd-kind-icon">Request<wbr>Opts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>acceptMethods<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#method" class="tsd-signature-type">Method</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>addBackSlash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>catchError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">; </span>catchMsg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">; </span>contentType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"application/x-www-form-urlencoded"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"multipart/form-data"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"application/json"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text/plain"</span><span class="tsd-signature-symbol">; </span>size<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/type.ts#L22">src/type.ts:22</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> accept<wbr>Methods<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#method" class="tsd-signature-type">Method</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Methods allowed To use</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> add<wbr>Back<wbr>Slash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p> Force to Add slash at the end of parsed url (default is false)</p>
+									</div>
+									<dl class="tsd-comment-tags">
+										<dt>example</dt>
+										<dd><pre><code>  Turn `http:<span class="hljs-regexp">//u</span>rl.to<span class="hljs-regexp">/1234`  to `http:/</span><span class="hljs-regexp">/url.to/</span><span class="hljs-number">1234</span>/`</code></pre>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> catch<wbr>Error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>catchError for both http response error and data.code!=200 error</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> catch<wbr>Msg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>catchMsg return by error response msg or default system msg</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> content<wbr>Type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"application/x-www-form-urlencoded"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"multipart/form-data"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"application/json"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"text/plain"</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> size<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p> size for request per page</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="xhr2" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> XHR2</h3>
+					<div class="tsd-signature tsd-kind-icon">XHR2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = typeof XMLHttpRequest !&#x3D;&#x3D; &#x27;undefined&#x27; ? XMLHttpRequest : xhr2</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/request.ts#L6">src/util/request.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="xhr2" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> xhr2</h3>
+					<div class="tsd-signature tsd-kind-icon">xhr2<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = require(&#x27;xhr2&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/request.ts#L4">src/util/request.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="catcherror" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> catch<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">catch<wbr>Error<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L3">src/util/catchError.ts:3</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <span class="tsd-signature-type">AjaxError</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="catchmsg" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> catch<wbr>Msg</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">catch<wbr>Msg<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L7">src/util/catchError.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>msg: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="createdatahook" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> create<wbr>Data<wbr>Hook</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Data<wbr>Hook&lt;T&gt;<span class="tsd-signature-symbol">(</span>data$<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, initialData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/hooks.ts#L4">src/util/hooks.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data$: <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>initialData: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="generateinitdata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> generate<wbr>Init<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Init<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>facet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>numpages<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>results<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>sum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/util.ts#L7">src/util/util.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>facet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>numpages<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>results<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>sum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>facet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>numpages<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>results<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>sum<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="generatepromiseresolvemock" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> generate<wbr>Promise<wbr>Resolve<wbr>Mock</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Promise<wbr>Resolve<wbr>Mock&lt;T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AjaxResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/mockFn.ts#L4">src/util/mockFn.ts:4</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AjaxResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="geterrormsg" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Error<wbr>Msg</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Error<wbr>Msg<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>responseText<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L38">src/util/catchError.ts:38</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>responseText<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="parsedata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> parse<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Data&lt;T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/util.ts#L34">src/util/util.ts:34</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="parserawresponse" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> parse<wbr>Raw<wbr>Response</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Raw<wbr>Response&lt;T&gt;<span class="tsd-signature-symbol">(</span>observer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, catchErr<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, catchMsg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, loading$<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/util.ts#L73">src/util/util.ts:73</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>observer: <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> catchErr: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> catchMsg: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> loading$: <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="parseresponse" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> parse<wbr>Response</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Response&lt;T&gt;<span class="tsd-signature-symbol">(</span>observer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, catchErr<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, catchMsg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, loading$<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/util.ts#L37">src/util/util.ts:37</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>observer: <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/ajaxfetcherresponse.html" class="tsd-signature-type">AjaxFetcherResponse</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> catchErr: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> catchMsg: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> loading$: <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="parseurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> parse<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Url<span class="tsd-signature-symbol">(</span>prefix<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, suffix<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/util.ts#L18">src/util/util.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>prefix: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> suffix: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="request" class="tsd-anchor"></a>
+					<h3>request</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">request<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AjaxResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/request.ts#L8">src/util/request.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-type">AjaxRequest</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AjaxResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="urljoin" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> url<wbr>Join</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">url<wbr>Join<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">]</span>, slash<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/util.ts#L21">src/util/util.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> slash: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="codemessage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> code<wbr>Message</h3>
+					<div class="tsd-signature tsd-kind-icon">code<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L20">src/util/catchError.ts:20</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.200" class="tsd-anchor"></a>
+						<h3>200</h3>
+						<div class="tsd-signature tsd-kind-icon">200<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;服务器成功返回请求的数据。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L21">src/util/catchError.ts:21</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.201" class="tsd-anchor"></a>
+						<h3>201</h3>
+						<div class="tsd-signature tsd-kind-icon">201<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;新建或修改数据成功。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L22">src/util/catchError.ts:22</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.202" class="tsd-anchor"></a>
+						<h3>202</h3>
+						<div class="tsd-signature tsd-kind-icon">202<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;一个请求已经进入后台排队（异步任务）。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L23">src/util/catchError.ts:23</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.204" class="tsd-anchor"></a>
+						<h3>204</h3>
+						<div class="tsd-signature tsd-kind-icon">204<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;删除数据成功。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L24">src/util/catchError.ts:24</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.400" class="tsd-anchor"></a>
+						<h3>400</h3>
+						<div class="tsd-signature tsd-kind-icon">400<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;请求有错误，请重试！&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L25">src/util/catchError.ts:25</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.401" class="tsd-anchor"></a>
+						<h3>401</h3>
+						<div class="tsd-signature tsd-kind-icon">401<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;用户没有权限（令牌、用户名、密码错误）。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L26">src/util/catchError.ts:26</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.403" class="tsd-anchor"></a>
+						<h3>403</h3>
+						<div class="tsd-signature tsd-kind-icon">403<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;用户得到授权，但是访问是被禁止的。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L27">src/util/catchError.ts:27</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.404" class="tsd-anchor"></a>
+						<h3>404</h3>
+						<div class="tsd-signature tsd-kind-icon">404<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;发出的请求针对的是不存在的记录，服务器没有进行操作。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L28">src/util/catchError.ts:28</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.406" class="tsd-anchor"></a>
+						<h3>406</h3>
+						<div class="tsd-signature tsd-kind-icon">406<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;请求的格式不可得。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L29">src/util/catchError.ts:29</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.410" class="tsd-anchor"></a>
+						<h3>410</h3>
+						<div class="tsd-signature tsd-kind-icon">410<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;请求的资源被永久删除，且不会再得到的。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L30">src/util/catchError.ts:30</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.422" class="tsd-anchor"></a>
+						<h3>422</h3>
+						<div class="tsd-signature tsd-kind-icon">422<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;当创建一个对象时，发生一个验证错误。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L31">src/util/catchError.ts:31</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.500" class="tsd-anchor"></a>
+						<h3>500</h3>
+						<div class="tsd-signature tsd-kind-icon">500<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;服务器发生错误，请检查服务器。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L32">src/util/catchError.ts:32</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.502" class="tsd-anchor"></a>
+						<h3>502</h3>
+						<div class="tsd-signature tsd-kind-icon">502<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;网关错误。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L33">src/util/catchError.ts:33</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.503" class="tsd-anchor"></a>
+						<h3>503</h3>
+						<div class="tsd-signature tsd-kind-icon">503<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;服务不可用，服务器暂时过载或维护。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L34">src/util/catchError.ts:34</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="codemessage.504" class="tsd-anchor"></a>
+						<h3>504</h3>
+						<div class="tsd-signature tsd-kind-icon">504<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;网关超时。&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/b8b4c97/src/util/catchError.ts#L35">src/util/catchError.ts:35</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals current ">
+						<a href="index.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/dataclient.html" class="tsd-kind-icon">Data<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/ajaxfetcherresponse.html" class="tsd-kind-icon">Ajax<wbr>Fetcher<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/data.html" class="tsd-kind-icon">Data</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/fetcherdata.html" class="tsd-kind-icon">Fetcher<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="index.html#method" class="tsd-kind-icon">Method</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="index.html#queryopt" class="tsd-kind-icon">Query<wbr>Opt</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="index.html#requestopts" class="tsd-kind-icon">Request<wbr>Opts</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="index.html#xhr2" class="tsd-kind-icon">XHR2</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="index.html#xhr2" class="tsd-kind-icon">xhr2</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#catcherror" class="tsd-kind-icon">catch<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#catchmsg" class="tsd-kind-icon">catch<wbr>Msg</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="index.html#createdatahook" class="tsd-kind-icon">create<wbr>Data<wbr>Hook</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#generateinitdata" class="tsd-kind-icon">generate<wbr>Init<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="index.html#generatepromiseresolvemock" class="tsd-kind-icon">generate<wbr>Promise<wbr>Resolve<wbr>Mock</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#geterrormsg" class="tsd-kind-icon">get<wbr>Error<wbr>Msg</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="index.html#parsedata" class="tsd-kind-icon">parse<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="index.html#parserawresponse" class="tsd-kind-icon">parse<wbr>Raw<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="index.html#parseresponse" class="tsd-kind-icon">parse<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#parseurl" class="tsd-kind-icon">parse<wbr>Url</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#request" class="tsd-kind-icon">request</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#urljoin" class="tsd-kind-icon">url<wbr>Join</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="index.html#codemessage" class="tsd-kind-icon">code<wbr>Message</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
