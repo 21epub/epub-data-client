@@ -68,13 +68,21 @@
     {
       "id": 7,
       "kind": 32,
+      "name": "400",
+      "url": "index.html#codemessage.400",
+      "classes": "tsd-kind-variable tsd-parent-kind-object-literal",
+      "parent": "codeMessage"
+    },
+    {
+      "id": 8,
+      "kind": 32,
       "name": "401",
       "url": "index.html#codemessage.401",
       "classes": "tsd-kind-variable tsd-parent-kind-object-literal",
       "parent": "codeMessage"
     },
     {
-      "id": 8,
+      "id": 9,
       "kind": 32,
       "name": "403",
       "url": "index.html#codemessage.403",
@@ -82,7 +90,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 9,
+      "id": 10,
       "kind": 32,
       "name": "404",
       "url": "index.html#codemessage.404",
@@ -90,7 +98,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 10,
+      "id": 11,
       "kind": 32,
       "name": "406",
       "url": "index.html#codemessage.406",
@@ -98,7 +106,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 11,
+      "id": 12,
       "kind": 32,
       "name": "410",
       "url": "index.html#codemessage.410",
@@ -106,7 +114,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 12,
+      "id": 13,
       "kind": 32,
       "name": "422",
       "url": "index.html#codemessage.422",
@@ -114,7 +122,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 13,
+      "id": 14,
       "kind": 32,
       "name": "500",
       "url": "index.html#codemessage.500",
@@ -122,7 +130,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 14,
+      "id": 15,
       "kind": 32,
       "name": "502",
       "url": "index.html#codemessage.502",
@@ -130,7 +138,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 15,
+      "id": 16,
       "kind": 32,
       "name": "503",
       "url": "index.html#codemessage.503",
@@ -138,7 +146,7 @@
       "parent": "codeMessage"
     },
     {
-      "id": 16,
+      "id": 17,
       "kind": 32,
       "name": "504",
       "url": "index.html#codemessage.504",
@@ -146,73 +154,42 @@
       "parent": "codeMessage"
     },
     {
-      "id": 17,
+      "id": 18,
       "kind": 64,
       "name": "getErrorMsg",
       "url": "index.html#geterrormsg",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 18,
+      "id": 19,
       "kind": 32,
       "name": "xhr2",
       "url": "index.html#xhr2",
       "classes": "tsd-kind-variable"
     },
     {
-      "id": 19,
+      "id": 20,
       "kind": 32,
       "name": "XHR2",
       "url": "index.html#xhr2",
       "classes": "tsd-kind-variable"
     },
     {
-      "id": 20,
+      "id": 21,
       "kind": 64,
       "name": "request",
       "url": "index.html#request",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 21,
-      "kind": 256,
-      "name": "FetcherData",
-      "url": "interfaces/fetcherdata.html",
-      "classes": "tsd-kind-interface tsd-has-type-parameter"
-    },
-    {
       "id": 22,
-      "kind": 1024,
-      "name": "msg",
-      "url": "interfaces/fetcherdata.html#msg",
-      "classes": "tsd-kind-property tsd-parent-kind-interface",
-      "parent": "FetcherData"
-    },
-    {
-      "id": 23,
-      "kind": 1024,
-      "name": "code",
-      "url": "interfaces/fetcherdata.html#code",
-      "classes": "tsd-kind-property tsd-parent-kind-interface",
-      "parent": "FetcherData"
-    },
-    {
-      "id": 24,
-      "kind": 1024,
-      "name": "data",
-      "url": "interfaces/fetcherdata.html#data",
-      "classes": "tsd-kind-property tsd-parent-kind-interface",
-      "parent": "FetcherData"
-    },
-    {
-      "id": 25,
       "kind": 256,
       "name": "Data",
       "url": "interfaces/data.html",
       "classes": "tsd-kind-interface tsd-has-type-parameter"
     },
     {
-      "id": 26,
+      "id": 23,
       "kind": 1024,
       "name": "numpages",
       "url": "interfaces/data.html#numpages",
@@ -220,7 +197,7 @@
       "parent": "Data"
     },
     {
-      "id": 27,
+      "id": 24,
       "kind": 1024,
       "name": "sum",
       "url": "interfaces/data.html#sum",
@@ -228,7 +205,7 @@
       "parent": "Data"
     },
     {
-      "id": 28,
+      "id": 25,
       "kind": 1024,
       "name": "page",
       "url": "interfaces/data.html#page",
@@ -236,7 +213,7 @@
       "parent": "Data"
     },
     {
-      "id": 29,
+      "id": 26,
       "kind": 1024,
       "name": "size",
       "url": "interfaces/data.html#size",
@@ -244,7 +221,7 @@
       "parent": "Data"
     },
     {
-      "id": 30,
+      "id": 27,
       "kind": 1024,
       "name": "facet",
       "url": "interfaces/data.html#facet",
@@ -252,7 +229,7 @@
       "parent": "Data"
     },
     {
-      "id": 31,
+      "id": 28,
       "kind": 1024,
       "name": "results",
       "url": "interfaces/data.html#results",
@@ -260,14 +237,45 @@
       "parent": "Data"
     },
     {
+      "id": 29,
+      "kind": 256,
+      "name": "FetcherData",
+      "url": "interfaces/fetcherdata.html",
+      "classes": "tsd-kind-interface tsd-has-type-parameter"
+    },
+    {
+      "id": 30,
+      "kind": 1024,
+      "name": "msg",
+      "url": "interfaces/fetcherdata.html#msg",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "FetcherData"
+    },
+    {
+      "id": 31,
+      "kind": 1024,
+      "name": "code",
+      "url": "interfaces/fetcherdata.html#code",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "FetcherData"
+    },
+    {
       "id": 32,
+      "kind": 1024,
+      "name": "data",
+      "url": "interfaces/fetcherdata.html#data",
+      "classes": "tsd-kind-property tsd-parent-kind-interface",
+      "parent": "FetcherData"
+    },
+    {
+      "id": 33,
       "kind": 256,
       "name": "AjaxFetcherResponse",
       "url": "interfaces/ajaxfetcherresponse.html",
       "classes": "tsd-kind-interface tsd-has-type-parameter"
     },
     {
-      "id": 33,
+      "id": 34,
       "kind": 1024,
       "name": "response",
       "url": "interfaces/ajaxfetcherresponse.html#response",
@@ -275,7 +283,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 34,
+      "id": 35,
       "kind": 1024,
       "name": "originalEvent",
       "url": "interfaces/ajaxfetcherresponse.html#originalevent",
@@ -283,7 +291,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 35,
+      "id": 36,
       "kind": 1024,
       "name": "xhr",
       "url": "interfaces/ajaxfetcherresponse.html#xhr",
@@ -291,7 +299,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 36,
+      "id": 37,
       "kind": 1024,
       "name": "request",
       "url": "interfaces/ajaxfetcherresponse.html#request",
@@ -299,7 +307,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 37,
+      "id": 38,
       "kind": 1024,
       "name": "status",
       "url": "interfaces/ajaxfetcherresponse.html#status",
@@ -307,7 +315,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 38,
+      "id": 39,
       "kind": 1024,
       "name": "responseText",
       "url": "interfaces/ajaxfetcherresponse.html#responsetext",
@@ -315,7 +323,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 39,
+      "id": 40,
       "kind": 1024,
       "name": "responseType",
       "url": "interfaces/ajaxfetcherresponse.html#responsetype",
@@ -323,7 +331,7 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 40,
+      "id": 41,
       "kind": 512,
       "name": "constructor",
       "url": "interfaces/ajaxfetcherresponse.html#constructor",
@@ -331,21 +339,21 @@
       "parent": "AjaxFetcherResponse"
     },
     {
-      "id": 41,
+      "id": 42,
       "kind": 4194304,
       "name": "Method",
       "url": "index.html#method",
       "classes": "tsd-kind-type-alias"
     },
     {
-      "id": 42,
+      "id": 43,
       "kind": 4194304,
       "name": "RequestOpts",
       "url": "index.html#requestopts",
       "classes": "tsd-kind-type-alias"
     },
     {
-      "id": 43,
+      "id": 44,
       "kind": 65536,
       "name": "__type",
       "url": "index.html#requestopts.__type",
@@ -353,7 +361,7 @@
       "parent": "RequestOpts"
     },
     {
-      "id": 44,
+      "id": 45,
       "kind": 32,
       "name": "acceptMethods",
       "url": "index.html#requestopts.__type.acceptmethods",
@@ -361,7 +369,7 @@
       "parent": "RequestOpts.__type"
     },
     {
-      "id": 45,
+      "id": 46,
       "kind": 32,
       "name": "contentType",
       "url": "index.html#requestopts.__type.contenttype",
@@ -369,7 +377,7 @@
       "parent": "RequestOpts.__type"
     },
     {
-      "id": 46,
+      "id": 47,
       "kind": 32,
       "name": "catchError",
       "url": "index.html#requestopts.__type.catcherror",
@@ -377,7 +385,7 @@
       "parent": "RequestOpts.__type"
     },
     {
-      "id": 47,
+      "id": 48,
       "kind": 32,
       "name": "catchMsg",
       "url": "index.html#requestopts.__type.catchmsg",
@@ -385,7 +393,7 @@
       "parent": "RequestOpts.__type"
     },
     {
-      "id": 48,
+      "id": 49,
       "kind": 32,
       "name": "size",
       "url": "index.html#requestopts.__type.size",
@@ -393,7 +401,7 @@
       "parent": "RequestOpts.__type"
     },
     {
-      "id": 49,
+      "id": 50,
       "kind": 32,
       "name": "addBackSlash",
       "url": "index.html#requestopts.__type.addbackslash",
@@ -401,14 +409,14 @@
       "parent": "RequestOpts.__type"
     },
     {
-      "id": 50,
+      "id": 51,
       "kind": 4194304,
       "name": "QueryOpt",
       "url": "index.html#queryopt",
       "classes": "tsd-kind-type-alias"
     },
     {
-      "id": 51,
+      "id": 52,
       "kind": 65536,
       "name": "__type",
       "url": "index.html#queryopt.__type",
@@ -416,7 +424,7 @@
       "parent": "QueryOpt"
     },
     {
-      "id": 52,
+      "id": 53,
       "kind": 32,
       "name": "size",
       "url": "index.html#queryopt.__type.size",
@@ -424,7 +432,7 @@
       "parent": "QueryOpt.__type"
     },
     {
-      "id": 53,
+      "id": 54,
       "kind": 32,
       "name": "page",
       "url": "index.html#queryopt.__type.page",
@@ -432,7 +440,7 @@
       "parent": "QueryOpt.__type"
     },
     {
-      "id": 54,
+      "id": 55,
       "kind": 32,
       "name": "query",
       "url": "index.html#queryopt.__type.query",
@@ -440,63 +448,63 @@
       "parent": "QueryOpt.__type"
     },
     {
-      "id": 55,
+      "id": 56,
       "kind": 64,
       "name": "generateInitData",
       "url": "index.html#generateinitdata",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 56,
+      "id": 57,
       "kind": 64,
       "name": "parseUrl",
       "url": "index.html#parseurl",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 57,
+      "id": 58,
       "kind": 64,
       "name": "urlJoin",
       "url": "index.html#urljoin",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 58,
+      "id": 59,
       "kind": 64,
       "name": "parseData",
       "url": "index.html#parsedata",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 59,
+      "id": 60,
       "kind": 64,
       "name": "parseResponse",
       "url": "index.html#parseresponse",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 60,
+      "id": 61,
       "kind": 64,
       "name": "parseRawResponse",
       "url": "index.html#parserawresponse",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 61,
+      "id": 62,
       "kind": 64,
       "name": "createDataHook",
       "url": "index.html#createdatahook",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 62,
+      "id": 63,
       "kind": 128,
       "name": "DataClient",
       "url": "classes/dataclient.html",
       "classes": "tsd-kind-class tsd-has-type-parameter"
     },
     {
-      "id": 63,
+      "id": 64,
       "kind": 1024,
       "name": "_url",
       "url": "classes/dataclient.html#_url",
@@ -504,15 +512,15 @@
       "parent": "DataClient"
     },
     {
-      "id": 64,
+      "id": 65,
       "kind": 1024,
-      "name": "_origin_url",
-      "url": "classes/dataclient.html#_origin_url",
+      "name": "_originUrl",
+      "url": "classes/dataclient.html#_originurl",
       "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-protected",
       "parent": "DataClient"
     },
     {
-      "id": 65,
+      "id": 66,
       "kind": 2097152,
       "name": "_options",
       "url": "classes/dataclient.html#_options",
@@ -520,7 +528,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 66,
+      "id": 67,
       "kind": 32,
       "name": "acceptMethods",
       "url": "classes/dataclient.html#_options.acceptmethods",
@@ -528,7 +536,7 @@
       "parent": "DataClient._options"
     },
     {
-      "id": 67,
+      "id": 68,
       "kind": 32,
       "name": "contentType",
       "url": "classes/dataclient.html#_options.contenttype",
@@ -536,7 +544,7 @@
       "parent": "DataClient._options"
     },
     {
-      "id": 68,
+      "id": 69,
       "kind": 32,
       "name": "addBackSlash",
       "url": "classes/dataclient.html#_options.addbackslash",
@@ -544,7 +552,7 @@
       "parent": "DataClient._options"
     },
     {
-      "id": 69,
+      "id": 70,
       "kind": 1024,
       "name": "catchError",
       "url": "classes/dataclient.html#catcherror",
@@ -552,7 +560,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 70,
+      "id": 71,
       "kind": 1024,
       "name": "catchMsg",
       "url": "classes/dataclient.html#catchmsg",
@@ -560,7 +568,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 71,
+      "id": 72,
       "kind": 1024,
       "name": "_size",
       "url": "classes/dataclient.html#_size",
@@ -568,7 +576,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 72,
+      "id": 73,
       "kind": 1024,
       "name": "_page",
       "url": "classes/dataclient.html#_page",
@@ -576,7 +584,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 73,
+      "id": 74,
       "kind": 1024,
       "name": "_numpages",
       "url": "classes/dataclient.html#_numpages",
@@ -584,7 +592,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 74,
+      "id": 75,
       "kind": 1024,
       "name": "_sum",
       "url": "classes/dataclient.html#_sum",
@@ -592,7 +600,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 75,
+      "id": 76,
       "kind": 1024,
       "name": "_query",
       "url": "classes/dataclient.html#_query",
@@ -600,7 +608,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 76,
+      "id": 77,
       "kind": 1024,
       "name": "_id",
       "url": "classes/dataclient.html#_id",
@@ -608,7 +616,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 77,
+      "id": 78,
       "kind": 1024,
       "name": "_path",
       "url": "classes/dataclient.html#_path",
@@ -616,7 +624,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 78,
+      "id": 79,
       "kind": 1024,
       "name": "_current",
       "url": "classes/dataclient.html#_current",
@@ -624,7 +632,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 79,
+      "id": 80,
       "kind": 1024,
       "name": "data",
       "url": "classes/dataclient.html#data",
@@ -632,7 +640,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 80,
+      "id": 81,
       "kind": 1024,
       "name": "rawData",
       "url": "classes/dataclient.html#rawdata",
@@ -640,7 +648,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 81,
+      "id": 82,
       "kind": 1024,
       "name": "currentData",
       "url": "classes/dataclient.html#currentdata",
@@ -648,7 +656,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 82,
+      "id": 83,
       "kind": 1024,
       "name": "dataLoading$",
       "url": "classes/dataclient.html#dataloading_",
@@ -656,7 +664,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 83,
+      "id": 84,
       "kind": 1024,
       "name": "currentLoading$",
       "url": "classes/dataclient.html#currentloading_",
@@ -664,7 +672,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 84,
+      "id": 85,
       "kind": 1024,
       "name": "rawData$",
       "url": "classes/dataclient.html#rawdata_",
@@ -672,7 +680,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 85,
+      "id": 86,
       "kind": 1024,
       "name": "data$",
       "url": "classes/dataclient.html#data_",
@@ -680,7 +688,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 86,
+      "id": 87,
       "kind": 1024,
       "name": "currentData$",
       "url": "classes/dataclient.html#currentdata_",
@@ -688,7 +696,15 @@
       "parent": "DataClient"
     },
     {
-      "id": 87,
+      "id": 88,
+      "kind": 1024,
+      "name": "query$",
+      "url": "classes/dataclient.html#query_",
+      "classes": "tsd-kind-property tsd-parent-kind-class tsd-is-protected",
+      "parent": "DataClient"
+    },
+    {
+      "id": 89,
       "kind": 1024,
       "name": "useRawData",
       "url": "classes/dataclient.html#userawdata",
@@ -696,15 +712,15 @@
       "parent": "DataClient"
     },
     {
-      "id": 88,
+      "id": 90,
       "kind": 65536,
       "name": "__type",
-      "url": "classes/dataclient.html#userawdata.__type-4",
+      "url": "classes/dataclient.html#userawdata.__type-5",
       "classes": "tsd-kind-type-literal tsd-parent-kind-property",
       "parent": "DataClient.useRawData"
     },
     {
-      "id": 89,
+      "id": 91,
       "kind": 1024,
       "name": "useData",
       "url": "classes/dataclient.html#usedata",
@@ -712,7 +728,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 90,
+      "id": 92,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usedata.__type-2",
@@ -720,7 +736,7 @@
       "parent": "DataClient.useData"
     },
     {
-      "id": 91,
+      "id": 93,
       "kind": 1024,
       "name": "useDataLoading",
       "url": "classes/dataclient.html#usedataloading",
@@ -728,7 +744,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 92,
+      "id": 94,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usedataloading.__type-3",
@@ -736,7 +752,7 @@
       "parent": "DataClient.useDataLoading"
     },
     {
-      "id": 93,
+      "id": 95,
       "kind": 1024,
       "name": "useCurrentLoading",
       "url": "classes/dataclient.html#usecurrentloading",
@@ -744,7 +760,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 94,
+      "id": 96,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usecurrentloading.__type-1",
@@ -752,7 +768,7 @@
       "parent": "DataClient.useCurrentLoading"
     },
     {
-      "id": 95,
+      "id": 97,
       "kind": 1024,
       "name": "useCurrentData",
       "url": "classes/dataclient.html#usecurrentdata",
@@ -760,7 +776,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 96,
+      "id": 98,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usecurrentdata.__type",
@@ -768,7 +784,23 @@
       "parent": "DataClient.useCurrentData"
     },
     {
-      "id": 97,
+      "id": 99,
+      "kind": 1024,
+      "name": "useQuery",
+      "url": "classes/dataclient.html#usequery",
+      "classes": "tsd-kind-property tsd-parent-kind-class",
+      "parent": "DataClient"
+    },
+    {
+      "id": 100,
+      "kind": 65536,
+      "name": "__type",
+      "url": "classes/dataclient.html#usequery.__type-4",
+      "classes": "tsd-kind-type-literal tsd-parent-kind-property",
+      "parent": "DataClient.useQuery"
+    },
+    {
+      "id": 101,
       "kind": 512,
       "name": "constructor",
       "url": "classes/dataclient.html#constructor",
@@ -776,7 +808,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 98,
+      "id": 102,
       "kind": 2048,
       "name": "rawAjax",
       "url": "classes/dataclient.html#rawajax",
@@ -784,7 +816,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 99,
+      "id": 103,
       "kind": 2048,
       "name": "rawRequest",
       "url": "classes/dataclient.html#rawrequest",
@@ -792,7 +824,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 100,
+      "id": 104,
       "kind": 2048,
       "name": "getAll",
       "url": "classes/dataclient.html#getall",
@@ -800,7 +832,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 101,
+      "id": 105,
       "kind": 2048,
       "name": "get",
       "url": "classes/dataclient.html#get",
@@ -808,7 +840,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 102,
+      "id": 106,
       "kind": 2048,
       "name": "post",
       "url": "classes/dataclient.html#post",
@@ -816,7 +848,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 103,
+      "id": 107,
       "kind": 2048,
       "name": "put",
       "url": "classes/dataclient.html#put",
@@ -824,7 +856,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 104,
+      "id": 108,
       "kind": 2048,
       "name": "patch",
       "url": "classes/dataclient.html#patch",
@@ -832,7 +864,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 105,
+      "id": 109,
       "kind": 2048,
       "name": "delete",
       "url": "classes/dataclient.html#delete",
@@ -840,7 +872,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 106,
+      "id": 110,
       "kind": 2048,
       "name": "option",
       "url": "classes/dataclient.html#option",
@@ -848,7 +880,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 107,
+      "id": 111,
       "kind": 2048,
       "name": "current",
       "url": "classes/dataclient.html#current",
@@ -856,7 +888,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 108,
+      "id": 112,
       "kind": 2048,
       "name": "fetchCurrent",
       "url": "classes/dataclient.html#fetchcurrent",
@@ -864,7 +896,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 109,
+      "id": 113,
       "kind": 2048,
       "name": "fetchCurrentLocal",
       "url": "classes/dataclient.html#fetchcurrentlocal",
@@ -872,7 +904,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 110,
+      "id": 114,
       "kind": 2048,
       "name": "options",
       "url": "classes/dataclient.html#options",
@@ -880,7 +912,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 111,
+      "id": 115,
       "kind": 2048,
       "name": "query",
       "url": "classes/dataclient.html#query",
@@ -888,7 +920,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 112,
+      "id": 116,
       "kind": 2048,
       "name": "page",
       "url": "classes/dataclient.html#page",
@@ -896,7 +928,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 113,
+      "id": 117,
       "kind": 2048,
       "name": "size",
       "url": "classes/dataclient.html#size",
@@ -904,7 +936,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 114,
+      "id": 118,
       "kind": 2048,
       "name": "url",
       "url": "classes/dataclient.html#url",
@@ -912,7 +944,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 115,
+      "id": 119,
       "kind": 2048,
       "name": "urlReset",
       "url": "classes/dataclient.html#urlreset",
@@ -920,7 +952,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 116,
+      "id": 120,
       "kind": 2048,
       "name": "id",
       "url": "classes/dataclient.html#id",
@@ -928,7 +960,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 117,
+      "id": 121,
       "kind": 2048,
       "name": "path",
       "url": "classes/dataclient.html#path",
@@ -936,7 +968,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 118,
+      "id": 122,
       "kind": 2048,
       "name": "getRawData",
       "url": "classes/dataclient.html#getrawdata",
@@ -944,7 +976,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 119,
+      "id": 123,
       "kind": 2048,
       "name": "getData",
       "url": "classes/dataclient.html#getdata",
@@ -952,7 +984,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 120,
+      "id": 124,
       "kind": 2048,
       "name": "getCurrent",
       "url": "classes/dataclient.html#getcurrent",
@@ -960,7 +992,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 121,
+      "id": 125,
       "kind": 2048,
       "name": "getCurrentData",
       "url": "classes/dataclient.html#getcurrentdata",
@@ -968,7 +1000,23 @@
       "parent": "DataClient"
     },
     {
-      "id": 122,
+      "id": 126,
+      "kind": 2048,
+      "name": "getQuery",
+      "url": "classes/dataclient.html#getquery",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "DataClient"
+    },
+    {
+      "id": 127,
+      "kind": 2048,
+      "name": "updateLocal",
+      "url": "classes/dataclient.html#updatelocal",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
+      "parent": "DataClient"
+    },
+    {
+      "id": 128,
       "kind": 2048,
       "name": "appendLocal",
       "url": "classes/dataclient.html#appendlocal",
@@ -976,7 +1024,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 123,
+      "id": 129,
       "kind": 2048,
       "name": "prependLocal",
       "url": "classes/dataclient.html#prependlocal",
@@ -984,7 +1032,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 124,
+      "id": 130,
       "kind": 2048,
       "name": "patchLocal",
       "url": "classes/dataclient.html#patchlocal",
@@ -992,7 +1040,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 125,
+      "id": 131,
       "kind": 1024,
       "name": "putLocal",
       "url": "classes/dataclient.html#putlocal",
@@ -1000,7 +1048,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 126,
+      "id": 132,
       "kind": 2048,
       "name": "deleteLocal",
       "url": "classes/dataclient.html#deletelocal",
@@ -1008,7 +1056,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 127,
+      "id": 133,
       "kind": 2048,
       "name": "emit$",
       "url": "classes/dataclient.html#emit_",
@@ -1016,7 +1064,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 128,
+      "id": 134,
       "kind": 2048,
       "name": "clearIdPath",
       "url": "classes/dataclient.html#clearidpath",
@@ -1024,22 +1072,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 129,
-      "kind": 128,
-      "name": "ObjectClient",
-      "url": "classes/objectclient.html",
-      "classes": "tsd-kind-class"
-    },
-    {
-      "id": 130,
-      "kind": 512,
-      "name": "constructor",
-      "url": "classes/objectclient.html#constructor",
-      "classes": "tsd-kind-constructor tsd-parent-kind-class",
-      "parent": "ObjectClient"
-    },
-    {
-      "id": 131,
+      "id": 135,
       "kind": 64,
       "name": "generatePromiseResolveMock",
       "url": "index.html#generatepromiseresolvemock",
@@ -1050,349 +1083,359 @@
     "version": "2.3.9",
     "fields": ["name", "parent"],
     "fieldVectors": [
-      ["name/0", [0, 36.376]],
+      ["name/0", [0, 36.672]],
       ["parent/0", []],
-      ["name/1", [1, 36.376]],
+      ["name/1", [1, 36.672]],
       ["parent/1", []],
-      ["name/2", [2, 21.495]],
+      ["name/2", [2, 21.166]],
       ["parent/2", []],
-      ["name/3", [3, 44.849]],
-      ["parent/3", [2, 1.979]],
-      ["name/4", [4, 44.849]],
-      ["parent/4", [2, 1.979]],
-      ["name/5", [5, 44.849]],
-      ["parent/5", [2, 1.979]],
-      ["name/6", [6, 44.849]],
-      ["parent/6", [2, 1.979]],
-      ["name/7", [7, 44.849]],
-      ["parent/7", [2, 1.979]],
-      ["name/8", [8, 44.849]],
-      ["parent/8", [2, 1.979]],
-      ["name/9", [9, 44.849]],
-      ["parent/9", [2, 1.979]],
-      ["name/10", [10, 44.849]],
-      ["parent/10", [2, 1.979]],
-      ["name/11", [11, 44.849]],
-      ["parent/11", [2, 1.979]],
-      ["name/12", [12, 44.849]],
-      ["parent/12", [2, 1.979]],
-      ["name/13", [13, 44.849]],
-      ["parent/13", [2, 1.979]],
-      ["name/14", [14, 44.849]],
-      ["parent/14", [2, 1.979]],
-      ["name/15", [15, 44.849]],
-      ["parent/15", [2, 1.979]],
-      ["name/16", [16, 44.849]],
-      ["parent/16", [2, 1.979]],
-      ["name/17", [17, 44.849]],
-      ["parent/17", []],
-      ["name/18", [18, 39.741]],
+      ["name/3", [3, 45.145]],
+      ["parent/3", [2, 1.962]],
+      ["name/4", [4, 45.145]],
+      ["parent/4", [2, 1.962]],
+      ["name/5", [5, 45.145]],
+      ["parent/5", [2, 1.962]],
+      ["name/6", [6, 45.145]],
+      ["parent/6", [2, 1.962]],
+      ["name/7", [7, 45.145]],
+      ["parent/7", [2, 1.962]],
+      ["name/8", [8, 45.145]],
+      ["parent/8", [2, 1.962]],
+      ["name/9", [9, 45.145]],
+      ["parent/9", [2, 1.962]],
+      ["name/10", [10, 45.145]],
+      ["parent/10", [2, 1.962]],
+      ["name/11", [11, 45.145]],
+      ["parent/11", [2, 1.962]],
+      ["name/12", [12, 45.145]],
+      ["parent/12", [2, 1.962]],
+      ["name/13", [13, 45.145]],
+      ["parent/13", [2, 1.962]],
+      ["name/14", [14, 45.145]],
+      ["parent/14", [2, 1.962]],
+      ["name/15", [15, 45.145]],
+      ["parent/15", [2, 1.962]],
+      ["name/16", [16, 45.145]],
+      ["parent/16", [2, 1.962]],
+      ["name/17", [17, 45.145]],
+      ["parent/17", [2, 1.962]],
+      ["name/18", [18, 45.145]],
       ["parent/18", []],
-      ["name/19", [18, 39.741]],
+      ["name/19", [19, 40.037]],
       ["parent/19", []],
-      ["name/20", [19, 39.741]],
+      ["name/20", [19, 40.037]],
       ["parent/20", []],
-      ["name/21", [20, 33.863]],
+      ["name/21", [20, 40.037]],
       ["parent/21", []],
-      ["name/22", [21, 44.849]],
-      ["parent/22", [20, 3.117]],
-      ["name/23", [22, 44.849]],
-      ["parent/23", [20, 3.117]],
-      ["name/24", [23, 25.39]],
-      ["parent/24", [20, 3.117]],
-      ["name/25", [23, 25.39]],
-      ["parent/25", []],
-      ["name/26", [24, 44.849]],
-      ["parent/26", [23, 2.337]],
-      ["name/27", [25, 44.849]],
-      ["parent/27", [23, 2.337]],
-      ["name/28", [26, 36.376]],
-      ["parent/28", [23, 2.337]],
-      ["name/29", [27, 33.863]],
-      ["parent/29", [23, 2.337]],
-      ["name/30", [28, 44.849]],
-      ["parent/30", [23, 2.337]],
-      ["name/31", [29, 44.849]],
-      ["parent/31", [23, 2.337]],
-      ["name/32", [30, 26.391]],
-      ["parent/32", []],
-      ["name/33", [31, 44.849]],
-      ["parent/33", [30, 2.429]],
-      ["name/34", [32, 44.849]],
-      ["parent/34", [30, 2.429]],
-      ["name/35", [33, 44.849]],
-      ["parent/35", [30, 2.429]],
-      ["name/36", [19, 39.741]],
-      ["parent/36", [30, 2.429]],
-      ["name/37", [34, 44.849]],
-      ["parent/37", [30, 2.429]],
-      ["name/38", [35, 44.849]],
-      ["parent/38", [30, 2.429]],
-      ["name/39", [36, 44.849]],
-      ["parent/39", [30, 2.429]],
-      ["name/40", [37, 36.376]],
-      ["parent/40", [30, 2.429]],
-      ["name/41", [38, 44.849]],
-      ["parent/41", []],
-      ["name/42", [39, 39.741]],
+      ["name/22", [21, 25.686]],
+      ["parent/22", []],
+      ["name/23", [22, 45.145]],
+      ["parent/23", [21, 2.381]],
+      ["name/24", [23, 45.145]],
+      ["parent/24", [21, 2.381]],
+      ["name/25", [24, 36.672]],
+      ["parent/25", [21, 2.381]],
+      ["name/26", [25, 34.159]],
+      ["parent/26", [21, 2.381]],
+      ["name/27", [26, 45.145]],
+      ["parent/27", [21, 2.381]],
+      ["name/28", [27, 45.145]],
+      ["parent/28", [21, 2.381]],
+      ["name/29", [28, 34.159]],
+      ["parent/29", []],
+      ["name/30", [29, 45.145]],
+      ["parent/30", [28, 3.166]],
+      ["name/31", [30, 45.145]],
+      ["parent/31", [28, 3.166]],
+      ["name/32", [21, 25.686]],
+      ["parent/32", [28, 3.166]],
+      ["name/33", [31, 26.687]],
+      ["parent/33", []],
+      ["name/34", [32, 45.145]],
+      ["parent/34", [31, 2.473]],
+      ["name/35", [33, 45.145]],
+      ["parent/35", [31, 2.473]],
+      ["name/36", [34, 45.145]],
+      ["parent/36", [31, 2.473]],
+      ["name/37", [20, 40.037]],
+      ["parent/37", [31, 2.473]],
+      ["name/38", [35, 45.145]],
+      ["parent/38", [31, 2.473]],
+      ["name/39", [36, 45.145]],
+      ["parent/39", [31, 2.473]],
+      ["name/40", [37, 45.145]],
+      ["parent/40", [31, 2.473]],
+      ["name/41", [38, 40.037]],
+      ["parent/41", [31, 2.473]],
+      ["name/42", [39, 45.145]],
       ["parent/42", []],
-      ["name/43", [40, 28.754]],
-      ["parent/43", [39, 3.658]],
-      ["name/44", [41, 39.741]],
-      ["parent/44", [42, 2.779]],
-      ["name/45", [43, 39.741]],
-      ["parent/45", [42, 2.779]],
-      ["name/46", [0, 36.376]],
-      ["parent/46", [42, 2.779]],
-      ["name/47", [1, 36.376]],
-      ["parent/47", [42, 2.779]],
-      ["name/48", [27, 33.863]],
-      ["parent/48", [42, 2.779]],
-      ["name/49", [44, 39.741]],
-      ["parent/49", [42, 2.779]],
-      ["name/50", [45, 39.741]],
-      ["parent/50", []],
-      ["name/51", [40, 28.754]],
-      ["parent/51", [45, 3.658]],
-      ["name/52", [27, 33.863]],
-      ["parent/52", [46, 3.349]],
-      ["name/53", [26, 36.376]],
-      ["parent/53", [46, 3.349]],
-      ["name/54", [47, 39.741]],
-      ["parent/54", [46, 3.349]],
-      ["name/55", [48, 44.849]],
-      ["parent/55", []],
-      ["name/56", [49, 44.849]],
+      ["name/43", [40, 40.037]],
+      ["parent/43", []],
+      ["name/44", [41, 27.799]],
+      ["parent/44", [40, 3.711]],
+      ["name/45", [42, 40.037]],
+      ["parent/45", [43, 2.825]],
+      ["name/46", [44, 40.037]],
+      ["parent/46", [43, 2.825]],
+      ["name/47", [0, 36.672]],
+      ["parent/47", [43, 2.825]],
+      ["name/48", [1, 36.672]],
+      ["parent/48", [43, 2.825]],
+      ["name/49", [25, 34.159]],
+      ["parent/49", [43, 2.825]],
+      ["name/50", [45, 40.037]],
+      ["parent/50", [43, 2.825]],
+      ["name/51", [46, 40.037]],
+      ["parent/51", []],
+      ["name/52", [41, 27.799]],
+      ["parent/52", [46, 3.711]],
+      ["name/53", [25, 34.159]],
+      ["parent/53", [47, 3.399]],
+      ["name/54", [24, 36.672]],
+      ["parent/54", [47, 3.399]],
+      ["name/55", [48, 36.672]],
+      ["parent/55", [47, 3.399]],
+      ["name/56", [49, 45.145]],
       ["parent/56", []],
-      ["name/57", [50, 44.849]],
+      ["name/57", [50, 45.145]],
       ["parent/57", []],
-      ["name/58", [51, 44.849]],
+      ["name/58", [51, 45.145]],
       ["parent/58", []],
-      ["name/59", [52, 44.849]],
+      ["name/59", [52, 45.145]],
       ["parent/59", []],
-      ["name/60", [53, 44.849]],
+      ["name/60", [53, 45.145]],
       ["parent/60", []],
-      ["name/61", [54, 44.849]],
+      ["name/61", [54, 45.145]],
       ["parent/61", []],
-      ["name/62", [55, 8.044]],
+      ["name/62", [55, 45.145]],
       ["parent/62", []],
-      ["name/63", [56, 44.849]],
-      ["parent/63", [55, 0.74]],
-      ["name/64", [57, 44.849]],
-      ["parent/64", [55, 0.74]],
-      ["name/65", [58, 44.849]],
-      ["parent/65", [55, 0.74]],
-      ["name/66", [41, 39.741]],
-      ["parent/66", [59, 3.349]],
-      ["name/67", [43, 39.741]],
-      ["parent/67", [59, 3.349]],
-      ["name/68", [44, 39.741]],
-      ["parent/68", [59, 3.349]],
-      ["name/69", [0, 36.376]],
-      ["parent/69", [55, 0.74]],
-      ["name/70", [1, 36.376]],
-      ["parent/70", [55, 0.74]],
-      ["name/71", [60, 44.849]],
-      ["parent/71", [55, 0.74]],
-      ["name/72", [61, 44.849]],
-      ["parent/72", [55, 0.74]],
-      ["name/73", [62, 44.849]],
-      ["parent/73", [55, 0.74]],
-      ["name/74", [63, 44.849]],
-      ["parent/74", [55, 0.74]],
-      ["name/75", [64, 44.849]],
-      ["parent/75", [55, 0.74]],
-      ["name/76", [65, 44.849]],
-      ["parent/76", [55, 0.74]],
-      ["name/77", [66, 44.849]],
-      ["parent/77", [55, 0.74]],
-      ["name/78", [67, 44.849]],
-      ["parent/78", [55, 0.74]],
-      ["name/79", [23, 25.39]],
-      ["parent/79", [55, 0.74]],
-      ["name/80", [68, 39.741]],
-      ["parent/80", [55, 0.74]],
-      ["name/81", [69, 39.741]],
-      ["parent/81", [55, 0.74]],
-      ["name/82", [70, 44.849]],
-      ["parent/82", [55, 0.74]],
-      ["name/83", [71, 44.849]],
-      ["parent/83", [55, 0.74]],
-      ["name/84", [68, 39.741]],
-      ["parent/84", [55, 0.74]],
-      ["name/85", [23, 25.39]],
-      ["parent/85", [55, 0.74]],
-      ["name/86", [69, 39.741]],
-      ["parent/86", [55, 0.74]],
-      ["name/87", [72, 44.849]],
-      ["parent/87", [55, 0.74]],
-      ["name/88", [40, 28.754]],
-      ["parent/88", [73, 4.129]],
-      ["name/89", [74, 44.849]],
-      ["parent/89", [55, 0.74]],
-      ["name/90", [40, 28.754]],
-      ["parent/90", [75, 4.129]],
-      ["name/91", [76, 44.849]],
-      ["parent/91", [55, 0.74]],
-      ["name/92", [40, 28.754]],
-      ["parent/92", [77, 4.129]],
-      ["name/93", [78, 44.849]],
-      ["parent/93", [55, 0.74]],
-      ["name/94", [40, 28.754]],
-      ["parent/94", [79, 4.129]],
-      ["name/95", [80, 44.849]],
-      ["parent/95", [55, 0.74]],
-      ["name/96", [40, 28.754]],
-      ["parent/96", [81, 4.129]],
-      ["name/97", [37, 36.376]],
-      ["parent/97", [55, 0.74]],
-      ["name/98", [82, 44.849]],
-      ["parent/98", [55, 0.74]],
-      ["name/99", [83, 44.849]],
-      ["parent/99", [55, 0.74]],
-      ["name/100", [84, 44.849]],
-      ["parent/100", [55, 0.74]],
-      ["name/101", [85, 44.849]],
-      ["parent/101", [55, 0.74]],
-      ["name/102", [86, 44.849]],
-      ["parent/102", [55, 0.74]],
-      ["name/103", [87, 44.849]],
-      ["parent/103", [55, 0.74]],
-      ["name/104", [88, 44.849]],
-      ["parent/104", [55, 0.74]],
-      ["name/105", [89, 44.849]],
-      ["parent/105", [55, 0.74]],
-      ["name/106", [90, 44.849]],
-      ["parent/106", [55, 0.74]],
-      ["name/107", [91, 44.849]],
-      ["parent/107", [55, 0.74]],
-      ["name/108", [92, 44.849]],
-      ["parent/108", [55, 0.74]],
-      ["name/109", [93, 44.849]],
-      ["parent/109", [55, 0.74]],
-      ["name/110", [94, 44.849]],
-      ["parent/110", [55, 0.74]],
-      ["name/111", [47, 39.741]],
-      ["parent/111", [55, 0.74]],
-      ["name/112", [26, 36.376]],
-      ["parent/112", [55, 0.74]],
-      ["name/113", [27, 33.863]],
-      ["parent/113", [55, 0.74]],
-      ["name/114", [95, 44.849]],
-      ["parent/114", [55, 0.74]],
-      ["name/115", [96, 44.849]],
-      ["parent/115", [55, 0.74]],
-      ["name/116", [97, 44.849]],
-      ["parent/116", [55, 0.74]],
-      ["name/117", [98, 44.849]],
-      ["parent/117", [55, 0.74]],
-      ["name/118", [99, 44.849]],
-      ["parent/118", [55, 0.74]],
-      ["name/119", [100, 44.849]],
-      ["parent/119", [55, 0.74]],
-      ["name/120", [101, 44.849]],
-      ["parent/120", [55, 0.74]],
-      ["name/121", [102, 44.849]],
-      ["parent/121", [55, 0.74]],
-      ["name/122", [103, 44.849]],
-      ["parent/122", [55, 0.74]],
-      ["name/123", [104, 44.849]],
-      ["parent/123", [55, 0.74]],
-      ["name/124", [105, 44.849]],
-      ["parent/124", [55, 0.74]],
-      ["name/125", [106, 44.849]],
-      ["parent/125", [55, 0.74]],
-      ["name/126", [107, 44.849]],
-      ["parent/126", [55, 0.74]],
-      ["name/127", [108, 44.849]],
-      ["parent/127", [55, 0.74]],
-      ["name/128", [109, 44.849]],
-      ["parent/128", [55, 0.74]],
-      ["name/129", [110, 39.741]],
-      ["parent/129", []],
-      ["name/130", [37, 36.376]],
-      ["parent/130", [110, 3.658]],
-      ["name/131", [111, 44.849]],
-      ["parent/131", []]
+      ["name/63", [56, 7.689]],
+      ["parent/63", []],
+      ["name/64", [57, 45.145]],
+      ["parent/64", [56, 0.713]],
+      ["name/65", [58, 45.145]],
+      ["parent/65", [56, 0.713]],
+      ["name/66", [59, 45.145]],
+      ["parent/66", [56, 0.713]],
+      ["name/67", [42, 40.037]],
+      ["parent/67", [60, 3.399]],
+      ["name/68", [44, 40.037]],
+      ["parent/68", [60, 3.399]],
+      ["name/69", [45, 40.037]],
+      ["parent/69", [60, 3.399]],
+      ["name/70", [0, 36.672]],
+      ["parent/70", [56, 0.713]],
+      ["name/71", [1, 36.672]],
+      ["parent/71", [56, 0.713]],
+      ["name/72", [61, 45.145]],
+      ["parent/72", [56, 0.713]],
+      ["name/73", [62, 45.145]],
+      ["parent/73", [56, 0.713]],
+      ["name/74", [63, 45.145]],
+      ["parent/74", [56, 0.713]],
+      ["name/75", [64, 45.145]],
+      ["parent/75", [56, 0.713]],
+      ["name/76", [65, 45.145]],
+      ["parent/76", [56, 0.713]],
+      ["name/77", [66, 45.145]],
+      ["parent/77", [56, 0.713]],
+      ["name/78", [67, 45.145]],
+      ["parent/78", [56, 0.713]],
+      ["name/79", [68, 45.145]],
+      ["parent/79", [56, 0.713]],
+      ["name/80", [21, 25.686]],
+      ["parent/80", [56, 0.713]],
+      ["name/81", [69, 40.037]],
+      ["parent/81", [56, 0.713]],
+      ["name/82", [70, 40.037]],
+      ["parent/82", [56, 0.713]],
+      ["name/83", [71, 45.145]],
+      ["parent/83", [56, 0.713]],
+      ["name/84", [72, 45.145]],
+      ["parent/84", [56, 0.713]],
+      ["name/85", [69, 40.037]],
+      ["parent/85", [56, 0.713]],
+      ["name/86", [21, 25.686]],
+      ["parent/86", [56, 0.713]],
+      ["name/87", [70, 40.037]],
+      ["parent/87", [56, 0.713]],
+      ["name/88", [48, 36.672]],
+      ["parent/88", [56, 0.713]],
+      ["name/89", [73, 45.145]],
+      ["parent/89", [56, 0.713]],
+      ["name/90", [41, 27.799]],
+      ["parent/90", [74, 4.184]],
+      ["name/91", [75, 45.145]],
+      ["parent/91", [56, 0.713]],
+      ["name/92", [41, 27.799]],
+      ["parent/92", [76, 4.184]],
+      ["name/93", [77, 45.145]],
+      ["parent/93", [56, 0.713]],
+      ["name/94", [41, 27.799]],
+      ["parent/94", [78, 4.184]],
+      ["name/95", [79, 45.145]],
+      ["parent/95", [56, 0.713]],
+      ["name/96", [41, 27.799]],
+      ["parent/96", [80, 4.184]],
+      ["name/97", [81, 45.145]],
+      ["parent/97", [56, 0.713]],
+      ["name/98", [41, 27.799]],
+      ["parent/98", [82, 4.184]],
+      ["name/99", [83, 45.145]],
+      ["parent/99", [56, 0.713]],
+      ["name/100", [41, 27.799]],
+      ["parent/100", [84, 4.184]],
+      ["name/101", [38, 40.037]],
+      ["parent/101", [56, 0.713]],
+      ["name/102", [85, 45.145]],
+      ["parent/102", [56, 0.713]],
+      ["name/103", [86, 45.145]],
+      ["parent/103", [56, 0.713]],
+      ["name/104", [87, 45.145]],
+      ["parent/104", [56, 0.713]],
+      ["name/105", [88, 45.145]],
+      ["parent/105", [56, 0.713]],
+      ["name/106", [89, 45.145]],
+      ["parent/106", [56, 0.713]],
+      ["name/107", [90, 45.145]],
+      ["parent/107", [56, 0.713]],
+      ["name/108", [91, 45.145]],
+      ["parent/108", [56, 0.713]],
+      ["name/109", [92, 45.145]],
+      ["parent/109", [56, 0.713]],
+      ["name/110", [93, 45.145]],
+      ["parent/110", [56, 0.713]],
+      ["name/111", [94, 45.145]],
+      ["parent/111", [56, 0.713]],
+      ["name/112", [95, 45.145]],
+      ["parent/112", [56, 0.713]],
+      ["name/113", [96, 45.145]],
+      ["parent/113", [56, 0.713]],
+      ["name/114", [97, 45.145]],
+      ["parent/114", [56, 0.713]],
+      ["name/115", [48, 36.672]],
+      ["parent/115", [56, 0.713]],
+      ["name/116", [24, 36.672]],
+      ["parent/116", [56, 0.713]],
+      ["name/117", [25, 34.159]],
+      ["parent/117", [56, 0.713]],
+      ["name/118", [98, 45.145]],
+      ["parent/118", [56, 0.713]],
+      ["name/119", [99, 45.145]],
+      ["parent/119", [56, 0.713]],
+      ["name/120", [100, 45.145]],
+      ["parent/120", [56, 0.713]],
+      ["name/121", [101, 45.145]],
+      ["parent/121", [56, 0.713]],
+      ["name/122", [102, 45.145]],
+      ["parent/122", [56, 0.713]],
+      ["name/123", [103, 45.145]],
+      ["parent/123", [56, 0.713]],
+      ["name/124", [104, 45.145]],
+      ["parent/124", [56, 0.713]],
+      ["name/125", [105, 45.145]],
+      ["parent/125", [56, 0.713]],
+      ["name/126", [106, 45.145]],
+      ["parent/126", [56, 0.713]],
+      ["name/127", [107, 45.145]],
+      ["parent/127", [56, 0.713]],
+      ["name/128", [108, 45.145]],
+      ["parent/128", [56, 0.713]],
+      ["name/129", [109, 45.145]],
+      ["parent/129", [56, 0.713]],
+      ["name/130", [110, 45.145]],
+      ["parent/130", [56, 0.713]],
+      ["name/131", [111, 45.145]],
+      ["parent/131", [56, 0.713]],
+      ["name/132", [112, 45.145]],
+      ["parent/132", [56, 0.713]],
+      ["name/133", [113, 45.145]],
+      ["parent/133", [56, 0.713]],
+      ["name/134", [114, 45.145]],
+      ["parent/134", [56, 0.713]],
+      ["name/135", [115, 45.145]],
+      ["parent/135", []]
     ],
     "invertedIndex": [
       ["200", { "_index": 3, "name": { "3": {} }, "parent": {} }],
       ["201", { "_index": 4, "name": { "4": {} }, "parent": {} }],
       ["202", { "_index": 5, "name": { "5": {} }, "parent": {} }],
       ["204", { "_index": 6, "name": { "6": {} }, "parent": {} }],
-      ["401", { "_index": 7, "name": { "7": {} }, "parent": {} }],
-      ["403", { "_index": 8, "name": { "8": {} }, "parent": {} }],
-      ["404", { "_index": 9, "name": { "9": {} }, "parent": {} }],
-      ["406", { "_index": 10, "name": { "10": {} }, "parent": {} }],
-      ["410", { "_index": 11, "name": { "11": {} }, "parent": {} }],
-      ["422", { "_index": 12, "name": { "12": {} }, "parent": {} }],
-      ["500", { "_index": 13, "name": { "13": {} }, "parent": {} }],
-      ["502", { "_index": 14, "name": { "14": {} }, "parent": {} }],
-      ["503", { "_index": 15, "name": { "15": {} }, "parent": {} }],
-      ["504", { "_index": 16, "name": { "16": {} }, "parent": {} }],
+      ["400", { "_index": 7, "name": { "7": {} }, "parent": {} }],
+      ["401", { "_index": 8, "name": { "8": {} }, "parent": {} }],
+      ["403", { "_index": 9, "name": { "9": {} }, "parent": {} }],
+      ["404", { "_index": 10, "name": { "10": {} }, "parent": {} }],
+      ["406", { "_index": 11, "name": { "11": {} }, "parent": {} }],
+      ["410", { "_index": 12, "name": { "12": {} }, "parent": {} }],
+      ["422", { "_index": 13, "name": { "13": {} }, "parent": {} }],
+      ["500", { "_index": 14, "name": { "14": {} }, "parent": {} }],
+      ["502", { "_index": 15, "name": { "15": {} }, "parent": {} }],
+      ["503", { "_index": 16, "name": { "16": {} }, "parent": {} }],
+      ["504", { "_index": 17, "name": { "17": {} }, "parent": {} }],
       [
         "__type",
         {
-          "_index": 40,
+          "_index": 41,
           "name": {
-            "43": {},
-            "51": {},
-            "88": {},
+            "44": {},
+            "52": {},
             "90": {},
             "92": {},
             "94": {},
-            "96": {}
+            "96": {},
+            "98": {},
+            "100": {}
           },
           "parent": {}
         }
       ],
-      ["_current", { "_index": 67, "name": { "78": {} }, "parent": {} }],
-      ["_id", { "_index": 65, "name": { "76": {} }, "parent": {} }],
-      ["_numpages", { "_index": 62, "name": { "73": {} }, "parent": {} }],
-      ["_options", { "_index": 58, "name": { "65": {} }, "parent": {} }],
-      ["_origin_url", { "_index": 57, "name": { "64": {} }, "parent": {} }],
-      ["_page", { "_index": 61, "name": { "72": {} }, "parent": {} }],
-      ["_path", { "_index": 66, "name": { "77": {} }, "parent": {} }],
-      ["_query", { "_index": 64, "name": { "75": {} }, "parent": {} }],
-      ["_size", { "_index": 60, "name": { "71": {} }, "parent": {} }],
-      ["_sum", { "_index": 63, "name": { "74": {} }, "parent": {} }],
-      ["_url", { "_index": 56, "name": { "63": {} }, "parent": {} }],
+      ["_current", { "_index": 68, "name": { "79": {} }, "parent": {} }],
+      ["_id", { "_index": 66, "name": { "77": {} }, "parent": {} }],
+      ["_numpages", { "_index": 63, "name": { "74": {} }, "parent": {} }],
+      ["_options", { "_index": 59, "name": { "66": {} }, "parent": {} }],
+      ["_originurl", { "_index": 58, "name": { "65": {} }, "parent": {} }],
+      ["_page", { "_index": 62, "name": { "73": {} }, "parent": {} }],
+      ["_path", { "_index": 67, "name": { "78": {} }, "parent": {} }],
+      ["_query", { "_index": 65, "name": { "76": {} }, "parent": {} }],
+      ["_size", { "_index": 61, "name": { "72": {} }, "parent": {} }],
+      ["_sum", { "_index": 64, "name": { "75": {} }, "parent": {} }],
+      ["_url", { "_index": 57, "name": { "64": {} }, "parent": {} }],
       [
         "acceptmethods",
-        { "_index": 41, "name": { "44": {}, "66": {} }, "parent": {} }
+        { "_index": 42, "name": { "45": {}, "67": {} }, "parent": {} }
       ],
       [
         "addbackslash",
-        { "_index": 44, "name": { "49": {}, "68": {} }, "parent": {} }
+        { "_index": 45, "name": { "50": {}, "69": {} }, "parent": {} }
       ],
       [
         "ajaxfetcherresponse",
         {
-          "_index": 30,
-          "name": { "32": {} },
+          "_index": 31,
+          "name": { "33": {} },
           "parent": {
-            "33": {},
             "34": {},
             "35": {},
             "36": {},
             "37": {},
             "38": {},
             "39": {},
-            "40": {}
+            "40": {},
+            "41": {}
           }
         }
       ],
-      ["appendlocal", { "_index": 103, "name": { "122": {} }, "parent": {} }],
+      ["appendlocal", { "_index": 108, "name": { "128": {} }, "parent": {} }],
       [
         "catcherror",
-        { "_index": 0, "name": { "0": {}, "46": {}, "69": {} }, "parent": {} }
+        { "_index": 0, "name": { "0": {}, "47": {}, "70": {} }, "parent": {} }
       ],
       [
         "catchmsg",
-        { "_index": 1, "name": { "1": {}, "47": {}, "70": {} }, "parent": {} }
+        { "_index": 1, "name": { "1": {}, "48": {}, "71": {} }, "parent": {} }
       ],
-      ["clearidpath", { "_index": 109, "name": { "128": {} }, "parent": {} }],
-      ["code", { "_index": 22, "name": { "23": {} }, "parent": {} }],
+      ["clearidpath", { "_index": 114, "name": { "134": {} }, "parent": {} }],
+      ["code", { "_index": 30, "name": { "31": {} }, "parent": {} }],
       [
         "codemessage",
         {
@@ -1412,54 +1455,50 @@
             "13": {},
             "14": {},
             "15": {},
-            "16": {}
+            "16": {},
+            "17": {}
           }
         }
       ],
       [
         "constructor",
-        {
-          "_index": 37,
-          "name": { "40": {}, "97": {}, "130": {} },
-          "parent": {}
-        }
+        { "_index": 38, "name": { "41": {}, "101": {} }, "parent": {} }
       ],
       [
         "contenttype",
-        { "_index": 43, "name": { "45": {}, "67": {} }, "parent": {} }
+        { "_index": 44, "name": { "46": {}, "68": {} }, "parent": {} }
       ],
-      ["createdatahook", { "_index": 54, "name": { "61": {} }, "parent": {} }],
-      ["current", { "_index": 91, "name": { "107": {} }, "parent": {} }],
+      ["createdatahook", { "_index": 55, "name": { "62": {} }, "parent": {} }],
+      ["current", { "_index": 94, "name": { "111": {} }, "parent": {} }],
       [
         "currentdata",
-        { "_index": 69, "name": { "81": {}, "86": {} }, "parent": {} }
+        { "_index": 70, "name": { "82": {}, "87": {} }, "parent": {} }
       ],
-      ["currentloading", { "_index": 71, "name": { "83": {} }, "parent": {} }],
+      ["currentloading", { "_index": 72, "name": { "84": {} }, "parent": {} }],
       [
         "data",
         {
-          "_index": 23,
-          "name": { "24": {}, "25": {}, "79": {}, "85": {} },
+          "_index": 21,
+          "name": { "22": {}, "32": {}, "80": {}, "86": {} },
           "parent": {
+            "23": {},
+            "24": {},
+            "25": {},
             "26": {},
             "27": {},
-            "28": {},
-            "29": {},
-            "30": {},
-            "31": {}
+            "28": {}
           }
         }
       ],
       [
         "dataclient",
         {
-          "_index": 55,
-          "name": { "62": {} },
+          "_index": 56,
+          "name": { "63": {} },
           "parent": {
-            "63": {},
             "64": {},
             "65": {},
-            "69": {},
+            "66": {},
             "70": {},
             "71": {},
             "72": {},
@@ -1478,14 +1517,13 @@
             "85": {},
             "86": {},
             "87": {},
+            "88": {},
             "89": {},
             "91": {},
             "93": {},
             "95": {},
             "97": {},
-            "98": {},
             "99": {},
-            "100": {},
             "101": {},
             "102": {},
             "103": {},
@@ -1513,171 +1551,184 @@
             "125": {},
             "126": {},
             "127": {},
-            "128": {}
+            "128": {},
+            "129": {},
+            "130": {},
+            "131": {},
+            "132": {},
+            "133": {},
+            "134": {}
           }
         }
       ],
       [
         "dataclient._options",
-        { "_index": 59, "name": {}, "parent": { "66": {}, "67": {}, "68": {} } }
+        { "_index": 60, "name": {}, "parent": { "67": {}, "68": {}, "69": {} } }
       ],
       [
         "dataclient.usecurrentdata",
-        { "_index": 81, "name": {}, "parent": { "96": {} } }
+        { "_index": 82, "name": {}, "parent": { "98": {} } }
       ],
       [
         "dataclient.usecurrentloading",
-        { "_index": 79, "name": {}, "parent": { "94": {} } }
+        { "_index": 80, "name": {}, "parent": { "96": {} } }
       ],
       [
         "dataclient.usedata",
-        { "_index": 75, "name": {}, "parent": { "90": {} } }
+        { "_index": 76, "name": {}, "parent": { "92": {} } }
       ],
       [
         "dataclient.usedataloading",
-        { "_index": 77, "name": {}, "parent": { "92": {} } }
+        { "_index": 78, "name": {}, "parent": { "94": {} } }
+      ],
+      [
+        "dataclient.usequery",
+        { "_index": 84, "name": {}, "parent": { "100": {} } }
       ],
       [
         "dataclient.userawdata",
-        { "_index": 73, "name": {}, "parent": { "88": {} } }
+        { "_index": 74, "name": {}, "parent": { "90": {} } }
       ],
-      ["dataloading", { "_index": 70, "name": { "82": {} }, "parent": {} }],
-      ["delete", { "_index": 89, "name": { "105": {} }, "parent": {} }],
-      ["deletelocal", { "_index": 107, "name": { "126": {} }, "parent": {} }],
-      ["emit", { "_index": 108, "name": { "127": {} }, "parent": {} }],
-      ["facet", { "_index": 28, "name": { "30": {} }, "parent": {} }],
-      ["fetchcurrent", { "_index": 92, "name": { "108": {} }, "parent": {} }],
+      ["dataloading", { "_index": 71, "name": { "83": {} }, "parent": {} }],
+      ["delete", { "_index": 92, "name": { "109": {} }, "parent": {} }],
+      ["deletelocal", { "_index": 112, "name": { "132": {} }, "parent": {} }],
+      ["emit", { "_index": 113, "name": { "133": {} }, "parent": {} }],
+      ["facet", { "_index": 26, "name": { "27": {} }, "parent": {} }],
+      ["fetchcurrent", { "_index": 95, "name": { "112": {} }, "parent": {} }],
       [
         "fetchcurrentlocal",
-        { "_index": 93, "name": { "109": {} }, "parent": {} }
+        { "_index": 96, "name": { "113": {} }, "parent": {} }
       ],
       [
         "fetcherdata",
         {
-          "_index": 20,
-          "name": { "21": {} },
-          "parent": { "22": {}, "23": {}, "24": {} }
+          "_index": 28,
+          "name": { "29": {} },
+          "parent": { "30": {}, "31": {}, "32": {} }
         }
       ],
       [
         "generateinitdata",
-        { "_index": 48, "name": { "55": {} }, "parent": {} }
+        { "_index": 49, "name": { "56": {} }, "parent": {} }
       ],
       [
         "generatepromiseresolvemock",
-        { "_index": 111, "name": { "131": {} }, "parent": {} }
+        { "_index": 115, "name": { "135": {} }, "parent": {} }
       ],
-      ["get", { "_index": 85, "name": { "101": {} }, "parent": {} }],
-      ["getall", { "_index": 84, "name": { "100": {} }, "parent": {} }],
-      ["getcurrent", { "_index": 101, "name": { "120": {} }, "parent": {} }],
+      ["get", { "_index": 88, "name": { "105": {} }, "parent": {} }],
+      ["getall", { "_index": 87, "name": { "104": {} }, "parent": {} }],
+      ["getcurrent", { "_index": 104, "name": { "124": {} }, "parent": {} }],
       [
         "getcurrentdata",
-        { "_index": 102, "name": { "121": {} }, "parent": {} }
+        { "_index": 105, "name": { "125": {} }, "parent": {} }
       ],
-      ["getdata", { "_index": 100, "name": { "119": {} }, "parent": {} }],
-      ["geterrormsg", { "_index": 17, "name": { "17": {} }, "parent": {} }],
-      ["getrawdata", { "_index": 99, "name": { "118": {} }, "parent": {} }],
-      ["id", { "_index": 97, "name": { "116": {} }, "parent": {} }],
-      ["method", { "_index": 38, "name": { "41": {} }, "parent": {} }],
-      ["msg", { "_index": 21, "name": { "22": {} }, "parent": {} }],
-      ["numpages", { "_index": 24, "name": { "26": {} }, "parent": {} }],
-      [
-        "objectclient",
-        { "_index": 110, "name": { "129": {} }, "parent": { "130": {} } }
-      ],
-      ["option", { "_index": 90, "name": { "106": {} }, "parent": {} }],
-      ["options", { "_index": 94, "name": { "110": {} }, "parent": {} }],
-      ["originalevent", { "_index": 32, "name": { "34": {} }, "parent": {} }],
+      ["getdata", { "_index": 103, "name": { "123": {} }, "parent": {} }],
+      ["geterrormsg", { "_index": 18, "name": { "18": {} }, "parent": {} }],
+      ["getquery", { "_index": 106, "name": { "126": {} }, "parent": {} }],
+      ["getrawdata", { "_index": 102, "name": { "122": {} }, "parent": {} }],
+      ["id", { "_index": 100, "name": { "120": {} }, "parent": {} }],
+      ["method", { "_index": 39, "name": { "42": {} }, "parent": {} }],
+      ["msg", { "_index": 29, "name": { "30": {} }, "parent": {} }],
+      ["numpages", { "_index": 22, "name": { "23": {} }, "parent": {} }],
+      ["option", { "_index": 93, "name": { "110": {} }, "parent": {} }],
+      ["options", { "_index": 97, "name": { "114": {} }, "parent": {} }],
+      ["originalevent", { "_index": 33, "name": { "35": {} }, "parent": {} }],
       [
         "page",
         {
-          "_index": 26,
-          "name": { "28": {}, "53": {}, "112": {} },
+          "_index": 24,
+          "name": { "25": {}, "54": {}, "116": {} },
           "parent": {}
         }
       ],
-      ["parsedata", { "_index": 51, "name": { "58": {} }, "parent": {} }],
+      ["parsedata", { "_index": 52, "name": { "59": {} }, "parent": {} }],
       [
         "parserawresponse",
-        { "_index": 53, "name": { "60": {} }, "parent": {} }
+        { "_index": 54, "name": { "61": {} }, "parent": {} }
       ],
-      ["parseresponse", { "_index": 52, "name": { "59": {} }, "parent": {} }],
-      ["parseurl", { "_index": 49, "name": { "56": {} }, "parent": {} }],
-      ["patch", { "_index": 88, "name": { "104": {} }, "parent": {} }],
-      ["patchlocal", { "_index": 105, "name": { "124": {} }, "parent": {} }],
-      ["path", { "_index": 98, "name": { "117": {} }, "parent": {} }],
-      ["post", { "_index": 86, "name": { "102": {} }, "parent": {} }],
-      ["prependlocal", { "_index": 104, "name": { "123": {} }, "parent": {} }],
-      ["put", { "_index": 87, "name": { "103": {} }, "parent": {} }],
-      ["putlocal", { "_index": 106, "name": { "125": {} }, "parent": {} }],
+      ["parseresponse", { "_index": 53, "name": { "60": {} }, "parent": {} }],
+      ["parseurl", { "_index": 50, "name": { "57": {} }, "parent": {} }],
+      ["patch", { "_index": 91, "name": { "108": {} }, "parent": {} }],
+      ["patchlocal", { "_index": 110, "name": { "130": {} }, "parent": {} }],
+      ["path", { "_index": 101, "name": { "121": {} }, "parent": {} }],
+      ["post", { "_index": 89, "name": { "106": {} }, "parent": {} }],
+      ["prependlocal", { "_index": 109, "name": { "129": {} }, "parent": {} }],
+      ["put", { "_index": 90, "name": { "107": {} }, "parent": {} }],
+      ["putlocal", { "_index": 111, "name": { "131": {} }, "parent": {} }],
       [
         "query",
-        { "_index": 47, "name": { "54": {}, "111": {} }, "parent": {} }
+        {
+          "_index": 48,
+          "name": { "55": {}, "88": {}, "115": {} },
+          "parent": {}
+        }
       ],
       [
         "queryopt",
-        { "_index": 45, "name": { "50": {} }, "parent": { "51": {} } }
+        { "_index": 46, "name": { "51": {} }, "parent": { "52": {} } }
       ],
       [
         "queryopt.__type",
-        { "_index": 46, "name": {}, "parent": { "52": {}, "53": {}, "54": {} } }
+        { "_index": 47, "name": {}, "parent": { "53": {}, "54": {}, "55": {} } }
       ],
-      ["rawajax", { "_index": 82, "name": { "98": {} }, "parent": {} }],
+      ["rawajax", { "_index": 85, "name": { "102": {} }, "parent": {} }],
       [
         "rawdata",
-        { "_index": 68, "name": { "80": {}, "84": {} }, "parent": {} }
+        { "_index": 69, "name": { "81": {}, "85": {} }, "parent": {} }
       ],
-      ["rawrequest", { "_index": 83, "name": { "99": {} }, "parent": {} }],
+      ["rawrequest", { "_index": 86, "name": { "103": {} }, "parent": {} }],
       [
         "request",
-        { "_index": 19, "name": { "20": {}, "36": {} }, "parent": {} }
+        { "_index": 20, "name": { "21": {}, "37": {} }, "parent": {} }
       ],
       [
         "requestopts",
-        { "_index": 39, "name": { "42": {} }, "parent": { "43": {} } }
+        { "_index": 40, "name": { "43": {} }, "parent": { "44": {} } }
       ],
       [
         "requestopts.__type",
         {
-          "_index": 42,
+          "_index": 43,
           "name": {},
           "parent": {
-            "44": {},
             "45": {},
             "46": {},
             "47": {},
             "48": {},
-            "49": {}
+            "49": {},
+            "50": {}
           }
         }
       ],
-      ["response", { "_index": 31, "name": { "33": {} }, "parent": {} }],
-      ["responsetext", { "_index": 35, "name": { "38": {} }, "parent": {} }],
-      ["responsetype", { "_index": 36, "name": { "39": {} }, "parent": {} }],
-      ["results", { "_index": 29, "name": { "31": {} }, "parent": {} }],
+      ["response", { "_index": 32, "name": { "34": {} }, "parent": {} }],
+      ["responsetext", { "_index": 36, "name": { "39": {} }, "parent": {} }],
+      ["responsetype", { "_index": 37, "name": { "40": {} }, "parent": {} }],
+      ["results", { "_index": 27, "name": { "28": {} }, "parent": {} }],
       [
         "size",
         {
-          "_index": 27,
-          "name": { "29": {}, "48": {}, "52": {}, "113": {} },
+          "_index": 25,
+          "name": { "26": {}, "49": {}, "53": {}, "117": {} },
           "parent": {}
         }
       ],
-      ["status", { "_index": 34, "name": { "37": {} }, "parent": {} }],
-      ["sum", { "_index": 25, "name": { "27": {} }, "parent": {} }],
-      ["url", { "_index": 95, "name": { "114": {} }, "parent": {} }],
-      ["urljoin", { "_index": 50, "name": { "57": {} }, "parent": {} }],
-      ["urlreset", { "_index": 96, "name": { "115": {} }, "parent": {} }],
-      ["usecurrentdata", { "_index": 80, "name": { "95": {} }, "parent": {} }],
+      ["status", { "_index": 35, "name": { "38": {} }, "parent": {} }],
+      ["sum", { "_index": 23, "name": { "24": {} }, "parent": {} }],
+      ["updatelocal", { "_index": 107, "name": { "127": {} }, "parent": {} }],
+      ["url", { "_index": 98, "name": { "118": {} }, "parent": {} }],
+      ["urljoin", { "_index": 51, "name": { "58": {} }, "parent": {} }],
+      ["urlreset", { "_index": 99, "name": { "119": {} }, "parent": {} }],
+      ["usecurrentdata", { "_index": 81, "name": { "97": {} }, "parent": {} }],
       [
         "usecurrentloading",
-        { "_index": 78, "name": { "93": {} }, "parent": {} }
+        { "_index": 79, "name": { "95": {} }, "parent": {} }
       ],
-      ["usedata", { "_index": 74, "name": { "89": {} }, "parent": {} }],
-      ["usedataloading", { "_index": 76, "name": { "91": {} }, "parent": {} }],
-      ["userawdata", { "_index": 72, "name": { "87": {} }, "parent": {} }],
-      ["xhr", { "_index": 33, "name": { "35": {} }, "parent": {} }],
-      ["xhr2", { "_index": 18, "name": { "18": {}, "19": {} }, "parent": {} }]
+      ["usedata", { "_index": 75, "name": { "91": {} }, "parent": {} }],
+      ["usedataloading", { "_index": 77, "name": { "93": {} }, "parent": {} }],
+      ["usequery", { "_index": 83, "name": { "99": {} }, "parent": {} }],
+      ["userawdata", { "_index": 73, "name": { "89": {} }, "parent": {} }],
+      ["xhr", { "_index": 34, "name": { "36": {} }, "parent": {} }],
+      ["xhr2", { "_index": 19, "name": { "19": {}, "20": {} }, "parent": {} }]
     ],
     "pipeline": []
   }
