@@ -689,7 +689,9 @@ export default class DataClient<T extends { id: string }> {
     }
   }
 
-  public putLocal = this.patchLocal
+  public putLocal = (body: Partial<T> = {}) => {
+    return this.patchLocal(body)
+  }
 
   public deleteLocal() {
     const id = this._id

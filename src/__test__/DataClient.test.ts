@@ -142,5 +142,31 @@ describe('Test DataClient functions', () => {
       modified: '2020-11-06 16:26',
       created: '2020-11-06 16:25'
     })
+    expect(dataClient.getData()).toEqual([
+      ...formData.data.results,
+      {
+        no: 2,
+        i1: 12,
+        openid: 9,
+        id: '21210894b550865b04515e71',
+        modified: '2020-11-06 16:26',
+        created: '2020-11-06 16:25'
+      }
+    ])
+    expect(dataClient.getRawData()).toEqual({
+      ...formData.data,
+      results: [
+        ...formData.data.results,
+        {
+          no: 2,
+          i1: 12,
+          openid: 9,
+          id: '21210894b550865b04515e71',
+          modified: '2020-11-06 16:26',
+          created: '2020-11-06 16:25'
+        }
+      ],
+      sum: 2
+    })
   })
 })
