@@ -1057,10 +1057,10 @@
     },
     {
       "id": 133,
-      "kind": 1024,
+      "kind": 2048,
       "name": "putLocal",
       "url": "classes/dataclient.html#putlocal",
-      "classes": "tsd-kind-property tsd-parent-kind-class",
+      "classes": "tsd-kind-method tsd-parent-kind-class",
       "parent": "DataClient"
     },
     {
