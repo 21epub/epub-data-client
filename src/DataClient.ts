@@ -631,6 +631,14 @@ export default class DataClient<T extends { id: string }> {
     return this._url
   }
 
+  public getSize() {
+    return this._size
+  }
+
+  public getPage() {
+    return this._page
+  }
+
   // * -------------------------------- local data methods
 
   public updateLocal(data: T[]) {

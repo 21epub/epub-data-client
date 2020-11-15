@@ -37,6 +37,12 @@ describe('Test DataClient functions', () => {
   test('should POST PUT PATCH DELETE OPTION correct ', async () => {
     const d = require('../testResults/formSingleData.json')
     mockRequest.mockImplementationOnce((opt) => {
+      expect(opt.url).toBe('v3/api/h5/works/soskgm/form/objects/12345/data/')
+      expect(opt.method).toBe('GET')
+      return generatePromiseResolveMock(d)
+    })
+    await dataClient.id('12345').path('data/').get()
+    mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe('v3/api/h5/works/soskgm/form/objects/test')
       expect(opt.method).toBe('POST')
       return generatePromiseResolveMock(d)
@@ -68,9 +74,7 @@ describe('Test DataClient functions', () => {
   test('should current Functions pass ', async () => {
     const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
-      expect(opt.url).toBe(
-        'v3/api/h5/works/soskgm/form/objects/test1111?page=1'
-      )
+      expect(opt.url).toBe('v3/api/h5/works/soskgm/form/objects/test1111')
       expect(opt.method).toBe('GET')
       return generatePromiseResolveMock(formData)
     })
@@ -84,10 +88,13 @@ describe('Test DataClient functions', () => {
     const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe(
-        '/v3/api/h5/works/soskgm/form/fields/1111/publish/?page=3&query=demo&size=20'
+        '/v3/api/h5/works/soskgm/form/fields/publish/?page=3&query=demo&size=20'
       )
       expect(opt.method).toBe('GET')
-      return generatePromiseResolveMock(formData)
+      return generatePromiseResolveMock({
+        ...formData,
+        data: { ...formData.data, page: 3 }
+      })
     })
     await dataClient
       .query({
@@ -96,18 +103,17 @@ describe('Test DataClient functions', () => {
       .url('/v3/api/h5/works/soskgm/form/fields/')
       .page(3)
       .size(20)
-      .id('1111')
       .path('publish/')
-      .get()
+      .getAll()
 
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe(
         'v3/api/h5/works/soskgm/form/objects/?page=3&query=demo&size=20'
       )
       expect(opt.method).toBe('GET')
-      return generatePromiseResolveMock(formData)
+      return generatePromiseResolveMock({ ...formData, page: 3 })
     })
-    await dataClient.urlReset().get()
+    await dataClient.urlReset().getAll()
   })
   test('should local functions pass', async () => {
     const formData = require('../testResults/formData.json')
