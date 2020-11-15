@@ -129,6 +129,7 @@ describe('Test DataClient functions', () => {
     }
     dataClient.appendLocal(newData)
     expect(dataClient.getData()).toEqual([...formData.data.results, newData])
+    expect(dataClient.getRawData().sum).toBe(2)
     dataClient.id('21210894b550865b04515e71').patchLocal({
       openid: 9
     })
@@ -168,5 +169,8 @@ describe('Test DataClient functions', () => {
       ],
       sum: 2
     })
+    dataClient.id('21210894b550865b04515e71').deleteLocal()
+    expect(dataClient.getData()).toEqual(formData.data.results)
+    expect(dataClient.getRawData().sum).toBe(1)
   })
 })

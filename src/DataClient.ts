@@ -88,7 +88,7 @@ export default class DataClient<T extends { id: string }> {
   protected _id: string = ''
   protected _path: string = ''
   protected _current: string = ''
-  protected data: T[] | [] = []
+  protected data: T[] = []
   protected rawData: Data<T>
   protected currentData: T | any = {}
 
@@ -101,7 +101,7 @@ export default class DataClient<T extends { id: string }> {
     generateInitData()
   )
 
-  protected data$: BehaviorSubject<T[] | []> = new BehaviorSubject<T[] | []>([])
+  protected data$: BehaviorSubject<T[]> = new BehaviorSubject<T[]>([])
   protected currentData$: BehaviorSubject<T | undefined> = new BehaviorSubject<
     T | undefined
   >(undefined)
@@ -163,7 +163,7 @@ export default class DataClient<T extends { id: string }> {
    *  ```
    *   @category Hooks
    */
-  public useData: () => T[] | [] // hooks for Data
+  public useData: () => T[] // hooks for Data
   /**
    * loading statu hooks for Data
    * @category Hooks
@@ -322,12 +322,10 @@ export default class DataClient<T extends { id: string }> {
    *  @category Request Functions
    */
   public async get() {
-    let url = urlJoin(
+    const url = urlJoin(
       [this._url, this._id, this._path],
       this._options.addBackSlash
     )
-    const query = { size: this._size, page: this._page, ...this._query }
-    url = queryString.stringifyUrl({ url: url, query })
     this.clearIdPath()
 
     return await parseResponse(
@@ -343,8 +341,8 @@ export default class DataClient<T extends { id: string }> {
    * @example
    * ```
    * const result = await client.post({
-   * "openid": 8,
-   * "created": "2020-11-06 16:25",
+   *  "openid": 8,
+   *  "created": "2020-11-06 16:25",
    *  "i1": 12,
    *  "no": 1,
    *  "modified": "2020-11-06 16:26",
@@ -457,12 +455,10 @@ export default class DataClient<T extends { id: string }> {
    *  ```
    */
   public async fetchCurrent(): Promise<T | undefined> {
-    let url = urlJoin(
+    const url = urlJoin(
       [this._url, this._current, this._path],
       this._options.addBackSlash
     )
-    const query = { size: this._size, page: this._page, ...this._query }
-    url = queryString.stringifyUrl({ url: url, query })
     this.clearIdPath()
 
     return await parseResponse(
@@ -528,9 +524,13 @@ export default class DataClient<T extends { id: string }> {
   }
 
   /**
-   *
+   * Set page for getAll() only
    * @param p
    * @category Chain Operators
+   * @example
+   * ```
+   *  await dataClient.page(2).getAll();
+   * ```
    */
   public page(p: number = 1): DataClient<T> {
     this._page = p
@@ -538,9 +538,13 @@ export default class DataClient<T extends { id: string }> {
   }
 
   /**
-   *
+   * Set size only for getAll()
    * @param s size / per page to fetch data
    * @category Chain Operators
+   * @example
+   * ```
+   *  await dataClient.page(3).size(20).getAll();
+   * ```
    */
   public size(s: number = 10) {
     this._size = s
@@ -583,9 +587,14 @@ export default class DataClient<T extends { id: string }> {
   }
 
   /**
-   *
+   * Set path suffix for all request
+   * Path will be cleared after usage
    * @param p
    * @category Chain Operators
+   * @example
+   * ```
+   *  await dataClient.id('12345').path('publish/').post();
+   * ```
    */
   public path(p: string): DataClient<T> {
     this._path = p
