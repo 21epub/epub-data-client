@@ -26,7 +26,7 @@ import {
 
 /**
  * Data client
- * - First, You shoud know the type of a single Data item , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
+ * - First, You shoud know the type of a single Data item typed <T> , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
  * - Asume that the single Data item type is
  * ```ts
  *  type DataItem = {
@@ -41,6 +41,7 @@ import {
  * - Then create a new Client
  * - Asume the client rest url is : http://url.to/data
  * ```ts
+ *  import { DataClient } from '@21epub/epub-data-client'
  *  const client = new DataClient<DataItem>('http://url.to/data')
  * ```
  * Create with opts to catch error and error msg by default
@@ -94,7 +95,35 @@ export default class DataClient<T extends { id: string }> {
 
   // * -------------------------------- Rxjs Subject define
 
+  /**
+   * Data loading$ rxjs/BehaviorSubject
+   * Custom trigger dataLoading$ state
+   * Automatically trigger by getAll()
+   * @example
+   * ```ts
+   *  dataLoading$.next(true);
+   *  ...
+   *  dataLoading$.next(false);
+   *
+   * ```
+   * Use with hooks
+   * ```tsx
+   *  const Comp = () => {
+   *    const dataLoading = client.useDataLoading();
+   *    return (
+   *       <>
+   *         {dataLoading? <spin/> : <Table/>}
+   *       </>
+   *    )
+   *  }
+   * ```
+   */
   public dataLoading$ = new BehaviorSubject(false)
+  /**
+   * CurrentData loading rxjs subject
+   * Custom trigger on demand
+   * Use with fetchCurrent() automatically
+   */
   public currentLoading$ = new BehaviorSubject(false)
 
   protected rawData$: BehaviorSubject<Data<T>> = new BehaviorSubject<Data<T>>(
@@ -114,29 +143,29 @@ export default class DataClient<T extends { id: string }> {
 
   /**
    * Hooks of rawData
-   * The Demo structure as below:
+   * The Demo rawData structure as below:
    * ```json
-   *      {
-   * "msg": "success",
-   * "code": 200,
-   * "data": {
-   *   "numpages": 1,
-   *  "sum": 1,
-   *  "results": [
-   *    {
-   *     "openid": 8,
-   *      "created": "2020-11-06 16:25",
-   *     "i1": 12,
-   *      "no": 1,
-   *      "modified": "2020-11-06 16:26",
-   *      "id": "5fa50894b550865b04515e71"
+   *  {
+   *    "msg": "success",
+   *    "code": 200,
+   *    "data": {
+   *      "numpages": 1,
+   *      "sum": 1,
+   *      "results": [
+   *        {
+   *          "openid": 8,
+   *          "created": "2020-11-06 16:25",
+   *          "i1": 12,
+   *          "no": 1,
+   *          "modified": "2020-11-06 16:26",
+   *          "id": "5fa50894b550865b04515e71"
+   *        }
+   *      ],
+   *      "facet": [],
+   *      "page": 1,
+   *      "size": 1
    *    }
-   *  ],
-   *  "facet": [],
-   *  "page": 1,
-   *  "size": 1
-   * }
-   *}
+   *  }
    * ```
    * @category Hooks
    * @example
@@ -149,6 +178,7 @@ export default class DataClient<T extends { id: string }> {
   public useRawData: () => Data<T> // hooks for rawData
   /**
    *  Hooks of result data
+   *  Data structure as below:
    *  ```json
    * [
    *   {
@@ -156,8 +186,8 @@ export default class DataClient<T extends { id: string }> {
    *     "created": "2020-11-06 16:25",
    *     "i1": 12,
    *     "no": 1,
-   *    "modified": "2020-11-06 16:26",
-   *    "id": "5fa50894b550865b04515e71"
+   *     "modified": "2020-11-06 16:26",
+   *     "id": "5fa50894b550865b04515e71"
    *   }
    * ]
    *  ```
@@ -176,7 +206,18 @@ export default class DataClient<T extends { id: string }> {
   public useCurrentLoading: () => boolean
   /**
    * Use current data of data client
+   * Current data is an object as below
+   * ```json
+   * {
+        "i1": 12,
+        "openid": 8,
+        "id": "5fa50894b550865b04515e71",
+        "modified": "2020-11-06 16:26",
+        "created": "2020-11-06 16:25"
+      }
+   * ```
    * @category Hooks
+   * 
    */
   public useCurrentData: () => T | undefined
   /**
@@ -282,6 +323,10 @@ export default class DataClient<T extends { id: string }> {
    * await client.url('http://newurl").getAll()  // fetch from url `http://newurl`
    * await client.path('all/').getAll()    // fetch from url  `http://url/all/`
    * ```
+   *  getAll() with page , size and query arguments
+   * ```
+   *  await client.page(2).size(20).query({query:"demo"}).getAll() ;
+   * ```
    * @category Request Functions
    */
   public async getAll() {
@@ -386,7 +431,7 @@ export default class DataClient<T extends { id: string }> {
   }
 
   /**
-   *
+   * Patch partial data to server
    * @param body
    * @category Request Functions
    */
@@ -437,6 +482,7 @@ export default class DataClient<T extends { id: string }> {
    * change current
    * Use it with fetchCurrent to fetch current item's data from server
    * Or use fetchCurrentLocal from this.data
+   * Id params will be cleared after using.
    * @param id
    */
   public current(id: string) {
@@ -447,7 +493,7 @@ export default class DataClient<T extends { id: string }> {
   /**
    *  fetch Current Item data from server
    *  Allowed path suffix
-   *  automately preserve data to currentData and this.data
+   *  automately preserve data to this._currentData and this.data
    *  useCurrentData will affected by update
    *  @example
    *  ```
@@ -603,44 +649,77 @@ export default class DataClient<T extends { id: string }> {
 
   // * -------------------------------- methods get properties
 
+  /**
+   *  @category Get Methods
+   */
   public getRawData() {
     return this.rawData
   }
 
+  /**
+   * @category Get Methods
+   */
   public getData() {
     return this.data
   }
 
+  /**
+   * @category Get Methods
+   */
   public getCurrent() {
     return this._current
   }
 
+  /**
+   * @category Get Methods
+   */
   public getCurrentData() {
     return this.currentData
   }
 
+  /**
+   * @category Get Methods
+   */
   public getQuery() {
     return this._query
   }
 
+  /**
+   * @category Get Methods
+   */
   public getOptions() {
     return this._options
   }
 
+  /**
+   * @category Get Methods
+   */
   public getUrl() {
     return this._url
   }
 
+  /**
+   * @category Get Methods
+   */
   public getSize() {
     return this._size
   }
 
+  /**
+   * @category Get Methods
+   */
   public getPage() {
     return this._page
   }
 
   // * -------------------------------- local data methods
 
+  /**
+   * Update all data locally
+   * !Caution: This function only changes the data list without modify the 'sum' value
+   * @param data
+   * @category Local Data Modification
+   */
   public updateLocal(data: T[]) {
     if (data?.length) {
       this.data = [...data]
@@ -657,6 +736,7 @@ export default class DataClient<T extends { id: string }> {
    * Append a single data to the end of the local data list
    * Without any sync with server
    * @param body
+   * @category Local Data Modification
    */
   public appendLocal(body: T) {
     if (body) {
@@ -671,6 +751,11 @@ export default class DataClient<T extends { id: string }> {
     return this.data
   }
 
+  /**
+   *
+   * @param body
+   * @category Local Data Modification
+   */
   public prependLocal(body: T) {
     if (body) {
       this.data = [body, ...this.data]
@@ -684,11 +769,16 @@ export default class DataClient<T extends { id: string }> {
     return this.data
   }
 
+  /**
+   * Patch a local data object value without sync server request
+   * @param body
+   * @category Local Data Modification
+   */
   public patchLocal(body: Partial<T> = {}) {
     const id = this._id
     this.clearIdPath()
     if (body && id && this.data.find((v: T) => v.id === id)) {
-      const d = (this.data as Array<T>).map((v) => {
+      const d = this.data.map((v) => {
         if (v.id === id) {
           return { ...v, ...body }
         }
@@ -706,10 +796,24 @@ export default class DataClient<T extends { id: string }> {
     }
   }
 
+  /**
+   *
+   * @param body
+   * @category Local Data Modification
+   */
   public putLocal = (body: Partial<T> = {}) => {
     return this.patchLocal(body)
   }
 
+  /**
+   * Delete a single Data from local
+   * @category Local Data Modification
+   * @example
+   * Delete a dataobject of id === '12345'
+   * ```
+   *  client.id('12345').deleteLocal();
+   * ```
+   */
   public deleteLocal() {
     const id = this._id
     this.clearIdPath()

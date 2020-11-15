@@ -67,7 +67,7 @@
 					<div class="lead">
 						<p>Data client</p>
 						<ul>
-							<li>First, You shoud know the type of a single Data item , You can use  <a href="https://jvilk.com/MakeTypes/">MakeTypes</a> to generate</li>
+							<li>First, You shoud know the type of a single Data item typed <T> , You can use  <a href="https://jvilk.com/MakeTypes/">MakeTypes</a> to generate</li>
 							<li>Asume that the single Data item type is<pre><code class="language-ts"><span class="hljs-keyword">type</span> DataItem = {
  <span class="hljs-attr">openid</span>: <span class="hljs-built_in">number</span>
  <span class="hljs-attr">created</span>: <span class="hljs-built_in">string</span>
@@ -78,7 +78,8 @@
 }</code></pre>
 							</li>
 							<li>Then create a new Client</li>
-							<li>Asume the client rest url is : <a href="http://url.to/data">http://url.to/data</a><pre><code class="language-ts"><span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> DataClient&lt;DataItem&gt;(<span class="hljs-string">&#x27;http://url.to/data&#x27;</span>)</code></pre>
+							<li>Asume the client rest url is : <a href="http://url.to/data">http://url.to/data</a><pre><code class="language-ts"><span class="hljs-keyword">import</span> { DataClient } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@21epub/epub-data-client&#x27;</span>
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> DataClient&lt;DataItem&gt;(<span class="hljs-string">&#x27;http://url.to/data&#x27;</span>)</code></pre>
 								Create with opts to catch error and error msg by default<pre><code class="language-ts"><span class="hljs-keyword">const</span> opts = {
  <span class="hljs-function"><span class="hljs-title">catchError</span>(<span class="hljs-params">error</span>)</span>{
    <span class="hljs-keyword">if</span>(error.status === <span class="hljs-number">400</span>) message.error(error.response.msg);
@@ -167,15 +168,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#url" class="tsd-kind-icon">url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#urlreset" class="tsd-kind-icon">url<wbr>Reset</a></li>
 							</ul>
-							<h3>Other Methods</h3>
+							<h3>Get Methods Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#appendlocal" class="tsd-kind-icon">append<wbr>Local</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="dataclient.html#clearidpath" class="tsd-kind-icon">clear<wbr>IdPath</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#current" class="tsd-kind-icon">current</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#deletelocal" class="tsd-kind-icon">delete<wbr>Local</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="dataclient.html#emit_" class="tsd-kind-icon">emit$</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#fetchcurrent" class="tsd-kind-icon">fetch<wbr>Current</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#fetchcurrentlocal" class="tsd-kind-icon">fetch<wbr>Current<wbr>Local</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#getcurrent" class="tsd-kind-icon">get<wbr>Current</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#getcurrentdata" class="tsd-kind-icon">get<wbr>Current<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#getdata" class="tsd-kind-icon">get<wbr>Data</a></li>
@@ -185,12 +179,25 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#getrawdata" class="tsd-kind-icon">get<wbr>Raw<wbr>Data</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#getsize" class="tsd-kind-icon">get<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#geturl" class="tsd-kind-icon">get<wbr>Url</a></li>
+							</ul>
+							<h3>Local Data Modification Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#appendlocal" class="tsd-kind-icon">append<wbr>Local</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#deletelocal" class="tsd-kind-icon">delete<wbr>Local</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#patchlocal" class="tsd-kind-icon">patch<wbr>Local</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#prependlocal" class="tsd-kind-icon">prepend<wbr>Local</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#putlocal" class="tsd-kind-icon">put<wbr>Local</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#updatelocal" class="tsd-kind-icon">update<wbr>Local</a></li>
+							</ul>
+							<h3>Other Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="dataclient.html#clearidpath" class="tsd-kind-icon">clear<wbr>IdPath</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#current" class="tsd-kind-icon">current</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="dataclient.html#emit_" class="tsd-kind-icon">emit$</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#fetchcurrent" class="tsd-kind-icon">fetch<wbr>Current</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#fetchcurrentlocal" class="tsd-kind-icon">fetch<wbr>Current<wbr>Local</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#rawajax" class="tsd-kind-icon">raw<wbr>Ajax</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#rawrequest" class="tsd-kind-icon">raw<wbr>Request</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="dataclient.html#updatelocal" class="tsd-kind-icon">update<wbr>Local</a></li>
 							</ul>
 							<h3>Request Functions Methods</h3>
 							<ul class="tsd-index-list">
@@ -224,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L191">src/DataClient.ts:191</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L232">src/DataClient.ts:232</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -258,12 +265,20 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Current<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L181">src/DataClient.ts:181</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L222">src/DataClient.ts:222</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Use current data of data client</p>
+							<p>Use current data of data client
+							Current data is an object as below</p>
+							<pre><code class="language-json">{
+<span class="hljs-attr">&quot;i1&quot;</span>: <span class="hljs-number">12</span>,
+<span class="hljs-attr">&quot;openid&quot;</span>: <span class="hljs-number">8</span>,
+<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;5fa50894b550865b04515e71&quot;</span>,
+<span class="hljs-attr">&quot;modified&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:26&quot;</span>,
+<span class="hljs-attr">&quot;created&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:25&quot;</span>
+}</code></pre>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
@@ -288,7 +303,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Current<wbr>Loading<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L176">src/DataClient.ts:176</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L206">src/DataClient.ts:206</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -318,20 +333,21 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L166">src/DataClient.ts:166</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L196">src/DataClient.ts:196</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p> Hooks of result data</p>
+							<p> Hooks of result data
+							Data structure as below:</p>
 							<pre><code class="language-json">[
  {
    <span class="hljs-attr">&quot;openid&quot;</span>: <span class="hljs-number">8</span>,
    <span class="hljs-attr">&quot;created&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:25&quot;</span>,
    <span class="hljs-attr">&quot;i1&quot;</span>: <span class="hljs-number">12</span>,
    <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-attr">&quot;modified&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:26&quot;</span>,
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;5fa50894b550865b04515e71&quot;</span>
+   <span class="hljs-attr">&quot;modified&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:26&quot;</span>,
+   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;5fa50894b550865b04515e71&quot;</span>
  }
 ]</code></pre>
 						</div>
@@ -358,7 +374,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Data<wbr>Loading<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L171">src/DataClient.ts:171</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L201">src/DataClient.ts:201</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -388,7 +404,7 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Query<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../index.html#requestopts" class="tsd-signature-type">RequestOpts</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L191">src/DataClient.ts:191</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L232">src/DataClient.ts:232</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -424,34 +440,34 @@
 					<div class="tsd-signature tsd-kind-icon">use<wbr>Raw<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L149">src/DataClient.ts:149</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L178">src/DataClient.ts:178</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Hooks of rawData
-							The Demo structure as below:</p>
-							<pre><code class="language-json">     {
-<span class="hljs-attr">&quot;msg&quot;</span>: <span class="hljs-string">&quot;success&quot;</span>,
-<span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">200</span>,
-<span class="hljs-attr">&quot;data&quot;</span>: {
-  <span class="hljs-attr">&quot;numpages&quot;</span>: <span class="hljs-number">1</span>,
- <span class="hljs-attr">&quot;sum&quot;</span>: <span class="hljs-number">1</span>,
- <span class="hljs-attr">&quot;results&quot;</span>: [
-   {
-    <span class="hljs-attr">&quot;openid&quot;</span>: <span class="hljs-number">8</span>,
-     <span class="hljs-attr">&quot;created&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:25&quot;</span>,
-    <span class="hljs-attr">&quot;i1&quot;</span>: <span class="hljs-number">12</span>,
-     <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-number">1</span>,
-     <span class="hljs-attr">&quot;modified&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:26&quot;</span>,
-     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;5fa50894b550865b04515e71&quot;</span>
+							The Demo rawData structure as below:</p>
+							<pre><code class="language-json"> {
+   <span class="hljs-attr">&quot;msg&quot;</span>: <span class="hljs-string">&quot;success&quot;</span>,
+   <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">200</span>,
+   <span class="hljs-attr">&quot;data&quot;</span>: {
+     <span class="hljs-attr">&quot;numpages&quot;</span>: <span class="hljs-number">1</span>,
+     <span class="hljs-attr">&quot;sum&quot;</span>: <span class="hljs-number">1</span>,
+     <span class="hljs-attr">&quot;results&quot;</span>: [
+       {
+         <span class="hljs-attr">&quot;openid&quot;</span>: <span class="hljs-number">8</span>,
+         <span class="hljs-attr">&quot;created&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:25&quot;</span>,
+         <span class="hljs-attr">&quot;i1&quot;</span>: <span class="hljs-number">12</span>,
+         <span class="hljs-attr">&quot;no&quot;</span>: <span class="hljs-number">1</span>,
+         <span class="hljs-attr">&quot;modified&quot;</span>: <span class="hljs-string">&quot;2020-11-06 16:26&quot;</span>,
+         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;5fa50894b550865b04515e71&quot;</span>
+       }
+     ],
+     <span class="hljs-attr">&quot;facet&quot;</span>: [],
+     <span class="hljs-attr">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
+     <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">1</span>
    }
- ],
- <span class="hljs-attr">&quot;facet&quot;</span>: [],
- <span class="hljs-attr">&quot;page&quot;</span>: <span class="hljs-number">1</span>,
- <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">1</span>
-}
-}</code></pre>
+ }</code></pre>
 						</div>
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
@@ -486,7 +502,7 @@
 					<div class="tsd-signature tsd-kind-icon">_current<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L90">src/DataClient.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L91">src/DataClient.ts:91</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -496,7 +512,7 @@
 					<div class="tsd-signature tsd-kind-icon">_id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L88">src/DataClient.ts:88</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L89">src/DataClient.ts:89</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -506,7 +522,7 @@
 					<div class="tsd-signature tsd-kind-icon">_numpages<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L85">src/DataClient.ts:85</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L86">src/DataClient.ts:86</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -516,7 +532,7 @@
 					<div class="tsd-signature tsd-kind-icon">_origin<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L68">src/DataClient.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L69">src/DataClient.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -531,7 +547,7 @@
 					<div class="tsd-signature tsd-kind-icon">_page<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L84">src/DataClient.ts:84</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L85">src/DataClient.ts:85</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -541,7 +557,7 @@
 					<div class="tsd-signature tsd-kind-icon">_path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L89">src/DataClient.ts:89</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L90">src/DataClient.ts:90</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -551,7 +567,7 @@
 					<div class="tsd-signature tsd-kind-icon">_query<span class="tsd-signature-symbol">:</span> <a href="../index.html#queryopt" class="tsd-signature-type">QueryOpt</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L87">src/DataClient.ts:87</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L88">src/DataClient.ts:88</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -561,7 +577,7 @@
 					<div class="tsd-signature tsd-kind-icon">_size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> = undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L83">src/DataClient.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L84">src/DataClient.ts:84</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -571,7 +587,7 @@
 					<div class="tsd-signature tsd-kind-icon">_sum<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L86">src/DataClient.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L87">src/DataClient.ts:87</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -581,7 +597,7 @@
 					<div class="tsd-signature tsd-kind-icon">_url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L64">src/DataClient.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L65">src/DataClient.ts:65</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -596,7 +612,7 @@
 					<div class="tsd-signature tsd-kind-icon">catch<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><span class="tsd-signature-type">catchError</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L81">src/DataClient.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L82">src/DataClient.ts:82</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -606,7 +622,7 @@
 					<div class="tsd-signature tsd-kind-icon">catch<wbr>Msg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L82">src/DataClient.ts:82</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L83">src/DataClient.ts:83</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -616,7 +632,7 @@
 					<div class="tsd-signature tsd-kind-icon">current<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L93">src/DataClient.ts:93</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L94">src/DataClient.ts:94</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -626,7 +642,7 @@
 					<div class="tsd-signature tsd-kind-icon">current<wbr>Data$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new BehaviorSubject&lt;T | undefined&gt;(undefined)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L105">src/DataClient.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L134">src/DataClient.ts:134</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -636,9 +652,16 @@
 					<div class="tsd-signature tsd-kind-icon">current<wbr>Loading$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new BehaviorSubject(false)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L98">src/DataClient.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L127">src/DataClient.ts:127</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>CurrentData loading rxjs subject
+								Custom trigger on demand
+							Use with fetchCurrent() automatically</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="data" class="tsd-anchor"></a>
@@ -646,7 +669,7 @@
 					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L91">src/DataClient.ts:91</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L92">src/DataClient.ts:92</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -656,7 +679,7 @@
 					<div class="tsd-signature tsd-kind-icon">data$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new BehaviorSubject&lt;T[]&gt;([])</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L104">src/DataClient.ts:104</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L133">src/DataClient.ts:133</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -666,9 +689,33 @@
 					<div class="tsd-signature tsd-kind-icon">data<wbr>Loading$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new BehaviorSubject(false)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L97">src/DataClient.ts:97</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L121">src/DataClient.ts:121</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Data loading$ rxjs/BehaviorSubject
+								Custom trigger dataLoading$ state
+							Automatically trigger by getAll()</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-ts"> dataLoading$.next(<span class="hljs-literal">true</span>);
+ ...
+ dataLoading$.next(<span class="hljs-literal">false</span>);
+</code></pre>
+								<p>Use with hooks</p>
+								<pre><code class="language-tsx"> const Comp = () =&gt; {
+   const dataLoading = client.useDataLoading();
+   return (
+      &lt;&gt;
+        {dataLoading? &lt;spin/&gt; : &lt;Table/&gt;}
+      &lt;/&gt;
+   )
+ }</code></pre>
+							</dd>
+						</dl>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="query_" class="tsd-anchor"></a>
@@ -676,7 +723,7 @@
 					<div class="tsd-signature tsd-kind-icon">query$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><a href="../index.html#requestopts" class="tsd-signature-type">RequestOpts</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new BehaviorSubject&lt;RequestOpts&gt;({})</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L109">src/DataClient.ts:109</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L138">src/DataClient.ts:138</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -686,7 +733,7 @@
 					<div class="tsd-signature tsd-kind-icon">raw<wbr>Data<span class="tsd-signature-symbol">:</span> <a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L92">src/DataClient.ts:92</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L93">src/DataClient.ts:93</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -696,7 +743,7 @@
 					<div class="tsd-signature tsd-kind-icon">raw<wbr>Data$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new BehaviorSubject&lt;Data&lt;T&gt;&gt;(generateInitData())</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L100">src/DataClient.ts:100</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L129">src/DataClient.ts:129</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -713,7 +760,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L584">src/DataClient.ts:584</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L630">src/DataClient.ts:630</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -747,7 +794,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L505">src/DataClient.ts:505</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L551">src/DataClient.ts:551</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -775,7 +822,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L535">src/DataClient.ts:535</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L581">src/DataClient.ts:581</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -808,7 +855,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L599">src/DataClient.ts:599</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L645">src/DataClient.ts:645</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -842,7 +889,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L518">src/DataClient.ts:518</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L564">src/DataClient.ts:564</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -869,7 +916,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L549">src/DataClient.ts:549</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L595">src/DataClient.ts:595</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -905,7 +952,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L560">src/DataClient.ts:560</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L606">src/DataClient.ts:606</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -934,7 +981,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L569">src/DataClient.ts:569</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L615">src/DataClient.ts:615</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -948,7 +995,181 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Other Methods</h2>
+				<h2>Get Methods Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcurrent" class="tsd-anchor"></a>
+					<h3>get<wbr>Current</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L669">src/DataClient.ts:669</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcurrentdata" class="tsd-anchor"></a>
+					<h3>get<wbr>Current<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L676">src/DataClient.ts:676</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getdata" class="tsd-anchor"></a>
+					<h3>get<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L662">src/DataClient.ts:662</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getoptions" class="tsd-anchor"></a>
+					<h3>get<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#requestopts" class="tsd-signature-type">RequestOpts</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L690">src/DataClient.ts:690</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../index.html#requestopts" class="tsd-signature-type">RequestOpts</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpage" class="tsd-anchor"></a>
+					<h3>get<wbr>Page</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Page<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L711">src/DataClient.ts:711</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getquery" class="tsd-anchor"></a>
+					<h3>get<wbr>Query</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Query<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#queryopt" class="tsd-signature-type">QueryOpt</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L683">src/DataClient.ts:683</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../index.html#queryopt" class="tsd-signature-type">QueryOpt</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getrawdata" class="tsd-anchor"></a>
+					<h3>get<wbr>Raw<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Raw<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L655">src/DataClient.ts:655</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getsize" class="tsd-anchor"></a>
+					<h3>get<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L704">src/DataClient.ts:704</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="geturl" class="tsd-anchor"></a>
+					<h3>get<wbr>Url</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L697">src/DataClient.ts:697</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Local Data Modification Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="appendlocal" class="tsd-anchor"></a>
 					<h3>append<wbr>Local</h3>
@@ -959,7 +1180,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L661">src/DataClient.ts:661</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L741">src/DataClient.ts:741</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -972,14 +1193,150 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>body: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deletelocal" class="tsd-anchor"></a>
+					<h3>delete<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Local<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L817">src/DataClient.ts:817</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Delete a single Data from local</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>Delete a dataobject of id === &#39;12345&#39;</p>
+										<pre><code> <span class="hljs-selector-tag">client</span><span class="hljs-selector-class">.id</span>(<span class="hljs-string">&#x27;12345&#x27;</span>)<span class="hljs-selector-class">.deleteLocal</span>();</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="patchlocal" class="tsd-anchor"></a>
+					<h3>patch<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">patch<wbr>Local<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L777">src/DataClient.ts:777</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Patch a local data object value without sync server request</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> body: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="prependlocal" class="tsd-anchor"></a>
+					<h3>prepend<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">prepend<wbr>Local<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L759">src/DataClient.ts:759</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>body: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="putlocal" class="tsd-anchor"></a>
+					<h3>put<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">put<wbr>Local<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L804">src/DataClient.ts:804</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> body: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatelocal" class="tsd-anchor"></a>
+					<h3>update<wbr>Local</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Local<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L723">src/DataClient.ts:723</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update all data locally
+									!Caution: This function only changes the data list without modify the &#39;sum&#39; value</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="clearidpath" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> clear<wbr>IdPath</h3>
@@ -990,7 +1347,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L736">src/DataClient.ts:736</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L840">src/DataClient.ts:840</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1012,14 +1369,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L442">src/DataClient.ts:442</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L488">src/DataClient.ts:488</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>change current
 										Use it with fetchCurrent to fetch current item&#39;s data from server
-									Or use fetchCurrentLocal from this.data</p>
+										Or use fetchCurrentLocal from this.data
+									Id params will be cleared after using.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1034,23 +1392,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="deletelocal" class="tsd-anchor"></a>
-					<h3>delete<wbr>Local</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Local<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L713">src/DataClient.ts:713</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="emit_" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> emit$</h3>
@@ -1061,7 +1402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L728">src/DataClient.ts:728</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L832">src/DataClient.ts:832</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1078,14 +1419,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L457">src/DataClient.ts:457</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L503">src/DataClient.ts:503</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p> fetch Current Item data from server
 										Allowed path suffix
-										automately preserve data to currentData and this.data
+										automately preserve data to this._currentData and this.data
 									useCurrentData will affected by update</p>
 								</div>
 								<dl class="tsd-comment-tags">
@@ -1108,7 +1449,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L488">src/DataClient.ts:488</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L534">src/DataClient.ts:534</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1126,228 +1467,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getcurrent" class="tsd-anchor"></a>
-					<h3>get<wbr>Current</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L614">src/DataClient.ts:614</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getcurrentdata" class="tsd-anchor"></a>
-					<h3>get<wbr>Current<wbr>Data</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L618">src/DataClient.ts:618</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getdata" class="tsd-anchor"></a>
-					<h3>get<wbr>Data</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L610">src/DataClient.ts:610</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getoptions" class="tsd-anchor"></a>
-					<h3>get<wbr>Options</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#requestopts" class="tsd-signature-type">RequestOpts</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L626">src/DataClient.ts:626</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#requestopts" class="tsd-signature-type">RequestOpts</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getpage" class="tsd-anchor"></a>
-					<h3>get<wbr>Page</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Page<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L638">src/DataClient.ts:638</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getquery" class="tsd-anchor"></a>
-					<h3>get<wbr>Query</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Query<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../index.html#queryopt" class="tsd-signature-type">QueryOpt</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L622">src/DataClient.ts:622</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../index.html#queryopt" class="tsd-signature-type">QueryOpt</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getrawdata" class="tsd-anchor"></a>
-					<h3>get<wbr>Raw<wbr>Data</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Raw<wbr>Data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L606">src/DataClient.ts:606</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getsize" class="tsd-anchor"></a>
-					<h3>get<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L634">src/DataClient.ts:634</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="geturl" class="tsd-anchor"></a>
-					<h3>get<wbr>Url</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Url<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L630">src/DataClient.ts:630</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="patchlocal" class="tsd-anchor"></a>
-					<h3>patch<wbr>Local</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">patch<wbr>Local<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L687">src/DataClient.ts:687</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> body: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="prependlocal" class="tsd-anchor"></a>
-					<h3>prepend<wbr>Local</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">prepend<wbr>Local<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L674">src/DataClient.ts:674</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>body: <span class="tsd-signature-type">T</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="putlocal" class="tsd-anchor"></a>
-					<h3>put<wbr>Local</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">put<wbr>Local<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L709">src/DataClient.ts:709</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> body: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="rawajax" class="tsd-anchor"></a>
 					<h3>raw<wbr>Ajax</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -1357,7 +1476,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L235">src/DataClient.ts:235</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L276">src/DataClient.ts:276</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1393,7 +1512,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L258">src/DataClient.ts:258</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L299">src/DataClient.ts:299</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1421,29 +1540,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="updatelocal" class="tsd-anchor"></a>
-					<h3>update<wbr>Local</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Local<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L644">src/DataClient.ts:644</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
-						</li>
-					</ul>
-				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Request Functions Methods</h2>
@@ -1457,7 +1553,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L411">src/DataClient.ts:411</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L456">src/DataClient.ts:456</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1487,7 +1583,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L324">src/DataClient.ts:324</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L369">src/DataClient.ts:369</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1513,7 +1609,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L287">src/DataClient.ts:287</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L332">src/DataClient.ts:332</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1526,6 +1622,8 @@
 									<p> You can also change url temporary or make path suffix to the url, id() not support</p>
 									<pre><code>await client.url<span class="hljs-params">(&#x27;http://newurl&quot;)</span><span class="hljs-string">.getAll</span><span class="hljs-params">()</span>  <span class="hljs-string">//</span> fetch from url `http:<span class="hljs-string">//newurl</span>`
 await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class="hljs-string">.getAll</span><span class="hljs-params">()</span>    <span class="hljs-string">//</span> fetch from url  `http:<span class="hljs-string">//url/all/</span>`</code></pre>
+									<p> getAll() with page , size and query arguments</p>
+									<pre><code> <span class="hljs-selector-tag">await</span> <span class="hljs-selector-tag">client</span><span class="hljs-selector-class">.page</span>(2)<span class="hljs-selector-class">.size</span>(20)<span class="hljs-selector-class">.query</span>({<span class="hljs-attribute">query</span>:<span class="hljs-string">&quot;demo&quot;</span>})<span class="hljs-selector-class">.getAll</span>() ;</code></pre>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1542,7 +1640,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L425">src/DataClient.ts:425</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L470">src/DataClient.ts:470</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1567,10 +1665,13 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L393">src/DataClient.ts:393</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L438">src/DataClient.ts:438</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Patch partial data to server</p>
+								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1592,7 +1693,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L354">src/DataClient.ts:354</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L399">src/DataClient.ts:399</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1632,7 +1733,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L379">src/DataClient.ts:379</a></li>
+									<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L424">src/DataClient.ts:424</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1671,7 +1772,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 					<div class="tsd-signature tsd-kind-icon">_options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L75">src/DataClient.ts:75</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L76">src/DataClient.ts:76</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1688,7 +1789,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<div class="tsd-signature tsd-kind-icon">accept<wbr>Methods<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"POST"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"GET"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PUT"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"DELETE"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"OPTION"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"PATCH"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [&#x27;POST&#x27;, &#x27;GET&#x27;, &#x27;PUT&#x27;, &#x27;PATCH&#x27;, &#x27;OPTION&#x27;, &#x27;DELETE&#x27;]</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L76">src/DataClient.ts:76</a></li>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L77">src/DataClient.ts:77</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1698,7 +1799,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<div class="tsd-signature tsd-kind-icon">add<wbr>Back<wbr>Slash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> = false</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L78">src/DataClient.ts:78</a></li>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L79">src/DataClient.ts:79</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -1708,7 +1809,7 @@ await client.path<span class="hljs-params">(&#x27;all/&#x27;)</span><span class=
 						<div class="tsd-signature tsd-kind-icon">content<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"application/json"</span><span class="tsd-signature-symbol"> = &quot;application/json&quot;</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/104cf6a/src/DataClient.ts#L77">src/DataClient.ts:77</a></li>
+								<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/2a27d00/src/DataClient.ts#L78">src/DataClient.ts:78</a></li>
 							</ul>
 						</aside>
 					</section>
