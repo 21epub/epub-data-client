@@ -1,6 +1,6 @@
 {
   "name": "@21epub/epub-data-client",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "data api client for epub",
   "author": "21epub",
   "license": "MIT",

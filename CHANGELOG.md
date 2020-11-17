@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.2.0](https://github.com/21epub/epub-data-client/compare/v0.1.6...v0.2.0) (2020-11-17)
+
+### Features
+
+- dataClient add ajaxRequestOptions , Add debounce throttle tools for request , update tests ([a899de3](https://github.com/21epub/epub-data-client/commit/a899de3))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [0.1.6](https://github.com/21epub/epub-data-client/compare/v0.1.5...v0.1.6) (2020-11-15)
 
 # Change Log
