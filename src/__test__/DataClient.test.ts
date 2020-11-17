@@ -125,6 +125,8 @@ describe('Test DataClient functions', () => {
     expect(dataClient.getQuery()).toEqual({
       search: 'demo'
     })
+    expect(dataClient.getSize()).toBe(20)
+    expect(dataClient.getPage()).toBe(1)
     const newData = {
       no: 2,
       i1: 12,

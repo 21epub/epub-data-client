@@ -1,4 +1,4 @@
-import { AjaxError, AjaxResponse } from 'rxjs/ajax'
+import { AjaxError, AjaxRequest, AjaxResponse } from 'rxjs/ajax'
 
 export interface Data<T> {
   numpages: number
@@ -49,6 +49,7 @@ export type RequestOpts = {
    *  ```
    */
   addBackSlash?: boolean
+  ajaxRequestOptions?: AjaxRequest
 }
 
 export type QueryOpt = {

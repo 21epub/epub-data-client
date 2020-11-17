@@ -76,7 +76,8 @@ export default class DataClient<T extends { id: string }> {
   protected _options: RequestOpts = {
     acceptMethods: ['POST', 'GET', 'PUT', 'PATCH', 'OPTION', 'DELETE'],
     contentType: 'application/json',
-    addBackSlash: false
+    addBackSlash: false,
+    ajaxRequestOptions: {}
   }
 
   protected catchError?: typeof catchError
@@ -284,7 +285,8 @@ export default class DataClient<T extends { id: string }> {
       headers: {
         'Content-Type': this._options.contentType
       },
-      body
+      body,
+      ...this._options.ajaxRequestOptions
     }) as any) as Observable<AjaxFetcherResponse<T>>
   }
 

@@ -40,6 +40,7 @@ export const getErrorMsg = (error: AjaxError & { responseText?: string }) => {
   return (
     error?.response?.msg ||
     error?.responseText ||
+    error?.message ||
     codeMessage[status] ||
     error?.response?.statusText ||
     '请求失败，请检查网络，并重试'

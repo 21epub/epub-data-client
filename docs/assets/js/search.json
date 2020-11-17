@@ -410,13 +410,21 @@
     },
     {
       "id": 51,
+      "kind": 32,
+      "name": "ajaxRequestOptions",
+      "url": "index.html#requestopts.__type.ajaxrequestoptions",
+      "classes": "tsd-kind-variable tsd-parent-kind-type-literal",
+      "parent": "RequestOpts.__type"
+    },
+    {
+      "id": 52,
       "kind": 4194304,
       "name": "QueryOpt",
       "url": "index.html#queryopt",
       "classes": "tsd-kind-type-alias"
     },
     {
-      "id": 52,
+      "id": 53,
       "kind": 65536,
       "name": "__type",
       "url": "index.html#queryopt.__type",
@@ -424,7 +432,7 @@
       "parent": "QueryOpt"
     },
     {
-      "id": 53,
+      "id": 54,
       "kind": 32,
       "name": "size",
       "url": "index.html#queryopt.__type.size",
@@ -432,7 +440,7 @@
       "parent": "QueryOpt.__type"
     },
     {
-      "id": 54,
+      "id": 55,
       "kind": 32,
       "name": "page",
       "url": "index.html#queryopt.__type.page",
@@ -440,7 +448,7 @@
       "parent": "QueryOpt.__type"
     },
     {
-      "id": 55,
+      "id": 56,
       "kind": 32,
       "name": "query",
       "url": "index.html#queryopt.__type.query",
@@ -448,63 +456,63 @@
       "parent": "QueryOpt.__type"
     },
     {
-      "id": 56,
+      "id": 57,
       "kind": 64,
       "name": "generateInitData",
       "url": "index.html#generateinitdata",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 57,
+      "id": 58,
       "kind": 64,
       "name": "parseUrl",
       "url": "index.html#parseurl",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 58,
+      "id": 59,
       "kind": 64,
       "name": "urlJoin",
       "url": "index.html#urljoin",
       "classes": "tsd-kind-function"
     },
     {
-      "id": 59,
+      "id": 60,
       "kind": 64,
       "name": "parseData",
       "url": "index.html#parsedata",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 60,
+      "id": 61,
       "kind": 64,
       "name": "parseResponse",
       "url": "index.html#parseresponse",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 61,
+      "id": 62,
       "kind": 64,
       "name": "parseRawResponse",
       "url": "index.html#parserawresponse",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 62,
+      "id": 63,
       "kind": 64,
       "name": "createDataHook",
       "url": "index.html#createdatahook",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     },
     {
-      "id": 63,
+      "id": 64,
       "kind": 128,
       "name": "DataClient",
       "url": "classes/dataclient.html",
       "classes": "tsd-kind-class tsd-has-type-parameter"
     },
     {
-      "id": 64,
+      "id": 65,
       "kind": 1024,
       "name": "_url",
       "url": "classes/dataclient.html#_url",
@@ -512,7 +520,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 65,
+      "id": 66,
       "kind": 1024,
       "name": "_originUrl",
       "url": "classes/dataclient.html#_originurl",
@@ -520,7 +528,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 66,
+      "id": 67,
       "kind": 2097152,
       "name": "_options",
       "url": "classes/dataclient.html#_options",
@@ -528,7 +536,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 67,
+      "id": 68,
       "kind": 32,
       "name": "acceptMethods",
       "url": "classes/dataclient.html#_options.acceptmethods",
@@ -536,7 +544,7 @@
       "parent": "DataClient._options"
     },
     {
-      "id": 68,
+      "id": 69,
       "kind": 32,
       "name": "contentType",
       "url": "classes/dataclient.html#_options.contenttype",
@@ -544,7 +552,7 @@
       "parent": "DataClient._options"
     },
     {
-      "id": 69,
+      "id": 70,
       "kind": 32,
       "name": "addBackSlash",
       "url": "classes/dataclient.html#_options.addbackslash",
@@ -552,7 +560,23 @@
       "parent": "DataClient._options"
     },
     {
-      "id": 70,
+      "id": 71,
+      "kind": 32,
+      "name": "ajaxRequestOptions",
+      "url": "classes/dataclient.html#_options.ajaxrequestoptions",
+      "classes": "tsd-kind-variable tsd-parent-kind-object-literal",
+      "parent": "DataClient._options"
+    },
+    {
+      "id": 72,
+      "kind": 65536,
+      "name": "__type",
+      "url": "classes/dataclient.html#_options.ajaxrequestoptions.__type-6",
+      "classes": "tsd-kind-type-literal tsd-parent-kind-variable",
+      "parent": "DataClient._options.ajaxRequestOptions"
+    },
+    {
+      "id": 73,
       "kind": 1024,
       "name": "catchError",
       "url": "classes/dataclient.html#catcherror",
@@ -560,7 +584,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 71,
+      "id": 74,
       "kind": 1024,
       "name": "catchMsg",
       "url": "classes/dataclient.html#catchmsg",
@@ -568,7 +592,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 72,
+      "id": 75,
       "kind": 1024,
       "name": "_size",
       "url": "classes/dataclient.html#_size",
@@ -576,7 +600,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 73,
+      "id": 76,
       "kind": 1024,
       "name": "_page",
       "url": "classes/dataclient.html#_page",
@@ -584,7 +608,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 74,
+      "id": 77,
       "kind": 1024,
       "name": "_numpages",
       "url": "classes/dataclient.html#_numpages",
@@ -592,7 +616,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 75,
+      "id": 78,
       "kind": 1024,
       "name": "_sum",
       "url": "classes/dataclient.html#_sum",
@@ -600,7 +624,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 76,
+      "id": 79,
       "kind": 1024,
       "name": "_query",
       "url": "classes/dataclient.html#_query",
@@ -608,7 +632,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 77,
+      "id": 80,
       "kind": 1024,
       "name": "_id",
       "url": "classes/dataclient.html#_id",
@@ -616,7 +640,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 78,
+      "id": 81,
       "kind": 1024,
       "name": "_path",
       "url": "classes/dataclient.html#_path",
@@ -624,7 +648,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 79,
+      "id": 82,
       "kind": 1024,
       "name": "_current",
       "url": "classes/dataclient.html#_current",
@@ -632,7 +656,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 80,
+      "id": 83,
       "kind": 1024,
       "name": "data",
       "url": "classes/dataclient.html#data",
@@ -640,7 +664,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 81,
+      "id": 84,
       "kind": 1024,
       "name": "rawData",
       "url": "classes/dataclient.html#rawdata",
@@ -648,7 +672,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 82,
+      "id": 85,
       "kind": 1024,
       "name": "currentData",
       "url": "classes/dataclient.html#currentdata",
@@ -656,7 +680,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 83,
+      "id": 86,
       "kind": 1024,
       "name": "dataLoading$",
       "url": "classes/dataclient.html#dataloading_",
@@ -664,7 +688,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 84,
+      "id": 87,
       "kind": 1024,
       "name": "currentLoading$",
       "url": "classes/dataclient.html#currentloading_",
@@ -672,7 +696,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 85,
+      "id": 88,
       "kind": 1024,
       "name": "rawData$",
       "url": "classes/dataclient.html#rawdata_",
@@ -680,7 +704,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 86,
+      "id": 89,
       "kind": 1024,
       "name": "data$",
       "url": "classes/dataclient.html#data_",
@@ -688,7 +712,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 87,
+      "id": 90,
       "kind": 1024,
       "name": "currentData$",
       "url": "classes/dataclient.html#currentdata_",
@@ -696,7 +720,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 88,
+      "id": 91,
       "kind": 1024,
       "name": "query$",
       "url": "classes/dataclient.html#query_",
@@ -704,7 +728,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 89,
+      "id": 92,
       "kind": 1024,
       "name": "useRawData",
       "url": "classes/dataclient.html#userawdata",
@@ -712,7 +736,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 90,
+      "id": 93,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#userawdata.__type-5",
@@ -720,7 +744,7 @@
       "parent": "DataClient.useRawData"
     },
     {
-      "id": 91,
+      "id": 94,
       "kind": 1024,
       "name": "useData",
       "url": "classes/dataclient.html#usedata",
@@ -728,7 +752,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 92,
+      "id": 95,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usedata.__type-2",
@@ -736,7 +760,7 @@
       "parent": "DataClient.useData"
     },
     {
-      "id": 93,
+      "id": 96,
       "kind": 1024,
       "name": "useDataLoading",
       "url": "classes/dataclient.html#usedataloading",
@@ -744,7 +768,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 94,
+      "id": 97,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usedataloading.__type-3",
@@ -752,7 +776,7 @@
       "parent": "DataClient.useDataLoading"
     },
     {
-      "id": 95,
+      "id": 98,
       "kind": 1024,
       "name": "useCurrentLoading",
       "url": "classes/dataclient.html#usecurrentloading",
@@ -760,7 +784,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 96,
+      "id": 99,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usecurrentloading.__type-1",
@@ -768,7 +792,7 @@
       "parent": "DataClient.useCurrentLoading"
     },
     {
-      "id": 97,
+      "id": 100,
       "kind": 1024,
       "name": "useCurrentData",
       "url": "classes/dataclient.html#usecurrentdata",
@@ -776,7 +800,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 98,
+      "id": 101,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usecurrentdata.__type",
@@ -784,7 +808,7 @@
       "parent": "DataClient.useCurrentData"
     },
     {
-      "id": 99,
+      "id": 102,
       "kind": 1024,
       "name": "useQuery",
       "url": "classes/dataclient.html#usequery",
@@ -792,7 +816,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 100,
+      "id": 103,
       "kind": 65536,
       "name": "__type",
       "url": "classes/dataclient.html#usequery.__type-4",
@@ -800,7 +824,7 @@
       "parent": "DataClient.useQuery"
     },
     {
-      "id": 101,
+      "id": 104,
       "kind": 512,
       "name": "constructor",
       "url": "classes/dataclient.html#constructor",
@@ -808,7 +832,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 102,
+      "id": 105,
       "kind": 2048,
       "name": "rawAjax",
       "url": "classes/dataclient.html#rawajax",
@@ -816,7 +840,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 103,
+      "id": 106,
       "kind": 2048,
       "name": "rawRequest",
       "url": "classes/dataclient.html#rawrequest",
@@ -824,7 +848,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 104,
+      "id": 107,
       "kind": 2048,
       "name": "getAll",
       "url": "classes/dataclient.html#getall",
@@ -832,7 +856,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 105,
+      "id": 108,
       "kind": 2048,
       "name": "get",
       "url": "classes/dataclient.html#get",
@@ -840,7 +864,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 106,
+      "id": 109,
       "kind": 2048,
       "name": "post",
       "url": "classes/dataclient.html#post",
@@ -848,7 +872,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 107,
+      "id": 110,
       "kind": 2048,
       "name": "put",
       "url": "classes/dataclient.html#put",
@@ -856,7 +880,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 108,
+      "id": 111,
       "kind": 2048,
       "name": "patch",
       "url": "classes/dataclient.html#patch",
@@ -864,7 +888,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 109,
+      "id": 112,
       "kind": 2048,
       "name": "delete",
       "url": "classes/dataclient.html#delete",
@@ -872,7 +896,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 110,
+      "id": 113,
       "kind": 2048,
       "name": "option",
       "url": "classes/dataclient.html#option",
@@ -880,7 +904,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 111,
+      "id": 114,
       "kind": 2048,
       "name": "current",
       "url": "classes/dataclient.html#current",
@@ -888,7 +912,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 112,
+      "id": 115,
       "kind": 2048,
       "name": "fetchCurrent",
       "url": "classes/dataclient.html#fetchcurrent",
@@ -896,7 +920,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 113,
+      "id": 116,
       "kind": 2048,
       "name": "fetchCurrentLocal",
       "url": "classes/dataclient.html#fetchcurrentlocal",
@@ -904,7 +928,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 114,
+      "id": 117,
       "kind": 2048,
       "name": "options",
       "url": "classes/dataclient.html#options",
@@ -912,7 +936,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 115,
+      "id": 118,
       "kind": 2048,
       "name": "query",
       "url": "classes/dataclient.html#query",
@@ -920,7 +944,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 116,
+      "id": 119,
       "kind": 2048,
       "name": "page",
       "url": "classes/dataclient.html#page",
@@ -928,7 +952,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 117,
+      "id": 120,
       "kind": 2048,
       "name": "size",
       "url": "classes/dataclient.html#size",
@@ -936,7 +960,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 118,
+      "id": 121,
       "kind": 2048,
       "name": "url",
       "url": "classes/dataclient.html#url",
@@ -944,7 +968,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 119,
+      "id": 122,
       "kind": 2048,
       "name": "urlReset",
       "url": "classes/dataclient.html#urlreset",
@@ -952,7 +976,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 120,
+      "id": 123,
       "kind": 2048,
       "name": "id",
       "url": "classes/dataclient.html#id",
@@ -960,7 +984,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 121,
+      "id": 124,
       "kind": 2048,
       "name": "path",
       "url": "classes/dataclient.html#path",
@@ -968,7 +992,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 122,
+      "id": 125,
       "kind": 2048,
       "name": "getRawData",
       "url": "classes/dataclient.html#getrawdata",
@@ -976,7 +1000,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 123,
+      "id": 126,
       "kind": 2048,
       "name": "getData",
       "url": "classes/dataclient.html#getdata",
@@ -984,7 +1008,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 124,
+      "id": 127,
       "kind": 2048,
       "name": "getCurrent",
       "url": "classes/dataclient.html#getcurrent",
@@ -992,7 +1016,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 125,
+      "id": 128,
       "kind": 2048,
       "name": "getCurrentData",
       "url": "classes/dataclient.html#getcurrentdata",
@@ -1000,7 +1024,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 126,
+      "id": 129,
       "kind": 2048,
       "name": "getQuery",
       "url": "classes/dataclient.html#getquery",
@@ -1008,7 +1032,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 127,
+      "id": 130,
       "kind": 2048,
       "name": "getOptions",
       "url": "classes/dataclient.html#getoptions",
@@ -1016,7 +1040,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 128,
+      "id": 131,
       "kind": 2048,
       "name": "getUrl",
       "url": "classes/dataclient.html#geturl",
@@ -1024,7 +1048,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 129,
+      "id": 132,
       "kind": 2048,
       "name": "getSize",
       "url": "classes/dataclient.html#getsize",
@@ -1032,7 +1056,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 130,
+      "id": 133,
       "kind": 2048,
       "name": "getPage",
       "url": "classes/dataclient.html#getpage",
@@ -1040,7 +1064,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 131,
+      "id": 134,
       "kind": 2048,
       "name": "updateLocal",
       "url": "classes/dataclient.html#updatelocal",
@@ -1048,7 +1072,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 132,
+      "id": 135,
       "kind": 2048,
       "name": "appendLocal",
       "url": "classes/dataclient.html#appendlocal",
@@ -1056,7 +1080,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 133,
+      "id": 136,
       "kind": 2048,
       "name": "prependLocal",
       "url": "classes/dataclient.html#prependlocal",
@@ -1064,7 +1088,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 134,
+      "id": 137,
       "kind": 2048,
       "name": "patchLocal",
       "url": "classes/dataclient.html#patchlocal",
@@ -1072,7 +1096,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 135,
+      "id": 138,
       "kind": 2048,
       "name": "putLocal",
       "url": "classes/dataclient.html#putlocal",
@@ -1080,7 +1104,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 136,
+      "id": 139,
       "kind": 2048,
       "name": "deleteLocal",
       "url": "classes/dataclient.html#deletelocal",
@@ -1088,7 +1112,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 137,
+      "id": 140,
       "kind": 2048,
       "name": "emit$",
       "url": "classes/dataclient.html#emit_",
@@ -1096,7 +1120,7 @@
       "parent": "DataClient"
     },
     {
-      "id": 138,
+      "id": 141,
       "kind": 2048,
       "name": "clearIdPath",
       "url": "classes/dataclient.html#clearidpath",
@@ -1104,10 +1128,31 @@
       "parent": "DataClient"
     },
     {
-      "id": 139,
+      "id": 142,
+      "kind": 64,
+      "name": "debounce",
+      "url": "index.html#debounce",
+      "classes": "tsd-kind-function tsd-has-type-parameter"
+    },
+    {
+      "id": 143,
+      "kind": 64,
+      "name": "throttle",
+      "url": "index.html#throttle",
+      "classes": "tsd-kind-function tsd-has-type-parameter"
+    },
+    {
+      "id": 144,
       "kind": 64,
       "name": "generatePromiseResolveMock",
       "url": "index.html#generatepromiseresolvemock",
+      "classes": "tsd-kind-function tsd-has-type-parameter"
+    },
+    {
+      "id": 145,
+      "kind": 64,
+      "name": "generatePromiseRejectMock",
+      "url": "index.html#generatepromiserejectmock",
       "classes": "tsd-kind-function tsd-has-type-parameter"
     }
   ],
@@ -1115,286 +1160,298 @@
     "version": "2.3.9",
     "fields": ["name", "parent"],
     "fieldVectors": [
-      ["name/0", [0, 36.96]],
+      ["name/0", [0, 37.377]],
       ["parent/0", []],
-      ["name/1", [1, 36.96]],
+      ["name/1", [1, 37.377]],
       ["parent/1", []],
-      ["name/2", [2, 21.454]],
+      ["name/2", [2, 21.871]],
       ["parent/2", []],
-      ["name/3", [3, 45.433]],
-      ["parent/3", [2, 1.993]],
-      ["name/4", [4, 45.433]],
-      ["parent/4", [2, 1.993]],
-      ["name/5", [5, 45.433]],
-      ["parent/5", [2, 1.993]],
-      ["name/6", [6, 45.433]],
-      ["parent/6", [2, 1.993]],
-      ["name/7", [7, 45.433]],
-      ["parent/7", [2, 1.993]],
-      ["name/8", [8, 45.433]],
-      ["parent/8", [2, 1.993]],
-      ["name/9", [9, 45.433]],
-      ["parent/9", [2, 1.993]],
-      ["name/10", [10, 45.433]],
-      ["parent/10", [2, 1.993]],
-      ["name/11", [11, 45.433]],
-      ["parent/11", [2, 1.993]],
-      ["name/12", [12, 45.433]],
-      ["parent/12", [2, 1.993]],
-      ["name/13", [13, 45.433]],
-      ["parent/13", [2, 1.993]],
-      ["name/14", [14, 45.433]],
-      ["parent/14", [2, 1.993]],
-      ["name/15", [15, 45.433]],
-      ["parent/15", [2, 1.993]],
-      ["name/16", [16, 45.433]],
-      ["parent/16", [2, 1.993]],
-      ["name/17", [17, 45.433]],
-      ["parent/17", [2, 1.993]],
-      ["name/18", [18, 45.433]],
+      ["name/3", [3, 45.85]],
+      ["parent/3", [2, 2.017]],
+      ["name/4", [4, 45.85]],
+      ["parent/4", [2, 2.017]],
+      ["name/5", [5, 45.85]],
+      ["parent/5", [2, 2.017]],
+      ["name/6", [6, 45.85]],
+      ["parent/6", [2, 2.017]],
+      ["name/7", [7, 45.85]],
+      ["parent/7", [2, 2.017]],
+      ["name/8", [8, 45.85]],
+      ["parent/8", [2, 2.017]],
+      ["name/9", [9, 45.85]],
+      ["parent/9", [2, 2.017]],
+      ["name/10", [10, 45.85]],
+      ["parent/10", [2, 2.017]],
+      ["name/11", [11, 45.85]],
+      ["parent/11", [2, 2.017]],
+      ["name/12", [12, 45.85]],
+      ["parent/12", [2, 2.017]],
+      ["name/13", [13, 45.85]],
+      ["parent/13", [2, 2.017]],
+      ["name/14", [14, 45.85]],
+      ["parent/14", [2, 2.017]],
+      ["name/15", [15, 45.85]],
+      ["parent/15", [2, 2.017]],
+      ["name/16", [16, 45.85]],
+      ["parent/16", [2, 2.017]],
+      ["name/17", [17, 45.85]],
+      ["parent/17", [2, 2.017]],
+      ["name/18", [18, 45.85]],
       ["parent/18", []],
-      ["name/19", [19, 40.325]],
+      ["name/19", [19, 40.741]],
       ["parent/19", []],
-      ["name/20", [19, 40.325]],
+      ["name/20", [19, 40.741]],
       ["parent/20", []],
-      ["name/21", [20, 40.325]],
+      ["name/21", [20, 40.741]],
       ["parent/21", []],
-      ["name/22", [21, 25.974]],
+      ["name/22", [21, 26.391]],
       ["parent/22", []],
-      ["name/23", [22, 45.433]],
-      ["parent/23", [21, 2.413]],
-      ["name/24", [23, 45.433]],
-      ["parent/24", [21, 2.413]],
-      ["name/25", [24, 36.96]],
-      ["parent/25", [21, 2.413]],
-      ["name/26", [25, 34.447]],
-      ["parent/26", [21, 2.413]],
-      ["name/27", [26, 45.433]],
-      ["parent/27", [21, 2.413]],
-      ["name/28", [27, 45.433]],
-      ["parent/28", [21, 2.413]],
-      ["name/29", [28, 34.447]],
+      ["name/23", [22, 45.85]],
+      ["parent/23", [21, 2.433]],
+      ["name/24", [23, 45.85]],
+      ["parent/24", [21, 2.433]],
+      ["name/25", [24, 37.377]],
+      ["parent/25", [21, 2.433]],
+      ["name/26", [25, 34.864]],
+      ["parent/26", [21, 2.433]],
+      ["name/27", [26, 45.85]],
+      ["parent/27", [21, 2.433]],
+      ["name/28", [27, 45.85]],
+      ["parent/28", [21, 2.433]],
+      ["name/29", [28, 34.864]],
       ["parent/29", []],
-      ["name/30", [29, 45.433]],
-      ["parent/30", [28, 3.201]],
-      ["name/31", [30, 45.433]],
-      ["parent/31", [28, 3.201]],
-      ["name/32", [21, 25.974]],
-      ["parent/32", [28, 3.201]],
-      ["name/33", [31, 26.975]],
+      ["name/30", [29, 45.85]],
+      ["parent/30", [28, 3.215]],
+      ["name/31", [30, 45.85]],
+      ["parent/31", [28, 3.215]],
+      ["name/32", [21, 26.391]],
+      ["parent/32", [28, 3.215]],
+      ["name/33", [31, 27.391]],
       ["parent/33", []],
-      ["name/34", [32, 45.433]],
-      ["parent/34", [31, 2.506]],
-      ["name/35", [33, 45.433]],
-      ["parent/35", [31, 2.506]],
-      ["name/36", [34, 45.433]],
-      ["parent/36", [31, 2.506]],
-      ["name/37", [20, 40.325]],
-      ["parent/37", [31, 2.506]],
-      ["name/38", [35, 45.433]],
-      ["parent/38", [31, 2.506]],
-      ["name/39", [36, 45.433]],
-      ["parent/39", [31, 2.506]],
-      ["name/40", [37, 45.433]],
-      ["parent/40", [31, 2.506]],
-      ["name/41", [38, 40.325]],
-      ["parent/41", [31, 2.506]],
-      ["name/42", [39, 45.433]],
+      ["name/34", [32, 45.85]],
+      ["parent/34", [31, 2.526]],
+      ["name/35", [33, 45.85]],
+      ["parent/35", [31, 2.526]],
+      ["name/36", [34, 45.85]],
+      ["parent/36", [31, 2.526]],
+      ["name/37", [20, 40.741]],
+      ["parent/37", [31, 2.526]],
+      ["name/38", [35, 45.85]],
+      ["parent/38", [31, 2.526]],
+      ["name/39", [36, 45.85]],
+      ["parent/39", [31, 2.526]],
+      ["name/40", [37, 45.85]],
+      ["parent/40", [31, 2.526]],
+      ["name/41", [38, 40.741]],
+      ["parent/41", [31, 2.526]],
+      ["name/42", [39, 45.85]],
       ["parent/42", []],
-      ["name/43", [40, 40.325]],
+      ["name/43", [40, 40.741]],
       ["parent/43", []],
-      ["name/44", [41, 28.087]],
-      ["parent/44", [40, 3.747]],
-      ["name/45", [42, 40.325]],
-      ["parent/45", [43, 2.859]],
-      ["name/46", [44, 40.325]],
-      ["parent/46", [43, 2.859]],
-      ["name/47", [0, 36.96]],
-      ["parent/47", [43, 2.859]],
-      ["name/48", [1, 36.96]],
-      ["parent/48", [43, 2.859]],
-      ["name/49", [25, 34.447]],
-      ["parent/49", [43, 2.859]],
-      ["name/50", [45, 40.325]],
-      ["parent/50", [43, 2.859]],
-      ["name/51", [46, 40.325]],
-      ["parent/51", []],
-      ["name/52", [41, 28.087]],
-      ["parent/52", [46, 3.747]],
-      ["name/53", [25, 34.447]],
-      ["parent/53", [47, 3.434]],
-      ["name/54", [24, 36.96]],
-      ["parent/54", [47, 3.434]],
-      ["name/55", [48, 36.96]],
-      ["parent/55", [47, 3.434]],
-      ["name/56", [49, 45.433]],
-      ["parent/56", []],
-      ["name/57", [50, 45.433]],
+      ["name/44", [41, 27.391]],
+      ["parent/44", [40, 3.757]],
+      ["name/45", [42, 40.741]],
+      ["parent/45", [43, 2.744]],
+      ["name/46", [44, 40.741]],
+      ["parent/46", [43, 2.744]],
+      ["name/47", [0, 37.377]],
+      ["parent/47", [43, 2.744]],
+      ["name/48", [1, 37.377]],
+      ["parent/48", [43, 2.744]],
+      ["name/49", [25, 34.864]],
+      ["parent/49", [43, 2.744]],
+      ["name/50", [45, 40.741]],
+      ["parent/50", [43, 2.744]],
+      ["name/51", [46, 40.741]],
+      ["parent/51", [43, 2.744]],
+      ["name/52", [47, 40.741]],
+      ["parent/52", []],
+      ["name/53", [41, 27.391]],
+      ["parent/53", [47, 3.757]],
+      ["name/54", [25, 34.864]],
+      ["parent/54", [48, 3.446]],
+      ["name/55", [24, 37.377]],
+      ["parent/55", [48, 3.446]],
+      ["name/56", [49, 37.377]],
+      ["parent/56", [48, 3.446]],
+      ["name/57", [50, 45.85]],
       ["parent/57", []],
-      ["name/58", [51, 45.433]],
+      ["name/58", [51, 45.85]],
       ["parent/58", []],
-      ["name/59", [52, 45.433]],
+      ["name/59", [52, 45.85]],
       ["parent/59", []],
-      ["name/60", [53, 45.433]],
+      ["name/60", [53, 45.85]],
       ["parent/60", []],
-      ["name/61", [54, 45.433]],
+      ["name/61", [54, 45.85]],
       ["parent/61", []],
-      ["name/62", [55, 45.433]],
+      ["name/62", [55, 45.85]],
       ["parent/62", []],
-      ["name/63", [56, 7.366]],
+      ["name/63", [56, 45.85]],
       ["parent/63", []],
-      ["name/64", [57, 45.433]],
-      ["parent/64", [56, 0.684]],
-      ["name/65", [58, 45.433]],
-      ["parent/65", [56, 0.684]],
-      ["name/66", [59, 45.433]],
-      ["parent/66", [56, 0.684]],
-      ["name/67", [42, 40.325]],
-      ["parent/67", [60, 3.434]],
-      ["name/68", [44, 40.325]],
-      ["parent/68", [60, 3.434]],
-      ["name/69", [45, 40.325]],
-      ["parent/69", [60, 3.434]],
-      ["name/70", [0, 36.96]],
-      ["parent/70", [56, 0.684]],
-      ["name/71", [1, 36.96]],
-      ["parent/71", [56, 0.684]],
-      ["name/72", [61, 45.433]],
-      ["parent/72", [56, 0.684]],
-      ["name/73", [62, 45.433]],
-      ["parent/73", [56, 0.684]],
-      ["name/74", [63, 45.433]],
-      ["parent/74", [56, 0.684]],
-      ["name/75", [64, 45.433]],
-      ["parent/75", [56, 0.684]],
-      ["name/76", [65, 45.433]],
-      ["parent/76", [56, 0.684]],
-      ["name/77", [66, 45.433]],
-      ["parent/77", [56, 0.684]],
-      ["name/78", [67, 45.433]],
-      ["parent/78", [56, 0.684]],
-      ["name/79", [68, 45.433]],
-      ["parent/79", [56, 0.684]],
-      ["name/80", [21, 25.974]],
-      ["parent/80", [56, 0.684]],
-      ["name/81", [69, 40.325]],
-      ["parent/81", [56, 0.684]],
-      ["name/82", [70, 40.325]],
-      ["parent/82", [56, 0.684]],
-      ["name/83", [71, 45.433]],
-      ["parent/83", [56, 0.684]],
-      ["name/84", [72, 45.433]],
-      ["parent/84", [56, 0.684]],
-      ["name/85", [69, 40.325]],
-      ["parent/85", [56, 0.684]],
-      ["name/86", [21, 25.974]],
-      ["parent/86", [56, 0.684]],
-      ["name/87", [70, 40.325]],
-      ["parent/87", [56, 0.684]],
-      ["name/88", [48, 36.96]],
-      ["parent/88", [56, 0.684]],
-      ["name/89", [73, 45.433]],
-      ["parent/89", [56, 0.684]],
-      ["name/90", [41, 28.087]],
-      ["parent/90", [74, 4.221]],
-      ["name/91", [75, 45.433]],
-      ["parent/91", [56, 0.684]],
-      ["name/92", [41, 28.087]],
-      ["parent/92", [76, 4.221]],
-      ["name/93", [77, 45.433]],
-      ["parent/93", [56, 0.684]],
-      ["name/94", [41, 28.087]],
-      ["parent/94", [78, 4.221]],
-      ["name/95", [79, 45.433]],
-      ["parent/95", [56, 0.684]],
-      ["name/96", [41, 28.087]],
-      ["parent/96", [80, 4.221]],
-      ["name/97", [81, 45.433]],
-      ["parent/97", [56, 0.684]],
-      ["name/98", [41, 28.087]],
-      ["parent/98", [82, 4.221]],
-      ["name/99", [83, 45.433]],
-      ["parent/99", [56, 0.684]],
-      ["name/100", [41, 28.087]],
-      ["parent/100", [84, 4.221]],
-      ["name/101", [38, 40.325]],
-      ["parent/101", [56, 0.684]],
-      ["name/102", [85, 45.433]],
-      ["parent/102", [56, 0.684]],
-      ["name/103", [86, 45.433]],
-      ["parent/103", [56, 0.684]],
-      ["name/104", [87, 45.433]],
-      ["parent/104", [56, 0.684]],
-      ["name/105", [88, 45.433]],
-      ["parent/105", [56, 0.684]],
-      ["name/106", [89, 45.433]],
-      ["parent/106", [56, 0.684]],
-      ["name/107", [90, 45.433]],
-      ["parent/107", [56, 0.684]],
-      ["name/108", [91, 45.433]],
-      ["parent/108", [56, 0.684]],
-      ["name/109", [92, 45.433]],
-      ["parent/109", [56, 0.684]],
-      ["name/110", [93, 45.433]],
-      ["parent/110", [56, 0.684]],
-      ["name/111", [94, 45.433]],
-      ["parent/111", [56, 0.684]],
-      ["name/112", [95, 45.433]],
-      ["parent/112", [56, 0.684]],
-      ["name/113", [96, 45.433]],
-      ["parent/113", [56, 0.684]],
-      ["name/114", [97, 45.433]],
-      ["parent/114", [56, 0.684]],
-      ["name/115", [48, 36.96]],
-      ["parent/115", [56, 0.684]],
-      ["name/116", [24, 36.96]],
-      ["parent/116", [56, 0.684]],
-      ["name/117", [25, 34.447]],
-      ["parent/117", [56, 0.684]],
-      ["name/118", [98, 45.433]],
-      ["parent/118", [56, 0.684]],
-      ["name/119", [99, 45.433]],
-      ["parent/119", [56, 0.684]],
-      ["name/120", [100, 45.433]],
-      ["parent/120", [56, 0.684]],
-      ["name/121", [101, 45.433]],
-      ["parent/121", [56, 0.684]],
-      ["name/122", [102, 45.433]],
-      ["parent/122", [56, 0.684]],
-      ["name/123", [103, 45.433]],
-      ["parent/123", [56, 0.684]],
-      ["name/124", [104, 45.433]],
-      ["parent/124", [56, 0.684]],
-      ["name/125", [105, 45.433]],
-      ["parent/125", [56, 0.684]],
-      ["name/126", [106, 45.433]],
-      ["parent/126", [56, 0.684]],
-      ["name/127", [107, 45.433]],
-      ["parent/127", [56, 0.684]],
-      ["name/128", [108, 45.433]],
-      ["parent/128", [56, 0.684]],
-      ["name/129", [109, 45.433]],
-      ["parent/129", [56, 0.684]],
-      ["name/130", [110, 45.433]],
-      ["parent/130", [56, 0.684]],
-      ["name/131", [111, 45.433]],
-      ["parent/131", [56, 0.684]],
-      ["name/132", [112, 45.433]],
-      ["parent/132", [56, 0.684]],
-      ["name/133", [113, 45.433]],
-      ["parent/133", [56, 0.684]],
-      ["name/134", [114, 45.433]],
-      ["parent/134", [56, 0.684]],
-      ["name/135", [115, 45.433]],
-      ["parent/135", [56, 0.684]],
-      ["name/136", [116, 45.433]],
-      ["parent/136", [56, 0.684]],
-      ["name/137", [117, 45.433]],
-      ["parent/137", [56, 0.684]],
-      ["name/138", [118, 45.433]],
-      ["parent/138", [56, 0.684]],
-      ["name/139", [119, 45.433]],
-      ["parent/139", []]
+      ["name/64", [57, 7.783]],
+      ["parent/64", []],
+      ["name/65", [58, 45.85]],
+      ["parent/65", [57, 0.718]],
+      ["name/66", [59, 45.85]],
+      ["parent/66", [57, 0.718]],
+      ["name/67", [60, 45.85]],
+      ["parent/67", [57, 0.718]],
+      ["name/68", [42, 40.741]],
+      ["parent/68", [61, 3.215]],
+      ["name/69", [44, 40.741]],
+      ["parent/69", [61, 3.215]],
+      ["name/70", [45, 40.741]],
+      ["parent/70", [61, 3.215]],
+      ["name/71", [46, 40.741]],
+      ["parent/71", [61, 3.215]],
+      ["name/72", [41, 27.391]],
+      ["parent/72", [62, 4.228]],
+      ["name/73", [0, 37.377]],
+      ["parent/73", [57, 0.718]],
+      ["name/74", [1, 37.377]],
+      ["parent/74", [57, 0.718]],
+      ["name/75", [63, 45.85]],
+      ["parent/75", [57, 0.718]],
+      ["name/76", [64, 45.85]],
+      ["parent/76", [57, 0.718]],
+      ["name/77", [65, 45.85]],
+      ["parent/77", [57, 0.718]],
+      ["name/78", [66, 45.85]],
+      ["parent/78", [57, 0.718]],
+      ["name/79", [67, 45.85]],
+      ["parent/79", [57, 0.718]],
+      ["name/80", [68, 45.85]],
+      ["parent/80", [57, 0.718]],
+      ["name/81", [69, 45.85]],
+      ["parent/81", [57, 0.718]],
+      ["name/82", [70, 45.85]],
+      ["parent/82", [57, 0.718]],
+      ["name/83", [21, 26.391]],
+      ["parent/83", [57, 0.718]],
+      ["name/84", [71, 40.741]],
+      ["parent/84", [57, 0.718]],
+      ["name/85", [72, 40.741]],
+      ["parent/85", [57, 0.718]],
+      ["name/86", [73, 45.85]],
+      ["parent/86", [57, 0.718]],
+      ["name/87", [74, 45.85]],
+      ["parent/87", [57, 0.718]],
+      ["name/88", [71, 40.741]],
+      ["parent/88", [57, 0.718]],
+      ["name/89", [21, 26.391]],
+      ["parent/89", [57, 0.718]],
+      ["name/90", [72, 40.741]],
+      ["parent/90", [57, 0.718]],
+      ["name/91", [49, 37.377]],
+      ["parent/91", [57, 0.718]],
+      ["name/92", [75, 45.85]],
+      ["parent/92", [57, 0.718]],
+      ["name/93", [41, 27.391]],
+      ["parent/93", [76, 4.228]],
+      ["name/94", [77, 45.85]],
+      ["parent/94", [57, 0.718]],
+      ["name/95", [41, 27.391]],
+      ["parent/95", [78, 4.228]],
+      ["name/96", [79, 45.85]],
+      ["parent/96", [57, 0.718]],
+      ["name/97", [41, 27.391]],
+      ["parent/97", [80, 4.228]],
+      ["name/98", [81, 45.85]],
+      ["parent/98", [57, 0.718]],
+      ["name/99", [41, 27.391]],
+      ["parent/99", [82, 4.228]],
+      ["name/100", [83, 45.85]],
+      ["parent/100", [57, 0.718]],
+      ["name/101", [41, 27.391]],
+      ["parent/101", [84, 4.228]],
+      ["name/102", [85, 45.85]],
+      ["parent/102", [57, 0.718]],
+      ["name/103", [41, 27.391]],
+      ["parent/103", [86, 4.228]],
+      ["name/104", [38, 40.741]],
+      ["parent/104", [57, 0.718]],
+      ["name/105", [87, 45.85]],
+      ["parent/105", [57, 0.718]],
+      ["name/106", [88, 45.85]],
+      ["parent/106", [57, 0.718]],
+      ["name/107", [89, 45.85]],
+      ["parent/107", [57, 0.718]],
+      ["name/108", [90, 45.85]],
+      ["parent/108", [57, 0.718]],
+      ["name/109", [91, 45.85]],
+      ["parent/109", [57, 0.718]],
+      ["name/110", [92, 45.85]],
+      ["parent/110", [57, 0.718]],
+      ["name/111", [93, 45.85]],
+      ["parent/111", [57, 0.718]],
+      ["name/112", [94, 45.85]],
+      ["parent/112", [57, 0.718]],
+      ["name/113", [95, 45.85]],
+      ["parent/113", [57, 0.718]],
+      ["name/114", [96, 45.85]],
+      ["parent/114", [57, 0.718]],
+      ["name/115", [97, 45.85]],
+      ["parent/115", [57, 0.718]],
+      ["name/116", [98, 45.85]],
+      ["parent/116", [57, 0.718]],
+      ["name/117", [99, 45.85]],
+      ["parent/117", [57, 0.718]],
+      ["name/118", [49, 37.377]],
+      ["parent/118", [57, 0.718]],
+      ["name/119", [24, 37.377]],
+      ["parent/119", [57, 0.718]],
+      ["name/120", [25, 34.864]],
+      ["parent/120", [57, 0.718]],
+      ["name/121", [100, 45.85]],
+      ["parent/121", [57, 0.718]],
+      ["name/122", [101, 45.85]],
+      ["parent/122", [57, 0.718]],
+      ["name/123", [102, 45.85]],
+      ["parent/123", [57, 0.718]],
+      ["name/124", [103, 45.85]],
+      ["parent/124", [57, 0.718]],
+      ["name/125", [104, 45.85]],
+      ["parent/125", [57, 0.718]],
+      ["name/126", [105, 45.85]],
+      ["parent/126", [57, 0.718]],
+      ["name/127", [106, 45.85]],
+      ["parent/127", [57, 0.718]],
+      ["name/128", [107, 45.85]],
+      ["parent/128", [57, 0.718]],
+      ["name/129", [108, 45.85]],
+      ["parent/129", [57, 0.718]],
+      ["name/130", [109, 45.85]],
+      ["parent/130", [57, 0.718]],
+      ["name/131", [110, 45.85]],
+      ["parent/131", [57, 0.718]],
+      ["name/132", [111, 45.85]],
+      ["parent/132", [57, 0.718]],
+      ["name/133", [112, 45.85]],
+      ["parent/133", [57, 0.718]],
+      ["name/134", [113, 45.85]],
+      ["parent/134", [57, 0.718]],
+      ["name/135", [114, 45.85]],
+      ["parent/135", [57, 0.718]],
+      ["name/136", [115, 45.85]],
+      ["parent/136", [57, 0.718]],
+      ["name/137", [116, 45.85]],
+      ["parent/137", [57, 0.718]],
+      ["name/138", [117, 45.85]],
+      ["parent/138", [57, 0.718]],
+      ["name/139", [118, 45.85]],
+      ["parent/139", [57, 0.718]],
+      ["name/140", [119, 45.85]],
+      ["parent/140", [57, 0.718]],
+      ["name/141", [120, 45.85]],
+      ["parent/141", [57, 0.718]],
+      ["name/142", [121, 45.85]],
+      ["parent/142", []],
+      ["name/143", [122, 45.85]],
+      ["parent/143", []],
+      ["name/144", [123, 45.85]],
+      ["parent/144", []],
+      ["name/145", [124, 45.85]],
+      ["parent/145", []]
     ],
     "invertedIndex": [
       ["200", { "_index": 3, "name": { "3": {} }, "parent": {} }],
@@ -1418,35 +1475,36 @@
           "_index": 41,
           "name": {
             "44": {},
-            "52": {},
-            "90": {},
-            "92": {},
-            "94": {},
-            "96": {},
-            "98": {},
-            "100": {}
+            "53": {},
+            "72": {},
+            "93": {},
+            "95": {},
+            "97": {},
+            "99": {},
+            "101": {},
+            "103": {}
           },
           "parent": {}
         }
       ],
-      ["_current", { "_index": 68, "name": { "79": {} }, "parent": {} }],
-      ["_id", { "_index": 66, "name": { "77": {} }, "parent": {} }],
-      ["_numpages", { "_index": 63, "name": { "74": {} }, "parent": {} }],
-      ["_options", { "_index": 59, "name": { "66": {} }, "parent": {} }],
-      ["_originurl", { "_index": 58, "name": { "65": {} }, "parent": {} }],
-      ["_page", { "_index": 62, "name": { "73": {} }, "parent": {} }],
-      ["_path", { "_index": 67, "name": { "78": {} }, "parent": {} }],
-      ["_query", { "_index": 65, "name": { "76": {} }, "parent": {} }],
-      ["_size", { "_index": 61, "name": { "72": {} }, "parent": {} }],
-      ["_sum", { "_index": 64, "name": { "75": {} }, "parent": {} }],
-      ["_url", { "_index": 57, "name": { "64": {} }, "parent": {} }],
+      ["_current", { "_index": 70, "name": { "82": {} }, "parent": {} }],
+      ["_id", { "_index": 68, "name": { "80": {} }, "parent": {} }],
+      ["_numpages", { "_index": 65, "name": { "77": {} }, "parent": {} }],
+      ["_options", { "_index": 60, "name": { "67": {} }, "parent": {} }],
+      ["_originurl", { "_index": 59, "name": { "66": {} }, "parent": {} }],
+      ["_page", { "_index": 64, "name": { "76": {} }, "parent": {} }],
+      ["_path", { "_index": 69, "name": { "81": {} }, "parent": {} }],
+      ["_query", { "_index": 67, "name": { "79": {} }, "parent": {} }],
+      ["_size", { "_index": 63, "name": { "75": {} }, "parent": {} }],
+      ["_sum", { "_index": 66, "name": { "78": {} }, "parent": {} }],
+      ["_url", { "_index": 58, "name": { "65": {} }, "parent": {} }],
       [
         "acceptmethods",
-        { "_index": 42, "name": { "45": {}, "67": {} }, "parent": {} }
+        { "_index": 42, "name": { "45": {}, "68": {} }, "parent": {} }
       ],
       [
         "addbackslash",
-        { "_index": 45, "name": { "50": {}, "69": {} }, "parent": {} }
+        { "_index": 45, "name": { "50": {}, "70": {} }, "parent": {} }
       ],
       [
         "ajaxfetcherresponse",
@@ -1465,16 +1523,20 @@
           }
         }
       ],
-      ["appendlocal", { "_index": 112, "name": { "132": {} }, "parent": {} }],
+      [
+        "ajaxrequestoptions",
+        { "_index": 46, "name": { "51": {}, "71": {} }, "parent": {} }
+      ],
+      ["appendlocal", { "_index": 114, "name": { "135": {} }, "parent": {} }],
       [
         "catcherror",
-        { "_index": 0, "name": { "0": {}, "47": {}, "70": {} }, "parent": {} }
+        { "_index": 0, "name": { "0": {}, "47": {}, "73": {} }, "parent": {} }
       ],
       [
         "catchmsg",
-        { "_index": 1, "name": { "1": {}, "48": {}, "71": {} }, "parent": {} }
+        { "_index": 1, "name": { "1": {}, "48": {}, "74": {} }, "parent": {} }
       ],
-      ["clearidpath", { "_index": 118, "name": { "138": {} }, "parent": {} }],
+      ["clearidpath", { "_index": 120, "name": { "141": {} }, "parent": {} }],
       ["code", { "_index": 30, "name": { "31": {} }, "parent": {} }],
       [
         "codemessage",
@@ -1502,24 +1564,24 @@
       ],
       [
         "constructor",
-        { "_index": 38, "name": { "41": {}, "101": {} }, "parent": {} }
+        { "_index": 38, "name": { "41": {}, "104": {} }, "parent": {} }
       ],
       [
         "contenttype",
-        { "_index": 44, "name": { "46": {}, "68": {} }, "parent": {} }
+        { "_index": 44, "name": { "46": {}, "69": {} }, "parent": {} }
       ],
-      ["createdatahook", { "_index": 55, "name": { "62": {} }, "parent": {} }],
-      ["current", { "_index": 94, "name": { "111": {} }, "parent": {} }],
+      ["createdatahook", { "_index": 56, "name": { "63": {} }, "parent": {} }],
+      ["current", { "_index": 96, "name": { "114": {} }, "parent": {} }],
       [
         "currentdata",
-        { "_index": 70, "name": { "82": {}, "87": {} }, "parent": {} }
+        { "_index": 72, "name": { "85": {}, "90": {} }, "parent": {} }
       ],
-      ["currentloading", { "_index": 72, "name": { "84": {} }, "parent": {} }],
+      ["currentloading", { "_index": 74, "name": { "87": {} }, "parent": {} }],
       [
         "data",
         {
           "_index": 21,
-          "name": { "22": {}, "32": {}, "80": {}, "86": {} },
+          "name": { "22": {}, "32": {}, "83": {}, "89": {} },
           "parent": {
             "23": {},
             "24": {},
@@ -1533,15 +1595,12 @@
       [
         "dataclient",
         {
-          "_index": 56,
-          "name": { "63": {} },
+          "_index": 57,
+          "name": { "64": {} },
           "parent": {
-            "64": {},
             "65": {},
             "66": {},
-            "70": {},
-            "71": {},
-            "72": {},
+            "67": {},
             "73": {},
             "74": {},
             "75": {},
@@ -1559,14 +1618,14 @@
             "87": {},
             "88": {},
             "89": {},
+            "90": {},
             "91": {},
-            "93": {},
-            "95": {},
-            "97": {},
-            "99": {},
-            "101": {},
+            "92": {},
+            "94": {},
+            "96": {},
+            "98": {},
+            "100": {},
             "102": {},
-            "103": {},
             "104": {},
             "105": {},
             "106": {},
@@ -1601,47 +1660,59 @@
             "135": {},
             "136": {},
             "137": {},
-            "138": {}
+            "138": {},
+            "139": {},
+            "140": {},
+            "141": {}
           }
         }
       ],
       [
         "dataclient._options",
-        { "_index": 60, "name": {}, "parent": { "67": {}, "68": {}, "69": {} } }
+        {
+          "_index": 61,
+          "name": {},
+          "parent": { "68": {}, "69": {}, "70": {}, "71": {} }
+        }
+      ],
+      [
+        "dataclient._options.ajaxrequestoptions",
+        { "_index": 62, "name": {}, "parent": { "72": {} } }
       ],
       [
         "dataclient.usecurrentdata",
-        { "_index": 82, "name": {}, "parent": { "98": {} } }
+        { "_index": 84, "name": {}, "parent": { "101": {} } }
       ],
       [
         "dataclient.usecurrentloading",
-        { "_index": 80, "name": {}, "parent": { "96": {} } }
+        { "_index": 82, "name": {}, "parent": { "99": {} } }
       ],
       [
         "dataclient.usedata",
-        { "_index": 76, "name": {}, "parent": { "92": {} } }
+        { "_index": 78, "name": {}, "parent": { "95": {} } }
       ],
       [
         "dataclient.usedataloading",
-        { "_index": 78, "name": {}, "parent": { "94": {} } }
+        { "_index": 80, "name": {}, "parent": { "97": {} } }
       ],
       [
         "dataclient.usequery",
-        { "_index": 84, "name": {}, "parent": { "100": {} } }
+        { "_index": 86, "name": {}, "parent": { "103": {} } }
       ],
       [
         "dataclient.userawdata",
-        { "_index": 74, "name": {}, "parent": { "90": {} } }
+        { "_index": 76, "name": {}, "parent": { "93": {} } }
       ],
-      ["dataloading", { "_index": 71, "name": { "83": {} }, "parent": {} }],
-      ["delete", { "_index": 92, "name": { "109": {} }, "parent": {} }],
-      ["deletelocal", { "_index": 116, "name": { "136": {} }, "parent": {} }],
-      ["emit", { "_index": 117, "name": { "137": {} }, "parent": {} }],
+      ["dataloading", { "_index": 73, "name": { "86": {} }, "parent": {} }],
+      ["debounce", { "_index": 121, "name": { "142": {} }, "parent": {} }],
+      ["delete", { "_index": 94, "name": { "112": {} }, "parent": {} }],
+      ["deletelocal", { "_index": 118, "name": { "139": {} }, "parent": {} }],
+      ["emit", { "_index": 119, "name": { "140": {} }, "parent": {} }],
       ["facet", { "_index": 26, "name": { "27": {} }, "parent": {} }],
-      ["fetchcurrent", { "_index": 95, "name": { "112": {} }, "parent": {} }],
+      ["fetchcurrent", { "_index": 97, "name": { "115": {} }, "parent": {} }],
       [
         "fetchcurrentlocal",
-        { "_index": 96, "name": { "113": {} }, "parent": {} }
+        { "_index": 98, "name": { "116": {} }, "parent": {} }
       ],
       [
         "fetcherdata",
@@ -1653,78 +1724,82 @@
       ],
       [
         "generateinitdata",
-        { "_index": 49, "name": { "56": {} }, "parent": {} }
+        { "_index": 50, "name": { "57": {} }, "parent": {} }
+      ],
+      [
+        "generatepromiserejectmock",
+        { "_index": 124, "name": { "145": {} }, "parent": {} }
       ],
       [
         "generatepromiseresolvemock",
-        { "_index": 119, "name": { "139": {} }, "parent": {} }
+        { "_index": 123, "name": { "144": {} }, "parent": {} }
       ],
-      ["get", { "_index": 88, "name": { "105": {} }, "parent": {} }],
-      ["getall", { "_index": 87, "name": { "104": {} }, "parent": {} }],
-      ["getcurrent", { "_index": 104, "name": { "124": {} }, "parent": {} }],
+      ["get", { "_index": 90, "name": { "108": {} }, "parent": {} }],
+      ["getall", { "_index": 89, "name": { "107": {} }, "parent": {} }],
+      ["getcurrent", { "_index": 106, "name": { "127": {} }, "parent": {} }],
       [
         "getcurrentdata",
-        { "_index": 105, "name": { "125": {} }, "parent": {} }
+        { "_index": 107, "name": { "128": {} }, "parent": {} }
       ],
-      ["getdata", { "_index": 103, "name": { "123": {} }, "parent": {} }],
+      ["getdata", { "_index": 105, "name": { "126": {} }, "parent": {} }],
       ["geterrormsg", { "_index": 18, "name": { "18": {} }, "parent": {} }],
-      ["getoptions", { "_index": 107, "name": { "127": {} }, "parent": {} }],
-      ["getpage", { "_index": 110, "name": { "130": {} }, "parent": {} }],
-      ["getquery", { "_index": 106, "name": { "126": {} }, "parent": {} }],
-      ["getrawdata", { "_index": 102, "name": { "122": {} }, "parent": {} }],
-      ["getsize", { "_index": 109, "name": { "129": {} }, "parent": {} }],
-      ["geturl", { "_index": 108, "name": { "128": {} }, "parent": {} }],
-      ["id", { "_index": 100, "name": { "120": {} }, "parent": {} }],
+      ["getoptions", { "_index": 109, "name": { "130": {} }, "parent": {} }],
+      ["getpage", { "_index": 112, "name": { "133": {} }, "parent": {} }],
+      ["getquery", { "_index": 108, "name": { "129": {} }, "parent": {} }],
+      ["getrawdata", { "_index": 104, "name": { "125": {} }, "parent": {} }],
+      ["getsize", { "_index": 111, "name": { "132": {} }, "parent": {} }],
+      ["geturl", { "_index": 110, "name": { "131": {} }, "parent": {} }],
+      ["id", { "_index": 102, "name": { "123": {} }, "parent": {} }],
       ["method", { "_index": 39, "name": { "42": {} }, "parent": {} }],
       ["msg", { "_index": 29, "name": { "30": {} }, "parent": {} }],
       ["numpages", { "_index": 22, "name": { "23": {} }, "parent": {} }],
-      ["option", { "_index": 93, "name": { "110": {} }, "parent": {} }],
-      ["options", { "_index": 97, "name": { "114": {} }, "parent": {} }],
+      ["option", { "_index": 95, "name": { "113": {} }, "parent": {} }],
+      ["options", { "_index": 99, "name": { "117": {} }, "parent": {} }],
       ["originalevent", { "_index": 33, "name": { "35": {} }, "parent": {} }],
       [
         "page",
         {
           "_index": 24,
-          "name": { "25": {}, "54": {}, "116": {} },
+          "name": { "25": {}, "55": {}, "119": {} },
           "parent": {}
         }
       ],
-      ["parsedata", { "_index": 52, "name": { "59": {} }, "parent": {} }],
+      ["parsedata", { "_index": 53, "name": { "60": {} }, "parent": {} }],
       [
         "parserawresponse",
-        { "_index": 54, "name": { "61": {} }, "parent": {} }
+        { "_index": 55, "name": { "62": {} }, "parent": {} }
       ],
-      ["parseresponse", { "_index": 53, "name": { "60": {} }, "parent": {} }],
-      ["parseurl", { "_index": 50, "name": { "57": {} }, "parent": {} }],
-      ["patch", { "_index": 91, "name": { "108": {} }, "parent": {} }],
-      ["patchlocal", { "_index": 114, "name": { "134": {} }, "parent": {} }],
-      ["path", { "_index": 101, "name": { "121": {} }, "parent": {} }],
-      ["post", { "_index": 89, "name": { "106": {} }, "parent": {} }],
-      ["prependlocal", { "_index": 113, "name": { "133": {} }, "parent": {} }],
-      ["put", { "_index": 90, "name": { "107": {} }, "parent": {} }],
-      ["putlocal", { "_index": 115, "name": { "135": {} }, "parent": {} }],
+      ["parseresponse", { "_index": 54, "name": { "61": {} }, "parent": {} }],
+      ["parseurl", { "_index": 51, "name": { "58": {} }, "parent": {} }],
+      ["patch", { "_index": 93, "name": { "111": {} }, "parent": {} }],
+      ["patchlocal", { "_index": 116, "name": { "137": {} }, "parent": {} }],
+      ["path", { "_index": 103, "name": { "124": {} }, "parent": {} }],
+      ["post", { "_index": 91, "name": { "109": {} }, "parent": {} }],
+      ["prependlocal", { "_index": 115, "name": { "136": {} }, "parent": {} }],
+      ["put", { "_index": 92, "name": { "110": {} }, "parent": {} }],
+      ["putlocal", { "_index": 117, "name": { "138": {} }, "parent": {} }],
       [
         "query",
         {
-          "_index": 48,
-          "name": { "55": {}, "88": {}, "115": {} },
+          "_index": 49,
+          "name": { "56": {}, "91": {}, "118": {} },
           "parent": {}
         }
       ],
       [
         "queryopt",
-        { "_index": 46, "name": { "51": {} }, "parent": { "52": {} } }
+        { "_index": 47, "name": { "52": {} }, "parent": { "53": {} } }
       ],
       [
         "queryopt.__type",
-        { "_index": 47, "name": {}, "parent": { "53": {}, "54": {}, "55": {} } }
+        { "_index": 48, "name": {}, "parent": { "54": {}, "55": {}, "56": {} } }
       ],
-      ["rawajax", { "_index": 85, "name": { "102": {} }, "parent": {} }],
+      ["rawajax", { "_index": 87, "name": { "105": {} }, "parent": {} }],
       [
         "rawdata",
-        { "_index": 69, "name": { "81": {}, "85": {} }, "parent": {} }
+        { "_index": 71, "name": { "84": {}, "88": {} }, "parent": {} }
       ],
-      ["rawrequest", { "_index": 86, "name": { "103": {} }, "parent": {} }],
+      ["rawrequest", { "_index": 88, "name": { "106": {} }, "parent": {} }],
       [
         "request",
         { "_index": 20, "name": { "21": {}, "37": {} }, "parent": {} }
@@ -1744,7 +1819,8 @@
             "47": {},
             "48": {},
             "49": {},
-            "50": {}
+            "50": {},
+            "51": {}
           }
         }
       ],
@@ -1756,25 +1832,26 @@
         "size",
         {
           "_index": 25,
-          "name": { "26": {}, "49": {}, "53": {}, "117": {} },
+          "name": { "26": {}, "49": {}, "54": {}, "120": {} },
           "parent": {}
         }
       ],
       ["status", { "_index": 35, "name": { "38": {} }, "parent": {} }],
       ["sum", { "_index": 23, "name": { "24": {} }, "parent": {} }],
-      ["updatelocal", { "_index": 111, "name": { "131": {} }, "parent": {} }],
-      ["url", { "_index": 98, "name": { "118": {} }, "parent": {} }],
-      ["urljoin", { "_index": 51, "name": { "58": {} }, "parent": {} }],
-      ["urlreset", { "_index": 99, "name": { "119": {} }, "parent": {} }],
-      ["usecurrentdata", { "_index": 81, "name": { "97": {} }, "parent": {} }],
+      ["throttle", { "_index": 122, "name": { "143": {} }, "parent": {} }],
+      ["updatelocal", { "_index": 113, "name": { "134": {} }, "parent": {} }],
+      ["url", { "_index": 100, "name": { "121": {} }, "parent": {} }],
+      ["urljoin", { "_index": 52, "name": { "59": {} }, "parent": {} }],
+      ["urlreset", { "_index": 101, "name": { "122": {} }, "parent": {} }],
+      ["usecurrentdata", { "_index": 83, "name": { "100": {} }, "parent": {} }],
       [
         "usecurrentloading",
-        { "_index": 79, "name": { "95": {} }, "parent": {} }
+        { "_index": 81, "name": { "98": {} }, "parent": {} }
       ],
-      ["usedata", { "_index": 75, "name": { "91": {} }, "parent": {} }],
-      ["usedataloading", { "_index": 77, "name": { "93": {} }, "parent": {} }],
-      ["usequery", { "_index": 83, "name": { "99": {} }, "parent": {} }],
-      ["userawdata", { "_index": 73, "name": { "89": {} }, "parent": {} }],
+      ["usedata", { "_index": 77, "name": { "94": {} }, "parent": {} }],
+      ["usedataloading", { "_index": 79, "name": { "96": {} }, "parent": {} }],
+      ["usequery", { "_index": 85, "name": { "102": {} }, "parent": {} }],
+      ["userawdata", { "_index": 75, "name": { "92": {} }, "parent": {} }],
       ["xhr", { "_index": 34, "name": { "36": {} }, "parent": {} }],
       ["xhr2", { "_index": 19, "name": { "19": {}, "20": {} }, "parent": {} }]
     ],
