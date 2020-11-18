@@ -26,6 +26,30 @@ import {
 
 /**
  * Data client
+ * - Causion First: Every api using this module should fit the response data structure as below
+ * - ```json
+ *  {
+   "msg": "success",
+   "code": 200,
+   "data": {
+     "numpages": 1,
+     "sum": 1,
+     "results": [
+       {
+         "openid": 8,
+         "created": "2020-11-06 16:25",
+         "i1": 12,
+         "no": 1,
+         "modified": "2020-11-06 16:26",
+         "id": "5fa50894b550865b04515e71"
+       }
+     ],
+     "facet": [],
+     "page": 1,
+     "size": 1
+   }
+ }
+ * - ```
  * - First, You shoud know the type of a single Data item typed <T> , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
  * - Asume that the single Data item type is
  * ```ts
@@ -147,9 +171,6 @@ export default class DataClient<T extends { id: string }> {
    * The Demo rawData structure as below:
    * ```json
    *  {
-   *    "msg": "success",
-   *    "code": 200,
-   *    "data": {
    *      "numpages": 1,
    *      "sum": 1,
    *      "results": [
@@ -165,7 +186,6 @@ export default class DataClient<T extends { id: string }> {
    *      "facet": [],
    *      "page": 1,
    *      "size": 1
-   *    }
    *  }
    * ```
    * @category Hooks
@@ -392,8 +412,7 @@ export default class DataClient<T extends { id: string }> {
    *  "created": "2020-11-06 16:25",
    *  "i1": 12,
    *  "no": 1,
-   *  "modified": "2020-11-06 16:26",
-   *   "id": "5fa50894b550865b04515e71"
+   *  "modified": "2020-11-06 16:26"
    *});
    * ```
    * @category Request Functions
