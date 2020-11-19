@@ -17,6 +17,7 @@ Well, This is a data client for Epub . （ Can be reformed for other Usage )
 - [x] Local data manupulate
 - [x] Hooks for data client
 - [x] Both for web and node supported
+- [x] Uniform the error catch for both http error and response code error
 
 ## Install
 
@@ -33,7 +34,7 @@ import { DataClient } from '@21epub/epub-data-client'
 
 const client = new DataClient('http://url.to/data/')
 
-client.fetchAll()
+client.getAll()
 
 class Example extends Component {
   data = client.useData()

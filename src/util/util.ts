@@ -2,7 +2,7 @@ import { BehaviorSubject, Observable } from 'rxjs'
 import { AjaxError } from 'rxjs/ajax'
 import { tap, filter, map } from 'rxjs/operators'
 import { AjaxFetcherResponse } from '../type'
-import { getErrorMsg } from './catchError'
+import { getErrorMsg, parseDataError } from './catchError'
 
 export const generateInitData = () => {
   return {
@@ -47,7 +47,7 @@ export const parseResponse = <T>(
     .pipe(
       tap((data) => {
         if (data?.response.code !== 200) {
-          throw data
+          throw parseDataError(data.response)
         }
       }),
       filter((data) => data?.response?.code === 200),

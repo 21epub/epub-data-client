@@ -32,12 +32,17 @@ test('Test request in node env', async () => {
   expect(data.response.id).toBe(1)
 })
 
-const mockData = {
+const mockDataFail = {
   message: 'ajax error 404',
   name: 'AjaxError',
   response: {},
   responseType: 'json',
   status: 404
+}
+
+const mockDataSuccess = {
+  code: 400,
+  msg: 'Server failed'
 }
 
 test('Response Error ', async () => {
@@ -50,7 +55,9 @@ test('Response Error ', async () => {
       timeout: 1000
     }
   })
-  mockRequest.mockImplementation(() => generatePromiseRejectMock(mockData))
+  mockRequest.mockImplementationOnce(() =>
+    generatePromiseRejectMock(mockDataFail)
+  )
   await client
     .id('22222')
     .get()
@@ -60,4 +67,26 @@ test('Response Error ', async () => {
   // .catch((error) => {
   //   //expect(error.status).toBe(404)
   // })
+})
+
+test('should error when response code not 200 ', async () => {
+  const url = 'https://jsonplaceholder.typicode.com/todos/'
+  const client = new DataClient(url, {
+    catchMsg(msg) {
+      expect(msg).toBe('Server failed')
+    },
+    ajaxRequestOptions: {
+      timeout: 1000
+    }
+  })
+  mockRequest.mockImplementationOnce(() =>
+    generatePromiseResolveMock(mockDataSuccess)
+  )
+  await client
+    .id('22222')
+    .get()
+    .catch((error) => {
+      expect(error.status).toBe(400)
+      expect(error.response.msg).toBe('Server failed')
+    })
 })

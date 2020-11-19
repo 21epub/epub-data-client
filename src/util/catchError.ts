@@ -1,4 +1,5 @@
 import { AjaxError } from 'rxjs/ajax'
+import { FetcherData } from '../type'
 
 export const catchError = (error: AjaxError) => {
   console.log(error)
@@ -7,15 +8,6 @@ export const catchError = (error: AjaxError) => {
 export const catchMsg = (msg: string) => {
   console.log(msg)
 }
-
-// export const catchResponseError = <T>(
-//   error: AjaxFetcherResponse<T>,
-//   defaultMsg = ''
-// ) => {
-//   console.log(error)
-
-//   return error
-// }
 
 export const codeMessage = {
   200: '服务器成功返回请求的数据。',
@@ -45,4 +37,12 @@ export const getErrorMsg = (error: AjaxError & { responseText?: string }) => {
     error?.response?.statusText ||
     '请求失败，请检查网络，并重试'
   )
+}
+
+export const parseDataError = <T>(data: FetcherData<T>): AjaxError => {
+  return {
+    response: data,
+    status: data.code,
+    responseType: 'json'
+  } as AjaxError
 }
