@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.3.0](https://github.com/21epub/epub-data-client/compare/v0.2.1...v0.3.0) (2020-11-19)
+
+### Bug Fixes
+
+- fix request error catch for response code!=200 ([03836ca](https://github.com/21epub/epub-data-client/commit/03836ca))
+
+### Features
+
+- add updateRawDataLocal function for local rawData modification ([d77b1bf](https://github.com/21epub/epub-data-client/commit/d77b1bf))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [0.2.1](https://github.com/21epub/epub-data-client/compare/v0.2.0...v0.2.1) (2020-11-17)
 
 # Change Log
