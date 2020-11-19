@@ -4,6 +4,7 @@ import { AjaxResponse } from 'rxjs/ajax'
 import { Observable } from 'rxjs'
 import request from '../util/request'
 import { generatePromiseResolveMock } from '../util/mockFn'
+import { Data } from '../type'
 
 type DataItem = {
   openid: number
@@ -17,6 +18,35 @@ type DataItem = {
 const dataClient = new DataClient<DataItem>(
   'v3/api/h5/works/soskgm/form/objects/'
 )
+
+const exampleLocalData = [
+  {
+    no: 20,
+    i1: 112,
+    openid: 19,
+    id: '99910894b550865b04512222',
+    modified: '2020-10-06 16:26',
+    created: '2020-10-06 16:25'
+  }
+]
+
+const exampleLocalRawData: Data<any> = {
+  page: 3,
+  numpages: 10,
+  sum: 100,
+  size: 20,
+  facet: [],
+  results: [
+    {
+      no: 200,
+      i1: 1134,
+      openid: 190,
+      id: '33391082121550865b04512222',
+      modified: '2020-10-06 16:26',
+      created: '2020-10-06 16:25'
+    }
+  ]
+}
 
 jest.mock('../util/request')
 
@@ -181,4 +211,9 @@ describe('Test DataClient functions', () => {
     expect(dataClient.getData()).toEqual(formData.data.results)
     expect(dataClient.getRawData().sum).toBe(1)
   })
+
+  dataClient.updateLocal(exampleLocalData)
+  expect(dataClient.getData()).toEqual(exampleLocalData)
+  dataClient.updateRawDataLocal(exampleLocalRawData)
+  expect(dataClient.getRawData()).toEqual(exampleLocalRawData)
 })

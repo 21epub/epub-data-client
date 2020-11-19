@@ -736,6 +736,22 @@ export default class DataClient<T extends { id: string }> {
   // * -------------------------------- local data methods
 
   /**
+   * Update all Raw data locally
+   * @param rawData
+   * @category Local Data Modification
+   */
+  public updateRawDataLocal(rawData: Data<T>) {
+    if (rawData && rawData.results) {
+      this.rawData = {
+        ...this.rawData,
+        ...rawData
+      }
+      this.emit$()
+    }
+    return this.rawData
+  }
+
+  /**
    * Update all data locally
    * !Caution: This function only changes the data list without modify the 'sum' value
    * @param data
