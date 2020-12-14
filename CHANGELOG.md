@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.4.0](https://github.com/21epub/epub-data-client/compare/v0.3.0...v0.4.0) (2020-12-14)
+
+### Features
+
+- add more freedom usage module ( DataClientPro ) for totally customized , patch for type def ([6c9e8ef](https://github.com/21epub/epub-data-client/commit/6c9e8ef))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [0.3.0](https://github.com/21epub/epub-data-client/compare/v0.2.1...v0.3.0) (2020-11-19)
 
 ### Bug Fixes
