@@ -4,7 +4,7 @@
   "description": "data api client for epub",
   "author": "21epub",
   "license": "MIT",
-  "homepage": "https://21epub.github.io/epub-data-client/classes/dataclient.html",
+  "homepage": "https://21epub.github.io/epub-data-client/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/21epub/epub-data-client.git"

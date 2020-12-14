@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>FetcherData | @21epub/epub-data-client</title>
+	<title>ParseOpts | @21epub/epub-data-client</title>
 	<meta name="description" content="Documentation for @21epub/epub-data-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="fetcherdata.html">FetcherData</a>
+					<a href="parseopts.html">ParseOpts</a>
 				</li>
 			</ul>
-			<h1>Interface FetcherData&lt;T&gt;</h1>
+			<h1>Interface ParseOpts&lt;D, T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -66,6 +66,9 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
+						<h4>D</h4>
+					</li>
+					<li>
 						<h4>T</h4>
 					</li>
 				</ul>
@@ -74,7 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">FetcherData</span>
+						<span class="target">ParseOpts</span>
 					</li>
 				</ul>
 			</section>
@@ -85,9 +88,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="fetcherdata.html#code" class="tsd-kind-icon">code</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="fetcherdata.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="fetcherdata.html#msg" class="tsd-kind-icon">msg</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parseopts.html#catcherr" class="tsd-kind-icon">catch<wbr>Err</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parseopts.html#catchmsg" class="tsd-kind-icon">catch<wbr>Msg</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parseopts.html#loading_" class="tsd-kind-icon">loading$</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parseopts.html#observer" class="tsd-kind-icon">observer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="parseopts.html#parsedata" class="tsd-kind-icon">parse<wbr>Data</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,32 +101,52 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="code" class="tsd-anchor"></a>
-					<h3>code</h3>
-					<div class="tsd-signature tsd-kind-icon">code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="catcherr" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> catch<wbr>Err</h3>
+					<div class="tsd-signature tsd-kind-icon">catch<wbr>Err<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AjaxError</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/type.ts#L13">src/type.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/util/util.ts#L110">src/util/util.ts:110</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="data" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <a href="data.html" class="tsd-signature-type">Data</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="catchmsg" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> catch<wbr>Msg</h3>
+					<div class="tsd-signature tsd-kind-icon">catch<wbr>Msg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/type.ts#L14">src/type.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/util/util.ts#L111">src/util/util.ts:111</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="msg" class="tsd-anchor"></a>
-					<h3>msg</h3>
-					<div class="tsd-signature tsd-kind-icon">msg<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="loading_" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> loading$</h3>
+					<div class="tsd-signature tsd-kind-icon">loading$<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BehaviorSubject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/type.ts#L12">src/type.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/util/util.ts#L112">src/util/util.ts:112</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="observer" class="tsd-anchor"></a>
+					<h3>observer</h3>
+					<div class="tsd-signature tsd-kind-icon">observer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><a href="ajaxresponsepro.html" class="tsd-signature-type">AjaxResponsePro</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/util/util.ts#L109">src/util/util.ts:109</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="parsedata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parse<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">parse<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>rawData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/21epub/epub-data-client/blob/6c9e8ef/src/util/util.ts#L113">src/util/util.ts:113</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -152,27 +177,33 @@
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="data.html" class="tsd-kind-icon">Data</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="fetcherdata.html" class="tsd-kind-icon">Fetcher<wbr>Data</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-has-type-parameter">
-						<a href="fetcherdata.html" class="tsd-kind-icon">Fetcher<wbr>Data</a>
+						<a href="parseopts.html" class="tsd-kind-icon">Parse<wbr>Opts</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="fetcherdata.html#code" class="tsd-kind-icon">code</a>
+								<a href="parseopts.html#catcherr" class="tsd-kind-icon">catch<wbr>Err</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="fetcherdata.html#data" class="tsd-kind-icon">data</a>
+								<a href="parseopts.html#catchmsg" class="tsd-kind-icon">catch<wbr>Msg</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="fetcherdata.html#msg" class="tsd-kind-icon">msg</a>
+								<a href="parseopts.html#loading_" class="tsd-kind-icon">loading$</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="parseopts.html#observer" class="tsd-kind-icon">observer</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="parseopts.html#parsedata" class="tsd-kind-icon">parse<wbr>Data</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="parseopts.html" class="tsd-kind-icon">Parse<wbr>Opts</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="requestoptspro.html" class="tsd-kind-icon">Request<wbr>Opts<wbr>Pro</a>
 					</li>
