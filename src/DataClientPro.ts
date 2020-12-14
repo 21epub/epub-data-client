@@ -7,33 +7,25 @@ import { catchError } from './util/catchError'
 import queryString from 'query-string'
 import { Observable } from 'rxjs/internal/Observable'
 import request from './util/request'
-import {
-  generateInitData,
-  parseData,
-  parseRawResponse,
-  parseResponse,
-  urlJoin
-} from './util/util'
+import { parseResponsePro, urlJoin } from './util/util'
 import { BehaviorSubject } from 'rxjs'
 import { createDataHook } from './util/hooks'
 import {
-  RequestOpts,
+  RequestOptsPro,
   QueryOpt,
-  Data,
   Method,
-  AjaxFetcherResponse
+  AjaxResponsePro,
+  ProParseDataFC
 } from './type'
 
 /**
- * Data client
- * - Causion First: Every api using this module should fit the response data structure as below
+ * Data client Pro ( More Customized solution for different api server )
+ * - Api data structure are not restricted , or some Demo like below : 
  * - ```json
  *  {
-   "msg": "success",
-   "code": 200,
-   "data": {
-     "numpages": 1,
-     "sum": 1,
+    "count": 30,
+    "next": "http://127.0.0.1:8000/api/assistance/?limit=10&offset=10",
+    "previous": null,
      "results": [
        {
          "openid": 8,
@@ -43,14 +35,19 @@ import {
          "modified": "2020-11-06 16:26",
          "id": "5fa50894b550865b04515e71"
        }
-     ],
-     "facet": [],
-     "page": 1,
-     "size": 1
+     ]
    }
- }
  * - ```
- * - First, You shoud know the type of a single Data item typed <T> , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
+ * - First, You shoud know the type of the RawData from server <D>  and a single Data item typed <T> , You can use  [MakeTypes](https://jvilk.com/MakeTypes/) to generate
+ * - Asume that your rawData type is 
+ * ```ts
+ * type RawData = {
+ *    count: number
+ *    next?: string
+ *    previous?: string
+ *    results: DataItem[]
+ * }
+ * ```
  * - Asume that the single Data item type is
  * ```ts
  *  type DataItem = {
@@ -62,15 +59,29 @@ import {
  *    id: string
  *  }
  * ```
+ * - You should specify the `parseData` method for data parsing , parseData is a parser to handle the return data,  for example: 
+ * - parseData method is only worked for `getAll` to parse the results 
+ * ```ts
+ * const opts = {
+ *  parseData: (rawData: RawData):DataItem[] => {
+ *     return rawData.results; 
+ *  }
+ * }
+ * ```
  * - Then create a new Client
  * - Asume the client rest url is : http://url.to/data
+ * - type D means rawData from response 
+ * - type T means single Data Item for Data list 
  * ```ts
- *  import { DataClient } from '@21epub/epub-data-client'
- *  const client = new DataClient<DataItem>('http://url.to/data')
+ *  import { DataClientPro } from '@21epub/epub-data-client'
+ *  const client = new DataClientPro<RawData , DataItem>('http://url.to/data', opts)
  * ```
  * Create with opts to catch error and error msg by default
  * ```ts
  * const opts = {
+ *    parseData: (rawData: RawData):DataItem[] => {
+ *       return rawData.results; 
+ *    }
  *    catchError(error){
  *      if(error.status === 400) message.error(error.response.msg);
  *    },
@@ -78,11 +89,11 @@ import {
  *      message.error(msg)
  *    }
  * }
- * const client = new DataClient<DataItem>('http://url.to/data', opts)
+ * const client = new DataClientPro<DataItem>('http://url.to/data', opts)
  * ```
  * -
  */
-export default class DataClient<T extends Record<string, any>> {
+export default class DataClientPro<D, T extends Record<string, any>> {
   /**
    * Url  of data client
    */
@@ -97,7 +108,7 @@ export default class DataClient<T extends Record<string, any>> {
    * contentType: You can change de mode for request
    * addBackSlash: If the url will end with a backSlash
    */
-  protected _options: RequestOpts = {
+  protected _options: RequestOptsPro<D, T> = {
     acceptMethods: ['POST', 'GET', 'PUT', 'PATCH', 'OPTION', 'DELETE'],
     contentType: 'application/json',
     addBackSlash: false,
@@ -107,16 +118,12 @@ export default class DataClient<T extends Record<string, any>> {
 
   protected catchError?: typeof catchError
   protected catchMsg?: (msg: string) => void
-  protected _size: number | undefined = undefined
-  protected _page: number = 1
-  protected _numpages: number = 1
-  protected _sum: number = 0
   protected _query: QueryOpt = {}
   protected _id: string | number = ''
   protected _path: string = ''
   protected _current: string | number = ''
-  protected data: T[] = []
-  protected rawData: Data<T>
+  protected data: D | T | T[] | undefined
+  protected rawData: D | undefined
   protected currentData: T | any = {}
   protected _idAttribute: string = 'id'
 
@@ -153,9 +160,9 @@ export default class DataClient<T extends Record<string, any>> {
    */
   public currentLoading$ = new BehaviorSubject(false)
 
-  protected rawData$: BehaviorSubject<Data<T>> = new BehaviorSubject<Data<T>>(
-    generateInitData()
-  )
+  protected rawData$: BehaviorSubject<D | undefined> = new BehaviorSubject<
+    D | undefined
+  >(undefined)
 
   protected data$: BehaviorSubject<T[]> = new BehaviorSubject<T[]>([])
   protected currentData$: BehaviorSubject<T | undefined> = new BehaviorSubject<
@@ -165,6 +172,17 @@ export default class DataClient<T extends Record<string, any>> {
   protected query$: BehaviorSubject<QueryOpt> = new BehaviorSubject<QueryOpt>(
     {}
   )
+
+  /**
+   * Parse data of data client pro
+   * parseData only for getAll to parse the server data
+   * Initialize it from contructor function
+   * @example
+   * ```ts
+   * parseData : (rawData? : RawData) => rawData.results
+   * ```
+   */
+  public parseData?: ProParseDataFC<D, T>
 
   // * -------------------------------- Hooks
 
@@ -190,15 +208,16 @@ export default class DataClient<T extends Record<string, any>> {
    *      "size": 1
    *  }
    * ```
+   * And then you can use the data as you wish
    * @category Hooks
    * @example
-   * ```
+   * ```ts
    * const Comp = () => {
    *     const {page, sum ,results } = client.useRawData
    * }
    * ```
    */
-  public useRawData: () => Data<T> // hooks for rawData
+  public useRawData: () => D | undefined // hooks for rawData
   /**
    *  Hooks of result data
    *  Data structure as below:
@@ -242,7 +261,7 @@ export default class DataClient<T extends Record<string, any>> {
    * @category Hooks
    * 
    */
-  public useCurrentData: () => T | undefined
+  public useCurrentData: () => any | undefined
   /**
    * Hooks for get query object
    * Can be used with .query() ,async data change
@@ -262,18 +281,20 @@ export default class DataClient<T extends Record<string, any>> {
    * @param _options
    * @param initState
    */
-  constructor(url: string, opts: RequestOpts = {}, initState: T[] = []) {
+  constructor(
+    url: string,
+    opts: RequestOptsPro<D, T> = {},
+    initState: T[] = []
+  ) {
     this._url = url
     this._originUrl = url // keep the origin url , changeBack when url change is temporary
     this._options = { ...this._options, ...opts }
-    this._size = opts.size ?? this._size
     this.catchError = opts.catchError ?? catchError
     this.catchMsg = opts.catchMsg
     this.data = initState
-    this.rawData = generateInitData()
-    this.useRawData = createDataHook<Data<T>>(this.rawData$, this.rawData)
+    this.useRawData = createDataHook<D | undefined>(this.rawData$, this.rawData)
     this.useData = createDataHook<T[]>(this.data$, [])
-    this.useCurrentData = createDataHook<T | undefined>(
+    this.useCurrentData = createDataHook<any | undefined>(
       this.currentData$,
       undefined
     )
@@ -283,11 +304,25 @@ export default class DataClient<T extends Record<string, any>> {
       false
     )
     this.useQuery = createDataHook<QueryOpt>(this.query$, {})
+    this.parseData = opts.parseData
     this._idAttribute = opts.idAttribute ?? 'id'
     return this
   }
 
   // * --------------------------------  Raw functions
+
+  private _getRequestArgs(
+    url: string,
+    method: Method,
+    body?: AjaxRequest['body']
+  ) {
+    return {
+      observer: this.rawAjax(url, method, body),
+      catchErr: this.catchError,
+      catchMsg: this.catchMsg,
+      parseData: this?.parseData
+    }
+  }
 
   /**
    * A low level request use as what you want .
@@ -301,7 +336,7 @@ export default class DataClient<T extends Record<string, any>> {
     url: string,
     method: Method,
     body?: AjaxRequest['body']
-  ): Observable<AjaxFetcherResponse<T>> {
+  ): Observable<AjaxResponsePro<D>> {
     return (request({
       url,
       method,
@@ -310,7 +345,7 @@ export default class DataClient<T extends Record<string, any>> {
       },
       body,
       ...this._options.ajaxRequestOptions
-    }) as any) as Observable<AjaxFetcherResponse<T>>
+    }) as any) as Observable<AjaxResponsePro<D>>
   }
 
   /**
@@ -325,12 +360,13 @@ export default class DataClient<T extends Record<string, any>> {
     url: string,
     method: Method,
     body?: AjaxRequest['body']
-  ): Promise<void | T[]> {
-    return await parseResponse<T>(
-      this.rawAjax(url, method, body),
-      this.catchError,
-      this.catchMsg
-    )
+  ): Promise<void | T[] | D | T | any> {
+    return await parseResponsePro<D, T>({
+      ...this._getRequestArgs(url, method, body),
+      parseData: undefined
+    }).then((data) => {
+      return data
+    })
   }
 
   // * -------------------------------- Rest Request functions
@@ -352,28 +388,24 @@ export default class DataClient<T extends Record<string, any>> {
    * ```
    *  await client.page(2).size(20).query({query:"demo"}).getAll() ;
    * ```
+   * Result will be prased by `parseData`
    * @category Request Functions
    */
   public async getAll() {
-    const query = { size: this._size, page: this._page, ...this._query }
+    const query = { ...this._query }
     let url = urlJoin([this._url, this._path], this._options.addBackSlash)
     url = queryString.stringifyUrl({ url, query })
     this.clearIdPath()
 
-    return await parseRawResponse<T>(
-      this.rawAjax(url, 'GET'),
-      this.catchError,
-      this.catchMsg,
-      this.dataLoading$
-    ).then((data) => {
+    return await parseResponsePro<D, T>({
+      ...this._getRequestArgs(url, 'GET'),
+      loading$: this.dataLoading$
+    }).then((data) => {
       if (data) {
-        this.rawData = data.response.data as Data<T>
-        this.data = parseData(data)
-        this._numpages = data.response.data?.numpages ?? 0
-        this._page = data.response.data?.page ?? 1
-        this._sum = data.response.data?.sum ?? 0
+        this.rawData = data
+        this.data = this.parseData ? this.parseData(data) : data
         this.rawData$.next(this.rawData)
-        this.data$.next(this.data)
+        this.data$.next(this.data as T[])
       }
       return this.data
     })
@@ -398,11 +430,7 @@ export default class DataClient<T extends Record<string, any>> {
     )
     this.clearIdPath()
 
-    return await parseResponse(
-      this.rawAjax(url, 'GET'),
-      this.catchError,
-      this.catchMsg
-    )
+    return await this.rawRequest(url, 'GET')
   }
 
   /**
@@ -523,25 +551,25 @@ export default class DataClient<T extends Record<string, any>> {
    *  ```
    *  await client.path('object').fetchCurrent()   // will fetch from url http://url/id/object
    *  ```
+   *  @category Request Functions
    */
-  public async fetchCurrent(): Promise<T | undefined> {
+  public async fetchCurrent(): Promise<any> {
     const url = urlJoin(
       [this._url, this._current, this._path],
       this._options.addBackSlash
     )
     this.clearIdPath()
 
-    return await parseResponse(
-      this.rawAjax(url, 'GET'),
-      this.catchError,
-      this.catchMsg,
-      this.currentLoading$
-    ).then((data) => {
-      if (data && data[0]) {
-        this.currentData = data[0]
+    return await parseResponsePro({
+      ...this._getRequestArgs(url, 'GET'),
+      parseData: undefined,
+      loading$: this.currentLoading$
+    }).then((data) => {
+      if (data) {
+        this.currentData = data
         this.currentData$.next(this.currentData)
         this.putLocal(this.currentData)
-        return data[0]
+        return data
       } else {
         return undefined
       }
@@ -557,7 +585,7 @@ export default class DataClient<T extends Record<string, any>> {
    */
   public fetchCurrentLocal(): T | undefined {
     const id = this._current
-    const data = this.data.find((d: T) => (d as any)[this._idAttribute] === id)
+    const data = (this.data as T[]).find((d: T) => d[this._idAttribute] === id)
     if (data) {
       this.currentData = data
       this.currentData$.next(this.currentData)
@@ -572,12 +600,11 @@ export default class DataClient<T extends Record<string, any>> {
    * @param opts
    * @category Chain Operators
    */
-  public options(opts: RequestOpts = {}): DataClient<T> {
+  public options(opts: RequestOptsPro<D, T> = {}): DataClientPro<D, T> {
     this._options = {
       ...this._options,
       ...opts
     }
-    if (opts.idAttribute) this._idAttribute = opts.idAttribute
     return this
   }
 
@@ -586,39 +613,11 @@ export default class DataClient<T extends Record<string, any>> {
    * @param q
    * @category Chain Operators
    */
-  public query(q = {}): DataClient<T> {
+  public query(q = {}): DataClientPro<D, T> {
     this._query = {
       ...q
     }
     this.query$.next(this._query)
-    return this
-  }
-
-  /**
-   * Set page for getAll() only
-   * @param p
-   * @category Chain Operators
-   * @example
-   * ```
-   *  await dataClient.page(2).getAll();
-   * ```
-   */
-  public page(p: number = 1): DataClient<T> {
-    this._page = p
-    return this
-  }
-
-  /**
-   * Set size only for getAll()
-   * @param s size / per page to fetch data
-   * @category Chain Operators
-   * @example
-   * ```
-   *  await dataClient.page(3).size(20).getAll();
-   * ```
-   */
-  public size(s: number = 10) {
-    this._size = s
     return this
   }
 
@@ -664,10 +663,10 @@ export default class DataClient<T extends Record<string, any>> {
    * @category Chain Operators
    * @example
    * ```
-   *  await dataClient.id('12345').path('publish/').post();
+   *  await DataClientPro.id('12345').path('publish/').post();
    * ```
    */
-  public path(p: string): DataClient<T> {
+  public path(p: string): DataClientPro<D, T> {
     this._path = p
     return this
   }
@@ -723,20 +722,6 @@ export default class DataClient<T extends Record<string, any>> {
     return this._url
   }
 
-  /**
-   * @category Get Methods
-   */
-  public getSize() {
-    return this._size
-  }
-
-  /**
-   * @category Get Methods
-   */
-  public getPage() {
-    return this._page
-  }
-
   // * -------------------------------- local data methods
 
   /**
@@ -744,12 +729,9 @@ export default class DataClient<T extends Record<string, any>> {
    * @param rawData
    * @category Local Data Modification
    */
-  public updateRawDataLocal(rawData: Data<T>) {
-    if (rawData && rawData.results) {
-      this.rawData = {
-        ...this.rawData,
-        ...rawData
-      }
+  public updateRawDataLocal(rawData: D) {
+    if (rawData) {
+      this.rawData = JSON.parse(JSON.stringify(rawData))
       this.emit$()
     }
     return this.rawData
@@ -764,10 +746,6 @@ export default class DataClient<T extends Record<string, any>> {
   public updateLocal(data: T[]) {
     if (data?.length) {
       this.data = [...data]
-      this.rawData = {
-        ...this.rawData,
-        results: this.data
-      }
       this.emit$()
     }
     return this.data
@@ -781,12 +759,7 @@ export default class DataClient<T extends Record<string, any>> {
    */
   public appendLocal(body: T) {
     if (body) {
-      this.data = [...this.data, body]
-      this.rawData = {
-        ...this.rawData,
-        sum: this.rawData.sum + 1,
-        results: this.data
-      }
+      this.data = [...(this.data as T[]), body]
       this.emit$()
     }
     return this.data
@@ -799,12 +772,7 @@ export default class DataClient<T extends Record<string, any>> {
    */
   public prependLocal(body: T) {
     if (body) {
-      this.data = [body, ...this.data]
-      this.rawData = {
-        ...this.rawData,
-        sum: this.rawData.sum + 1,
-        results: this.data
-      }
+      this.data = [body, ...(this.data as T[])]
       this.emit$()
     }
     return this.data
@@ -818,18 +786,18 @@ export default class DataClient<T extends Record<string, any>> {
   public patchLocal(body: Partial<T> = {}) {
     const id = this._id
     this.clearIdPath()
-    if (body && id && this.data.find((v: T) => v[this._idAttribute] === id)) {
-      const d = this.data.map((v) => {
+    if (
+      body &&
+      id &&
+      (this.data as T[]).find((v: T) => v[this._idAttribute] === id)
+    ) {
+      const d = (this.data as T[]).map((v) => {
         if (v[this._idAttribute] === id) {
           return { ...v, ...body }
         }
         return v
       })
       this.data = [...d]
-      this.rawData = {
-        ...this.rawData,
-        results: this.data
-      }
       this.emit$()
     }
     if (
@@ -862,13 +830,10 @@ export default class DataClient<T extends Record<string, any>> {
   public deleteLocal() {
     const id = this._id
     this.clearIdPath()
-    if (id && this.data.find((v: T) => v[this._idAttribute] === id)) {
-      this.data = [...this.data.filter((v: T) => v[this._idAttribute] !== id)]
-      this.rawData = {
-        ...this.rawData,
-        sum: this.rawData.sum - 1,
-        results: this.data
-      }
+    if (id && (this.data as T[]).find((v: T) => v[this._idAttribute] === id)) {
+      this.data = [
+        ...(this.data as T[]).filter((v: T) => v[this._idAttribute] !== id)
+      ]
       this.emit$()
     }
     return this.data
@@ -876,7 +841,7 @@ export default class DataClient<T extends Record<string, any>> {
 
   protected emit$() {
     this.rawData$.next(this.rawData)
-    this.data$.next(this.data)
+    this.data$.next(this.data as T[])
   }
 
   /**

@@ -210,10 +210,42 @@ describe('Test DataClient functions', () => {
     dataClient.id('21210894b550865b04515e71').deleteLocal()
     expect(dataClient.getData()).toEqual(formData.data.results)
     expect(dataClient.getRawData().sum).toBe(1)
+    dataClient.updateLocal(exampleLocalData)
+    expect(dataClient.getData()).toEqual(exampleLocalData)
+    dataClient.updateRawDataLocal(exampleLocalRawData)
+    expect(dataClient.getRawData()).toEqual(exampleLocalRawData)
   })
 
-  dataClient.updateLocal(exampleLocalData)
-  expect(dataClient.getData()).toEqual(exampleLocalData)
-  dataClient.updateRawDataLocal(exampleLocalRawData)
-  expect(dataClient.getRawData()).toEqual(exampleLocalRawData)
+  test('should change idAttributes and return data is ok', async () => {
+    dataClient.options({
+      idAttribute: 'slug'
+    })
+
+    const formData = require('../testResults/formData.json')
+
+    mockRequest.mockImplementationOnce(() =>
+      generatePromiseResolveMock({
+        ...formData,
+        data: {
+          results: [
+            {
+              no: 2,
+              i1: 12,
+              openid: 9,
+              slug: '21210894b550865b04515e71',
+              modified: '2020-11-06 16:26',
+              created: '2020-11-06 16:25'
+            }
+          ]
+        }
+      })
+    )
+
+    await dataClient.current('21210894b550865b04515e71').fetchCurrent()
+    dataClient.id('21210894b550865b04515e71').patchLocal({
+      no: 4
+    })
+    const currentData = dataClient.getCurrentData()
+    expect(currentData.no).toBe(4)
+  })
 })

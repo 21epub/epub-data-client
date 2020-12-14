@@ -17,6 +17,10 @@ export interface AjaxFetcherResponse<T> extends AjaxResponse {
   response: FetcherData<T>
 }
 
+export interface AjaxResponsePro<T> extends AjaxResponse {
+  response: T
+}
+
 export type Method = 'POST' | 'GET' | 'PUT' | 'DELETE' | 'OPTION' | 'PATCH'
 
 export type RequestOpts = {
@@ -50,6 +54,13 @@ export type RequestOpts = {
    */
   addBackSlash?: boolean
   ajaxRequestOptions?: AjaxRequest
+  idAttribute?: string
+}
+
+export type ProParseDataFC<D, T> = (rawData?: D) => T[] | [] | D | T | undefined
+
+export interface RequestOptsPro<D, T> extends RequestOpts {
+  parseData?: ProParseDataFC<D, T>
 }
 
 export type QueryOpt = {
