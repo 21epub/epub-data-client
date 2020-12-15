@@ -545,8 +545,10 @@ export default class DataClientPro<D, T extends Record<string, any>> {
   /**
    *  fetch Current Item data from server
    *  Allowed path suffix
-   *  automately preserve data to this._currentData and this.data
+   *  automately preserve data to this._currentData
    *  useCurrentData will affected by update
+   *  !Caution: `parseData` will not Effect this method
+   *  !Caution: Not like DataClient , Because the dataStructure maybe different , So data list may not be updated only if the return data fit the structure of a single item
    *  @example
    *  ```
    *  await client.path('object').fetchCurrent()   // will fetch from url http://url/id/object
@@ -568,7 +570,7 @@ export default class DataClientPro<D, T extends Record<string, any>> {
       if (data) {
         this.currentData = data
         this.currentData$.next(this.currentData)
-        this.putLocal(this.currentData)
+        this.id(this._current).putLocal(this.currentData)
         return data
       } else {
         return undefined
@@ -674,49 +676,49 @@ export default class DataClientPro<D, T extends Record<string, any>> {
   // * -------------------------------- methods get properties
 
   /**
-   *  @category Get Methods
+   *  @category Get Local Data Or Settings
    */
   public getRawData() {
     return this.rawData
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getData() {
     return this.data
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getCurrent() {
     return this._current
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getCurrentData() {
     return this.currentData
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getQuery() {
     return this._query
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getOptions() {
     return this._options
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getUrl() {
     return this._url
@@ -788,6 +790,7 @@ export default class DataClientPro<D, T extends Record<string, any>> {
     this.clearIdPath()
     if (
       body &&
+      body[this._idAttribute] &&
       id &&
       (this.data as T[]).find((v: T) => v[this._idAttribute] === id)
     ) {

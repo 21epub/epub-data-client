@@ -59,7 +59,30 @@ export type RequestOpts = {
 
 export type ProParseDataFC<D, T> = (rawData?: D) => T[] | [] | D | T | undefined
 
-export interface RequestOptsPro<D, T> extends RequestOpts {
+export interface RequestOptsPro<D, T> {
+  /**
+   * Methods allowed To use
+   */
+  acceptMethods?: Array<Method>
+  contentType?:
+    | 'application/x-www-form-urlencoded'
+    | 'multipart/form-data'
+    | 'application/json'
+    | 'text/plain'
+  /**
+   * catchError for both http response error and data.code!=200 error
+   */
+  catchError?: (error: AjaxError) => void
+  /**
+   * catchMsg return by error response msg or default system msg
+   */
+  catchMsg?: (msg: string) => void
+  /**
+   *  size for request per page
+   */
+  addBackSlash?: boolean
+  ajaxRequestOptions?: AjaxRequest
+  idAttribute?: string
   parseData?: ProParseDataFC<D, T>
 }
 

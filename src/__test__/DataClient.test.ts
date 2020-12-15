@@ -104,14 +104,27 @@ describe('Test DataClient functions', () => {
   test('should current Functions pass ', async () => {
     const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
-      expect(opt.url).toBe('v3/api/h5/works/soskgm/form/objects/test1111')
+      expect(opt.url).toBe(
+        'v3/api/h5/works/soskgm/form/objects/5fa50894b550865b04515e71'
+      )
       expect(opt.method).toBe('GET')
-      return generatePromiseResolveMock(formData)
+      return generatePromiseResolveMock({
+        ...formData,
+        data: {
+          ...formData.data,
+          results: [{ ...formData.data.results[0], no: 111 }]
+        }
+      })
     })
-    const result = await dataClient.current('test1111').fetchCurrent()
+    const result = await dataClient
+      .current('5fa50894b550865b04515e71')
+      .fetchCurrent()
 
-    expect(dataClient.getCurrent()).toBe('test1111')
-    expect(result).toBe(formData.data.results[0])
+    expect(dataClient.getCurrent()).toBe('5fa50894b550865b04515e71')
+    expect(result).toEqual({ ...formData.data.results[0], no: 111 })
+    expect(
+      dataClient.getData().find((v) => v.id === '5fa50894b550865b04515e71')
+    ).toEqual({ ...formData.data.results[0], no: 111 })
   })
 
   test('should change args pass ', async () => {
@@ -247,5 +260,16 @@ describe('Test DataClient functions', () => {
     })
     const currentData = dataClient.getCurrentData()
     expect(currentData.no).toBe(4)
+  })
+
+  test('should getOptions ok', () => {
+    const options = dataClient.getOptions()
+    expect(options).toEqual({
+      acceptMethods: ['POST', 'GET', 'PUT', 'PATCH', 'OPTION', 'DELETE'],
+      addBackSlash: false,
+      ajaxRequestOptions: {},
+      contentType: 'application/json',
+      idAttribute: 'slug'
+    })
   })
 })

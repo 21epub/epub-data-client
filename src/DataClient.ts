@@ -523,6 +523,7 @@ export default class DataClient<T extends Record<string, any>> {
    *  ```
    *  await client.path('object').fetchCurrent()   // will fetch from url http://url/id/object
    *  ```
+   *  @category Request Functions
    */
   public async fetchCurrent(): Promise<T | undefined> {
     const url = urlJoin(
@@ -540,7 +541,7 @@ export default class DataClient<T extends Record<string, any>> {
       if (data && data[0]) {
         this.currentData = data[0]
         this.currentData$.next(this.currentData)
-        this.putLocal(this.currentData)
+        this.id(this._current).putLocal(this.currentData)
         return data[0]
       } else {
         return undefined
@@ -582,7 +583,8 @@ export default class DataClient<T extends Record<string, any>> {
   }
 
   /**
-   *
+   * Set the query args only for getAll function
+   * * Notice: This is a Operator only for getAll method , other method not care *
    * @param q
    * @category Chain Operators
    */
@@ -596,6 +598,7 @@ export default class DataClient<T extends Record<string, any>> {
 
   /**
    * Set page for getAll() only
+   * * Notice: This is a Operator only for getAll method , other method not care *
    * @param p
    * @category Chain Operators
    * @example
@@ -610,6 +613,7 @@ export default class DataClient<T extends Record<string, any>> {
 
   /**
    * Set size only for getAll()
+   * * Notice: This is a Operator only for getAll method , other method not care *
    * @param s size / per page to fetch data
    * @category Chain Operators
    * @example
@@ -675,63 +679,63 @@ export default class DataClient<T extends Record<string, any>> {
   // * -------------------------------- methods get properties
 
   /**
-   *  @category Get Methods
+   *  @category Get Local Data Or Settings
    */
   public getRawData() {
     return this.rawData
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getData() {
     return this.data
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getCurrent() {
     return this._current
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getCurrentData() {
     return this.currentData
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getQuery() {
     return this._query
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getOptions() {
     return this._options
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getUrl() {
     return this._url
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getSize() {
     return this._size
   }
 
   /**
-   * @category Get Methods
+   * @category Get Local Data Or Settings
    */
   public getPage() {
     return this._page
