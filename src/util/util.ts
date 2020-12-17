@@ -150,3 +150,12 @@ export const parseResponsePro = <D, T>({
       throw error
     })
 }
+
+export type ParseFnForLoadMore = <T>(prevData: T[], currentData: T[]) => T[]
+
+export const parseFnForLoadMore: ParseFnForLoadMore = (
+  prevData,
+  currentData
+) => {
+  return [...prevData, ...currentData]
+}

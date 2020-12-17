@@ -10,6 +10,8 @@ import request from './util/request'
 import {
   generateInitData,
   parseData,
+  ParseFnForLoadMore,
+  parseFnForLoadMore,
   parseRawResponse,
   parseResponse,
   urlJoin
@@ -369,6 +371,72 @@ export default class DataClient<T extends Record<string, any>> {
       if (data) {
         this.rawData = data.response.data as Data<T>
         this.data = parseData(data)
+        this._numpages = data.response.data?.numpages ?? 0
+        this._page = data.response.data?.page ?? 1
+        this._sum = data.response.data?.sum ?? 0
+        this.rawData$.next(this.rawData)
+        this.data$.next(this.data)
+      }
+      return this.data
+    })
+  }
+
+  /**
+   *  fetch more context datas from server
+   *  append these data to this.data
+   *  preserve the data to this.rawData and this.data
+   *  Every fetch success for change the data
+   *  Scroll a container to load more page datas
+   *  ```
+   *  await client.page(2).getMore()  // will fetch from http://url
+   *  await client.getMore()   // not page params , asume this._page is 1 , then it will automatically load data from page 2
+   *  await client.getMore().catch(err=> console.log(err))  // fetch for custom error catch
+   * ```
+   *  You can also change url temporary or make path suffix to the url, id() not support
+   * ```
+   * await client.url('http://newurl").getMore()  // fetch from url `http://newurl`
+   * await client.path('all/').getMore()    // fetch from url  `http://url/all/`
+   * ```
+   *  getMore() with page , size and query arguments
+   * ```
+   *  await client.page(2).size(20).query({query:"demo"}).getMore() ;
+   * ```
+   * @category Request Functions
+   * @param parseFn Custom the methods to handle the data callback , You can append or prepend the data to origin or make any validation
+   * @example
+   * You can custom your data parse function
+   * ```ts
+   *   await dataClient.page(3).getMore({
+   *    parseFn: (prevData, currentData) => {
+   *     return [...currentData, ...prevData]
+   *    }
+   *  })
+   * ```
+   */
+  public async getMore({ parseFn }: { parseFn?: ParseFnForLoadMore } = {}) {
+    const query = {
+      size: this._size,
+      page: this._page,
+      ...this._query
+    }
+    const parseLoadFn = parseFn ?? parseFnForLoadMore
+    let url = urlJoin([this._url, this._path], this._options.addBackSlash)
+    url = queryString.stringifyUrl({ url, query })
+    this.clearIdPath()
+
+    return await parseRawResponse<T>(
+      this.rawAjax(url, 'GET'),
+      this.catchError,
+      this.catchMsg,
+      this.dataLoading$
+    ).then((data) => {
+      if (data) {
+        const newResults = parseLoadFn<T>(this.data, parseData(data))
+        this.data = newResults
+        this.rawData = {
+          ...data.response.data,
+          results: newResults
+        } as Data<T>
         this._numpages = data.response.data?.numpages ?? 0
         this._page = data.response.data?.page ?? 1
         this._sum = data.response.data?.sum ?? 0

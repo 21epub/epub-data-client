@@ -53,9 +53,10 @@ jest.mock('../util/request')
 const mockRequest = request as jest.Mock<Observable<AjaxResponse>>
 
 describe('Test DataClient functions', () => {
+  const formData = require('../testResults/formData.json')
+
   test('should FetchAll Data correct ', async () => {
     // fn.mockImplementationOnce(() => 'test')
-    const formData = require('../testResults/formData.json')
 
     mockRequest.mockImplementationOnce(() =>
       generatePromiseResolveMock(formData)
@@ -102,7 +103,6 @@ describe('Test DataClient functions', () => {
   })
 
   test('should current Functions pass ', async () => {
-    const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe(
         'v3/api/h5/works/soskgm/form/objects/5fa50894b550865b04515e71'
@@ -128,7 +128,6 @@ describe('Test DataClient functions', () => {
   })
 
   test('should change args pass ', async () => {
-    const formData = require('../testResults/formData.json')
     mockRequest.mockImplementationOnce((opt) => {
       expect(opt.url).toBe(
         '/v3/api/h5/works/soskgm/form/fields/publish/?page=3&query=demo&size=20'
@@ -159,7 +158,6 @@ describe('Test DataClient functions', () => {
     await dataClient.urlReset().getAll()
   })
   test('should local functions pass', async () => {
-    const formData = require('../testResults/formData.json')
     expect(dataClient.getRawData()).toBe(formData.data)
     expect(dataClient.getData()).toBe(formData.data.results)
     dataClient.query({
@@ -234,8 +232,6 @@ describe('Test DataClient functions', () => {
       idAttribute: 'slug'
     })
 
-    const formData = require('../testResults/formData.json')
-
     mockRequest.mockImplementationOnce(() =>
       generatePromiseResolveMock({
         ...formData,
@@ -271,5 +267,59 @@ describe('Test DataClient functions', () => {
       contentType: 'application/json',
       idAttribute: 'slug'
     })
+  })
+
+  test('should getMore page data ok', async () => {
+    const data = dataClient.getData()
+    const newData = {
+      no: 10,
+      i1: 12,
+      openid: 9,
+      id: '000',
+      modified: '2020-11-06 16:26',
+      created: '2020-11-06 16:25'
+    }
+    mockRequest.mockImplementationOnce((opt) => {
+      expect(opt.url).toBe(
+        'v3/api/h5/works/soskgm/form/objects/?page=3&search=demo&size=20'
+      )
+      return generatePromiseResolveMock({
+        ...formData,
+        data: {
+          results: [newData]
+        }
+      })
+    })
+    await dataClient.page(3).getMore()
+    expect(dataClient.getData()).toEqual([...data, newData])
+  })
+
+  test('should Custom getMore callback data handle ok', async () => {
+    const data = dataClient.getData()
+    const newData = {
+      no: 10,
+      i1: 12,
+      openid: 9,
+      id: '000',
+      modified: '2020-11-06 16:26',
+      created: '2020-11-06 16:25'
+    }
+    mockRequest.mockImplementationOnce((opt) => {
+      expect(opt.url).toBe(
+        'v3/api/h5/works/soskgm/form/objects/?page=3&search=demo&size=20'
+      )
+      return generatePromiseResolveMock({
+        ...formData,
+        data: {
+          results: [newData]
+        }
+      })
+    })
+    await dataClient.page(3).getMore({
+      parseFn: (prevData, currentData) => {
+        return [...currentData, ...prevData]
+      }
+    })
+    expect(dataClient.getData()).toEqual([newData, ...data])
   })
 })
