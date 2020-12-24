@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.1](https://github.com/21epub/epub-data-client/compare/v0.5.0...v0.5.1) (2020-12-24)
+
+### Bug Fixes
+
+- fix for updateLocal when data is empty array ([43d9115](https://github.com/21epub/epub-data-client/commit/43d9115))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [0.5.0](https://github.com/21epub/epub-data-client/compare/v0.4.1...v0.5.0) (2020-12-17)
 
 ### Features
