@@ -833,15 +833,13 @@ export default class DataClient<T extends Record<string, any>> {
    * @param data
    * @category Local Data Modification
    */
-  public updateLocal(data: T[]) {
-    if (data?.length) {
-      this.data = [...data]
-      this.rawData = {
-        ...this.rawData,
-        results: this.data
-      }
-      this.emit$()
+  public updateLocal(data: T[] = []) {
+    this.data = [...data]
+    this.rawData = {
+      ...this.rawData,
+      results: this.data
     }
+    this.emit$()
     return this.data
   }
 
